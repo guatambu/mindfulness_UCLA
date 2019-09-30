@@ -13,6 +13,19 @@
 		FAC8915D2341EB090018338C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC8915B2341EB090018338C /* LaunchScreen.storyboard */; };
 		FAC8916A2341EB5E0018338C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC891682341EB5D0018338C /* LaunchScreen.storyboard */; };
 		FAC8916B2341EB5E0018338C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC891692341EB5E0018338C /* Main.storyboard */; };
+		FAC891792341EF370018338C /* TImer_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916C2341EF340018338C /* TImer_Blue.png */; };
+		FAC8917A2341EF370018338C /* Getting_Started_Lotus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */; };
+		FAC8917B2341EF370018338C /* TImer_White.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916E2341EF350018338C /* TImer_White.png */; };
+		FAC8917C2341EF370018338C /* Course_Content_Mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */; };
+		FAC8917D2341EF370018338C /* Audio_Tracks_Meditation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC891702341EF350018338C /* Audio_Tracks_Meditation.jpg */; };
+		FAC8917E2341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891712341EF350018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png */; };
+		FAC8917F2341EF370018338C /* Timer_Large_Detail.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891722341EF350018338C /* Timer_Large_Detail.png */; };
+		FAC891802341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891732341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png */; };
+		FAC891812341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891742341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png */; };
+		FAC891822341EF370018338C /* TImer.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891752341EF360018338C /* TImer.png */; };
+		FAC891832341EF370018338C /* Timer_Large_Detail_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */; };
+		FAC891842341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Modified.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891772341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Modified.png */; };
+		FAC891852341EF370018338C /* Video_Courses_Yoga.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FAC891782341EF370018338C /* Video_Courses_Yoga.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,19 @@
 		FAC8915E2341EB090018338C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC891682341EB5D0018338C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC891692341EB5E0018338C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FAC8916C2341EF340018338C /* TImer_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TImer_Blue.png; sourceTree = "<group>"; };
+		FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Getting_Started_Lotus.jpg; sourceTree = "<group>"; };
+		FAC8916E2341EF350018338C /* TImer_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TImer_White.png; sourceTree = "<group>"; };
+		FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Course_Content_Mountain.jpg; sourceTree = "<group>"; };
+		FAC891702341EF350018338C /* Audio_Tracks_Meditation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Audio_Tracks_Meditation.jpg; sourceTree = "<group>"; };
+		FAC891712341EF350018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png; sourceTree = "<group>"; };
+		FAC891722341EF350018338C /* Timer_Large_Detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail.png; sourceTree = "<group>"; };
+		FAC891732341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UCLA_Meditation_Course_Lotus_Flower_Original_Image.png; sourceTree = "<group>"; };
+		FAC891742341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png; sourceTree = "<group>"; };
+		FAC891752341EF360018338C /* TImer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TImer.png; sourceTree = "<group>"; };
+		FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail_Blue.png; sourceTree = "<group>"; };
+		FAC891772341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Modified.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UCLA_Meditation_Course_Lotus_Flower_Original_Image_Modified.png; sourceTree = "<group>"; };
+		FAC891782341EF370018338C /* Video_Courses_Yoga.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Video_Courses_Yoga.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +96,19 @@
 			children = (
 				FAC8914F2341EB070018338C /* AppDelegate.swift */,
 				FAC891592341EB090018338C /* Assets.xcassets */,
+				FAC891702341EF350018338C /* Audio_Tracks_Meditation.jpg */,
+				FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */,
+				FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */,
+				FAC8916C2341EF340018338C /* TImer_Blue.png */,
+				FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */,
+				FAC891722341EF350018338C /* Timer_Large_Detail.png */,
+				FAC8916E2341EF350018338C /* TImer_White.png */,
+				FAC891752341EF360018338C /* TImer.png */,
+				FAC891742341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png */,
+				FAC891772341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Modified.png */,
+				FAC891712341EF350018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png */,
+				FAC891732341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png */,
+				FAC891782341EF370018338C /* Video_Courses_Yoga.jpeg */,
 				FAC8915B2341EB090018338C /* LaunchScreen.storyboard */,
 				FAC8915E2341EB090018338C /* Info.plist */,
 			);
@@ -158,9 +197,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC8916A2341EB5E0018338C /* LaunchScreen.storyboard in Resources */,
+				FAC891822341EF370018338C /* TImer.png in Resources */,
+				FAC891852341EF370018338C /* Video_Courses_Yoga.jpeg in Resources */,
+				FAC891812341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png in Resources */,
+				FAC891792341EF370018338C /* TImer_Blue.png in Resources */,
+				FAC8917A2341EF370018338C /* Getting_Started_Lotus.jpg in Resources */,
 				FAC8915D2341EB090018338C /* LaunchScreen.storyboard in Resources */,
+				FAC8917E2341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png in Resources */,
+				FAC891802341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png in Resources */,
+				FAC8917B2341EF370018338C /* TImer_White.png in Resources */,
 				FAC8915A2341EB090018338C /* Assets.xcassets in Resources */,
+				FAC8917F2341EF370018338C /* Timer_Large_Detail.png in Resources */,
 				FAC8916B2341EB5E0018338C /* Main.storyboard in Resources */,
+				FAC891832341EF370018338C /* Timer_Large_Detail_Blue.png in Resources */,
+				FAC8917D2341EF370018338C /* Audio_Tracks_Meditation.jpg in Resources */,
+				FAC891842341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Modified.png in Resources */,
+				FAC8917C2341EF370018338C /* Course_Content_Mountain.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
