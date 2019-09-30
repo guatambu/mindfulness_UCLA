@@ -24,7 +24,7 @@
                                 <color key="textColor" red="0.25882352941176467" green="0.52941176470588236" blue="0.96078431372549022" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lotus_Blue" translatesAutoresizingMaskIntoConstraints="NO" id="Wza-49-tbh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue" translatesAutoresizingMaskIntoConstraints="NO" id="Wza-49-tbh">
                                 <rect key="frame" x="47" y="284" width="320" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wza-49-tbh" secondAttribute="height" multiplier="32:17" id="2Nd-0u-gtU"/>
@@ -49,6 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Lotus_Blue" width="512" height="302.5"/>
+        <image name="UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue" width="512" height="302.5"/>
     </resources>
 </document>
