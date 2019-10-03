@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4B9D4823459620004D1B7C /* Timer_White_40px.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D4723459620004D1B7C /* Timer_White_40px.png */; };
 		FAC891502341EB070018338C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8914F2341EB070018338C /* AppDelegate.swift */; };
 		FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */; };
 		FAC8915A2341EB090018338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC891592341EB090018338C /* Assets.xcassets */; };
@@ -14,7 +15,6 @@
 		FAC8916B2341EB5E0018338C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC891692341EB5E0018338C /* Main.storyboard */; };
 		FAC891792341EF370018338C /* TImer_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916C2341EF340018338C /* TImer_Blue.png */; };
 		FAC8917A2341EF370018338C /* Getting_Started_Lotus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */; };
-		FAC8917B2341EF370018338C /* TImer_White.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916E2341EF350018338C /* TImer_White.png */; };
 		FAC8917C2341EF370018338C /* Course_Content_Mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */; };
 		FAC8917D2341EF370018338C /* Audio_Tracks_Meditation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC891702341EF350018338C /* Audio_Tracks_Meditation.jpg */; };
 		FAC8917E2341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891712341EF350018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png */; };
@@ -23,9 +23,18 @@
 		FAC891812341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891742341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png */; };
 		FAC891832341EF370018338C /* Timer_Large_Detail_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */; };
 		FAC891852341EF370018338C /* Video_Courses_Yoga.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FAC891782341EF370018338C /* Video_Courses_Yoga.jpeg */; };
+		FAC8918723457E640018338C /* DashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918623457E640018338C /* DashboardTableViewController.swift */; };
+		FAC8918923457E8C0018338C /* GettingStartedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918823457E8C0018338C /* GettingStartedTableViewController.swift */; };
+		FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */; };
+		FAC8918D23457EC90018338C /* GuidedMeditationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918C23457EC90018338C /* GuidedMeditationsTableViewController.swift */; };
+		FAC8918F23457EE10018338C /* VideoCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */; };
+		FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */; };
+		FAC8919323457F3B0018338C /* MeditationTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */; };
+		FAC89195234580250018338C /* Timer_Large_Detail_Background_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA4B9D4723459620004D1B7C /* Timer_White_40px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_White_40px.png; sourceTree = "<group>"; };
 		FAC8914C2341EB070018338C /* mindfulness_UCLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindfulness_UCLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC8914F2341EB070018338C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC891572341EB070018338C /* mindfulness_UCLA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mindfulness_UCLA.xcdatamodel; sourceTree = "<group>"; };
@@ -35,7 +44,6 @@
 		FAC891692341EB5E0018338C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FAC8916C2341EF340018338C /* TImer_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TImer_Blue.png; sourceTree = "<group>"; };
 		FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Getting_Started_Lotus.jpg; sourceTree = "<group>"; };
-		FAC8916E2341EF350018338C /* TImer_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TImer_White.png; sourceTree = "<group>"; };
 		FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Course_Content_Mountain.jpg; sourceTree = "<group>"; };
 		FAC891702341EF350018338C /* Audio_Tracks_Meditation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Audio_Tracks_Meditation.jpg; sourceTree = "<group>"; };
 		FAC891712341EF350018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png; sourceTree = "<group>"; };
@@ -44,6 +52,14 @@
 		FAC891742341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png; sourceTree = "<group>"; };
 		FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail_Blue.png; sourceTree = "<group>"; };
 		FAC891782341EF370018338C /* Video_Courses_Yoga.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Video_Courses_Yoga.jpeg; sourceTree = "<group>"; };
+		FAC8918623457E640018338C /* DashboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewController.swift; sourceTree = "<group>"; };
+		FAC8918823457E8C0018338C /* GettingStartedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedTableViewController.swift; sourceTree = "<group>"; };
+		FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentTableViewController.swift; sourceTree = "<group>"; };
+		FAC8918C23457EC90018338C /* GuidedMeditationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationsTableViewController.swift; sourceTree = "<group>"; };
+		FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCoursesTableViewController.swift; sourceTree = "<group>"; };
+		FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCourseMaterialsTableViewController.swift; sourceTree = "<group>"; };
+		FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerViewController.swift; sourceTree = "<group>"; };
+		FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail_Background_Color.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +92,9 @@
 		FAC8914E2341EB070018338C /* mindfulness_UCLA */ = {
 			isa = PBXGroup;
 			children = (
+				FAC891652341EB390018338C /* Models */,
 				FAC891672341EB490018338C /* Views */,
 				FAC891662341EB420018338C /* Controllers */,
-				FAC891652341EB390018338C /* Models */,
 				FAC891642341EB2D0018338C /* App Resources */,
 				FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */,
 			);
@@ -96,7 +112,8 @@
 				FAC8916C2341EF340018338C /* TImer_Blue.png */,
 				FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */,
 				FAC891722341EF350018338C /* Timer_Large_Detail.png */,
-				FAC8916E2341EF350018338C /* TImer_White.png */,
+				FA4B9D4723459620004D1B7C /* Timer_White_40px.png */,
+				FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */,
 				FAC891742341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png */,
 				FAC891712341EF350018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png */,
 				FAC891732341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png */,
@@ -116,6 +133,13 @@
 		FAC891662341EB420018338C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAC8918623457E640018338C /* DashboardTableViewController.swift */,
+				FAC8918823457E8C0018338C /* GettingStartedTableViewController.swift */,
+				FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */,
+				FAC8918C23457EC90018338C /* GuidedMeditationsTableViewController.swift */,
+				FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */,
+				FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */,
+				FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,11 +214,12 @@
 				FAC8916A2341EB5E0018338C /* LaunchScreen.storyboard in Resources */,
 				FAC891852341EF370018338C /* Video_Courses_Yoga.jpeg in Resources */,
 				FAC891812341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png in Resources */,
+				FA4B9D4823459620004D1B7C /* Timer_White_40px.png in Resources */,
 				FAC891792341EF370018338C /* TImer_Blue.png in Resources */,
 				FAC8917A2341EF370018338C /* Getting_Started_Lotus.jpg in Resources */,
 				FAC8917E2341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png in Resources */,
+				FAC89195234580250018338C /* Timer_Large_Detail_Background_Color.png in Resources */,
 				FAC891802341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png in Resources */,
-				FAC8917B2341EF370018338C /* TImer_White.png in Resources */,
 				FAC8915A2341EB090018338C /* Assets.xcassets in Resources */,
 				FAC8917F2341EF370018338C /* Timer_Large_Detail.png in Resources */,
 				FAC8916B2341EB5E0018338C /* Main.storyboard in Resources */,
@@ -211,8 +236,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC8918F23457EE10018338C /* VideoCoursesTableViewController.swift in Sources */,
 				FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */,
+				FAC8918D23457EC90018338C /* GuidedMeditationsTableViewController.swift in Sources */,
+				FAC8918723457E640018338C /* DashboardTableViewController.swift in Sources */,
+				FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */,
+				FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */,
+				FAC8918923457E8C0018338C /* GettingStartedTableViewController.swift in Sources */,
 				FAC891502341EB070018338C /* AppDelegate.swift in Sources */,
+				FAC8919323457F3B0018338C /* MeditationTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
