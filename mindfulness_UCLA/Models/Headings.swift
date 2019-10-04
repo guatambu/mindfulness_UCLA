@@ -1,0 +1,20 @@
+//
+//  Headings.swift
+//  mindfulness_UCLA
+//
+//  Created by Michael Guatambu Davis on 10/3/19.
+//  Copyright © 2019 DunDak, LLC. All rights reserved.
+//
+
+import Foundation
+
+enum WeekHeadings: String {
+    
+    case overview = "overview"
+    case videos = "videos"
+    case readings = "readings"
+    case dailyPractice = "daily practice"
+    case practiceSheets = "practice sheets"
+    case supplementalMaterials = "supplementary materials"
+    
+}

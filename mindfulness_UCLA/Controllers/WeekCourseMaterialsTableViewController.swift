@@ -2,16 +2,40 @@
 //  WeekCourseMaterialsTableViewController.swift
 //  mindfulness_UCLA
 //
-//  Created by Kelly Johnson on 10/2/19.
+//  Created by Michael Guatambu Davis on 10/2/19.
 //  Copyright © 2019 DunDak, LLC. All rights reserved.
 //
 
 import UIKit
 
 class WeekCourseMaterialsTableViewController: UITableViewController {
+    
+    // MARK: Properties
+    
+    var week: Int?
+    
+    let weekHeadings: [ WeekHeadings ] = [ WeekHeadings.overview,
+                                           WeekHeadings.videos,
+                                           WeekHeadings.readings,
+                                           WeekHeadings.dailyPractice,
+                                           WeekHeadings.practiceSheets,
+                                           WeekHeadings.supplementalMaterials
+                                        ]
+    
 
+    // MARK: ViewController Lifecycle Funcitons
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let week = week else {
+            
+            print("ERROR: nil value foudn for week in WeekCourseMaterialsTableViewController.swift -> viewDidLoad() - line 34.")
+            
+            return
+        }
+        
+        title = "week \(week + 1)"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,20 +46,24 @@ class WeekCourseMaterialsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return weekHeadings.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "weekCourseMaterialCell", for: indexPath)
 
         // Configure the cell...
+        if indexPath.row == 0 {
+            
+            cell.textLabel?.text = "week \(indexPath.row + 1) \(weekHeadings[indexPath.row].rawValue)"
+            
+        } else {
+            
+            cell.textLabel?.text = weekHeadings[indexPath.row].rawValue
+            
+        }
 
         return cell
     }

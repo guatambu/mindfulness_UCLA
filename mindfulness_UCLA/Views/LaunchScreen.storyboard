@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mindfulness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iH-Up-MWz">
-                                <rect key="frame" x="32" y="462" width="350" height="36.5"/>
+                                <rect key="frame" x="32" y="501" width="350" height="36.5"/>
                                 <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="32"/>
                                 <color key="textColor" red="0.25882352941176467" green="0.52941176470588236" blue="0.96078431372549022" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue" translatesAutoresizingMaskIntoConstraints="NO" id="Wza-49-tbh">
-                                <rect key="frame" x="47" y="284" width="320" height="170"/>
+                                <rect key="frame" x="47" y="323" width="320" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wza-49-tbh" secondAttribute="height" multiplier="32:17" id="2Nd-0u-gtU"/>
                                 </constraints>
@@ -34,8 +34,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wza-49-tbh" secondAttribute="trailing" constant="47" id="6xl-yr-Zjn"/>
-                            <constraint firstItem="Wza-49-tbh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="LKD-gz-t2j"/>
                             <constraint firstItem="1iH-Up-MWz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="dMh-ru-QCO"/>
+                            <constraint firstItem="Wza-49-tbh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-40" id="eiI-A7-sgi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1iH-Up-MWz" secondAttribute="trailing" constant="32" id="nmF-iL-AMz"/>
                             <constraint firstItem="1iH-Up-MWz" firstAttribute="top" secondItem="Wza-49-tbh" secondAttribute="bottom" constant="8" id="oQJ-bx-0YP"/>
                             <constraint firstItem="Wza-49-tbh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="sh2-PD-KdL"/>
