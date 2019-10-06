@@ -12,7 +12,15 @@
 		FA4B9D4E23470DD3004D1B7C /* Headings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D4D23470DD3004D1B7C /* Headings.swift */; };
 		FA4B9D502349ADDC004D1B7C /* WeekCourseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */; };
 		FA4B9D522349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D512349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files */; };
-		FA4B9D602349BAE3004D1B7C /* WeeksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D5F2349BAE3004D1B7C /* WeeksData.swift */; };
+		FA4B9D602349BAE3004D1B7C /* Week1Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */; };
+		FA4B9D622349C59B004D1B7C /* Week2Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D612349C59B004D1B7C /* Week2Data.swift */; };
+		FA4B9D642349C5A8004D1B7C /* Week3Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D632349C5A8004D1B7C /* Week3Data.swift */; };
+		FA4B9D662349C5B4004D1B7C /* Week4Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D652349C5B4004D1B7C /* Week4Data.swift */; };
+		FA4B9D682349C5BF004D1B7C /* Week5Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D672349C5BF004D1B7C /* Week5Data.swift */; };
+		FA4B9D6A2349C5CB004D1B7C /* Week6Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D692349C5CB004D1B7C /* Week6Data.swift */; };
+		FA4B9D6C2349C5D8004D1B7C /* Week7Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D6B2349C5D8004D1B7C /* Week7Data.swift */; };
+		FA4B9D6E2349C5E5004D1B7C /* Week8Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */; };
+		FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */; };
 		FAC891502341EB070018338C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8914F2341EB070018338C /* AppDelegate.swift */; };
 		FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */; };
 		FAC8915A2341EB090018338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC891592341EB090018338C /* Assets.xcassets */; };
@@ -54,7 +62,15 @@
 		FA4B9D5B2349B989004D1B7C /* soften-soothe-allow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "soften-soothe-allow.mp3"; sourceTree = "<group>"; };
 		FA4B9D5C2349B989004D1B7C /* turning-toward-emotional (1).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "turning-toward-emotional (1).mp3"; sourceTree = "<group>"; };
 		FA4B9D5D2349B989004D1B7C /* bodyscan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bodyscan.mp3; sourceTree = "<group>"; };
-		FA4B9D5F2349BAE3004D1B7C /* WeeksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksData.swift; sourceTree = "<group>"; };
+		FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week1Data.swift; sourceTree = "<group>"; };
+		FA4B9D612349C59B004D1B7C /* Week2Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week2Data.swift; sourceTree = "<group>"; };
+		FA4B9D632349C5A8004D1B7C /* Week3Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week3Data.swift; sourceTree = "<group>"; };
+		FA4B9D652349C5B4004D1B7C /* Week4Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4Data.swift; sourceTree = "<group>"; };
+		FA4B9D672349C5BF004D1B7C /* Week5Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week5Data.swift; sourceTree = "<group>"; };
+		FA4B9D692349C5CB004D1B7C /* Week6Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week6Data.swift; sourceTree = "<group>"; };
+		FA4B9D6B2349C5D8004D1B7C /* Week7Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week7Data.swift; sourceTree = "<group>"; };
+		FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week8Data.swift; sourceTree = "<group>"; };
+		FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week9Data.swift; sourceTree = "<group>"; };
 		FAC8914C2341EB070018338C /* mindfulness_UCLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindfulness_UCLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC8914F2341EB070018338C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC891572341EB070018338C /* mindfulness_UCLA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mindfulness_UCLA.xcdatamodel; sourceTree = "<group>"; };
@@ -176,7 +192,15 @@
 			children = (
 				FA4B9D4D23470DD3004D1B7C /* Headings.swift */,
 				FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */,
-				FA4B9D5F2349BAE3004D1B7C /* WeeksData.swift */,
+				FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */,
+				FA4B9D612349C59B004D1B7C /* Week2Data.swift */,
+				FA4B9D632349C5A8004D1B7C /* Week3Data.swift */,
+				FA4B9D652349C5B4004D1B7C /* Week4Data.swift */,
+				FA4B9D672349C5BF004D1B7C /* Week5Data.swift */,
+				FA4B9D692349C5CB004D1B7C /* Week6Data.swift */,
+				FA4B9D6B2349C5D8004D1B7C /* Week7Data.swift */,
+				FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */,
+				FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,17 +313,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4B9D662349C5B4004D1B7C /* Week4Data.swift in Sources */,
+				FA4B9D622349C59B004D1B7C /* Week2Data.swift in Sources */,
 				FAC8918F23457EE10018338C /* VideoCoursesTableViewController.swift in Sources */,
 				FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */,
 				FAC8918D23457EC90018338C /* GuidedMeditationsTableViewController.swift in Sources */,
-				FA4B9D602349BAE3004D1B7C /* WeeksData.swift in Sources */,
+				FA4B9D6C2349C5D8004D1B7C /* Week7Data.swift in Sources */,
+				FA4B9D682349C5BF004D1B7C /* Week5Data.swift in Sources */,
+				FA4B9D602349BAE3004D1B7C /* Week1Data.swift in Sources */,
+				FA4B9D642349C5A8004D1B7C /* Week3Data.swift in Sources */,
 				FAC8918723457E640018338C /* DashboardTableViewController.swift in Sources */,
 				FA4B9D4E23470DD3004D1B7C /* Headings.swift in Sources */,
+				FA4B9D6E2349C5E5004D1B7C /* Week8Data.swift in Sources */,
 				FA4B9D502349ADDC004D1B7C /* WeekCourseContent.swift in Sources */,
+				FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */,
 				FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */,
 				FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */,
 				FAC8918923457E8C0018338C /* GettingStartedTableViewController.swift in Sources */,
 				FAC891502341EB070018338C /* AppDelegate.swift in Sources */,
+				FA4B9D6A2349C5CB004D1B7C /* Week6Data.swift in Sources */,
 				FAC8919323457F3B0018338C /* MeditationTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
