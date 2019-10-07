@@ -10,6 +10,9 @@ import Foundation
 
 struct WeekCourseContent{
     
+    // week's lesson title properties
+    var lessonTitle: String
+    var lessonSubTitle: String?
     /* these are all of type Tuple of Strings */
     // the .0 being a heading/title, and the .1 being the body text of the paragraph
     var introTextParagraph1: (String, String)

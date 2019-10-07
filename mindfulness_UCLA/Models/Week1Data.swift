@@ -11,6 +11,8 @@ import Foundation
 struct Week1Data {
     
     static let week1 = WeekCourseContent(
+                                         lessonTitle: "Week 1 - Simple Awareness",
+                                         lessonSubTitle: "Introduction to the Body Scan",
                                          introTextParagraph1: ("", "Now that you've experienced the Introduction and completed the *Getting Started Worksheet* (see *Getting Started*), you are ready to begin. *#Welcome!#*"),
                                          introTextParagraph2: ("", "#NOTE: The links to all the materials described below are given in the colored section at the bottom of the page. Although there are five videos to watch this week, once you start one, the others will automatically follow. Some of the videos have ads at the beginning. Revenue from these ads go to the original creators of the videos, not to Palouse Mindfulness.#"),
                                          introTextParagraph3: nil,
@@ -48,13 +50,12 @@ struct Week1Data {
         ],
                                          practiceSheetsURLList: [
                                             ("\(WeekHeadings.formalPracticeSheet.rawValue) - Body Scan", "TBD"),
-                                            ("\(WeekHeadings.informalPracticeSheet.rawValue) - Simple Awareness and/or Mindful Eating", "TBD"),
+                                            ("\(WeekHeadings.informalPracticeSheet.rawValue) - Simple Awareness and/or Mindful Eating", "TBD")
         ],
                                          guidedMeditationPlaceholder: [
                                             ("*Body Scan (32 min)*", "TBD")
         ]
     )
-
 }
 
 
