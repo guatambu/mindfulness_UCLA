@@ -11,7 +11,7 @@ import Foundation
 struct Week3Data {
     
     static let week3 = WeekCourseContent(
-        lessonTitle: "Week 3 - DEaling with Thoughts",
+        lessonTitle: "Week 3 - Dealing with Thoughts",
         lessonSubTitle: "Introduction to Yoga",
         introTextParagraph1: ("", "At this point in your practice, you may be noticing just how busy the mind is, with replays of past events, expectations/fears about the future, or evaluations of present experience (I like this, don't like that, when will this be over, etc.)."),
         introTextParagraph2: ("", "It can seem that the object of meditation is to get rid of all thoughts and distractions, and when that isn't happening, you may feel like you are failing at meditation and/or the meditation can turn into a struggle, wanting your experience to be different than it is. In fact, the kind of meditation you are learning is more about working skillfully with *any* internal or external experience, and isn't really about \"getting rid\" of thoughts and distractions. In fact, it can be said that wandering thoughts are the weights that train the muscles of the mind."),

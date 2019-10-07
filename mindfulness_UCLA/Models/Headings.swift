@@ -19,5 +19,6 @@ enum WeekHeadings: String {
     case suplmentaryMaterialsExplained = "*supplementary materials related to this week's topic* ~- [optional materials]~"
     case formalPracticeSheet = "*formal practice sheet*"
     case informalPracticeSheet = "*informal practice sheet*"
+    case midwaySelfAssessment = "*mid-way self-assessent*"
     
 }
