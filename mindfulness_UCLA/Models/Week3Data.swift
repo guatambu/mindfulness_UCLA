@@ -10,7 +10,7 @@ import Foundation
 
 struct Week3Data {
     
-    static let week3 = WeekCourseContent(
+    static let courseContent = WeekCourseContent(
         lessonTitle: "Week 3 - Dealing with Thoughts",
         lessonSubTitle: "Introduction to Yoga",
         introTextParagraph1: ("", "At this point in your practice, you may be noticing just how busy the mind is, with replays of past events, expectations/fears about the future, or evaluations of present experience (I like this, don't like that, when will this be over, etc.)."),

@@ -10,7 +10,7 @@ import Foundation
 
 struct Week5Data {
     
-    static let week5 = WeekCourseContent(
+    static let courseContent = WeekCourseContent(
         lessonTitle: "Week 5 - Dealing with Difficult Emotions or Physical Pain",
         lessonSubTitle: "Turning Toward...",
         introTextParagraph1: ("Dealing with Difficult Emotions or Physical Pain", "So far in this course, when some difficulty presents itself during meditation in the form of a thought, emotion, or physical sensation, we have been simply acknowledging it and then “firmly but gently” returning to the object of awareness (for instance, breath in the sitting meditation). This week, we introduce a new way to deal with difficult emotions or physical pain, called #*\"Turning Toward\"*# that involves intentionally exploring the difficulty rather than moving away from it. This is a powerful method, but it is deeply counter-intuitive, because the last thing we think we want to do is to move closer to what's been troubling us."),

@@ -10,7 +10,7 @@ import Foundation
 
 struct Week4Data {
     
-    static let week4 = WeekCourseContent(
+    static let courseContent = WeekCourseContent(
         lessonTitle: "Week 4 - Stress: Responding vs. Reacting",
         lessonSubTitle: "STOP: The One-minute Breathing Space",
         introTextParagraph1: ("this week's videos", "We begin with *Stress - Portrait of a Killer*, featuring Robert Sapolsky, a neuroscientist at Stanford University and possibly the world's greatest authority on the causes and effects of stress. This video describes the physiology of stress and how, in modern life, our stress response, designed evolutionarily to protect us from danger, can actually put our lives in danger when it is activated continually and without resolution. This is the bad news."),
