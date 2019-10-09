@@ -10,6 +10,8 @@ import Foundation
 
 struct Week8Data {
     
+    // THIS IS NOT THE CORRECT DATA FOR WEEK 8 //
+    
     static let courseContent = WeekCourseContent(
         lessonTitle: "Week 5 - Dealing with Difficult Emotions or Physical Pain",
         lessonSubTitle: "Turning Toward...",
