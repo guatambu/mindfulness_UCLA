@@ -61,8 +61,8 @@ struct Week6Data {
             ("\(WeekHeadings.informalPracticeSheet.rawValue) - Communication Calendar", "TBD")
         ],
         guidedMeditationPlaceholder: [
-            ("Meditation for Difficult Emotions (22 min)", "TBD"),
-            ("Meditation for Physical Pain (25 min)", "TBD")
+            ("Mountain Meditation (20 min)", "TBD"),
+            ("Lake Meditation (20 min)", "TBD")
         ]
     )
 }
