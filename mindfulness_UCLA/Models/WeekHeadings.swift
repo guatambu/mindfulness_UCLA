@@ -1,5 +1,5 @@
 //
-//  Headings.swift
+//  WeekHeadings.swift
 //  mindfulness_UCLA
 //
 //  Created by Michael Guatambu Davis on 10/3/19.

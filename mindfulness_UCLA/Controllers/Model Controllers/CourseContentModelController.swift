@@ -23,6 +23,30 @@ class CourseContentModelController {
                    Week7Data.courseContent,
                    Week8Data.courseContent,
                    Week9Data.courseContent]
+    
+    // might not end up using these, leaving them here for now as food for thought
+//    var weeek1: [String] = []
+//    var week2: [String] = []
+//    var week3: [String] = []
+//    var week4: [String] = []
+//    var week5: [String] = []
+//    var week6: [String] = []
+//    var week7: [String] = []
+//    var week8: [String] = []
+//    var week9: [String] = []
+    
+    static var raisinMeditationCount = 0
+    static var bodyScanMeditationCount = 0
+    static var sittingMeditationCount = 0
+    static var difficultEmotionsMeditationCount = 0
+    static var physicalPainMeditationCount = 0
+    static var mountainMeditationCount = 0
+    static var lakeMeditationCount = 0
+    static var lovingKindnessMeditationCount = 0
+    static var softenSootheAllowMeditationCount = 0
+    static var rainMeditationCount = 0
+    static var silentMeditationCount = 0
+    
 
     
     // MARK: - CRUD Functions

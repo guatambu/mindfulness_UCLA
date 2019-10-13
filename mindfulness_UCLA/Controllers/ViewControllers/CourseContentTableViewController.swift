@@ -12,7 +12,6 @@ class CourseContentTableViewController: UITableViewController {
     
     // MARK: Properties
     
-    let weeks: [Int] = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
     
     // MARK: ViewController Lifecycle Fucntions
 
@@ -25,14 +24,14 @@ class CourseContentTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return weeks.count
+        return CourseContentModelController.shared.courses.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "courseContentCell", for: indexPath)
         
-        cell.textLabel?.text = "week \(weeks[indexPath.row])"
+        cell.textLabel?.text = "week \(indexPath.row + 1)"
         
         return cell
     }
@@ -52,5 +51,7 @@ class CourseContentTableViewController: UITableViewController {
         navigationItem.backBarButtonItem = backButtonItem
         // pass any properties to next ViewController
         destViewController.week = indexPath.row
+        destViewController.weekData = CourseContentModelController.shared.courses[indexPath.row]
+        
     }
 }
