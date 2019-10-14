@@ -54,8 +54,7 @@ struct Week3Data {
         practiceSheetsURLList: [
             ("\(WeekHeadings.formalPracticeSheet.rawValue) - Mindful Yoga (Yoga 1), Body Scan, Sitting Meditation", "TBD"),
             ("\(WeekHeadings.informalPracticeSheet.rawValue) - Unpleasant Events Calendar", "TBD")
-        ],
-        guidedMeditationPlaceholder: [("Mindful Yoga 1 (37 min)", "https://www.youtube.com/watch?v=Teo0f1ab1PY&index=3&list=PLbiVpU59JkVaFMGi0A8Im_hfSh-SWsFwg")]
+        ]
     )
 }
 

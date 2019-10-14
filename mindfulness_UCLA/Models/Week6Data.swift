@@ -59,10 +59,6 @@ struct Week6Data {
         practiceSheetsURLList: [
             ("\(WeekHeadings.formalPracticeSheet.rawValue) -  Body Scan, Sitting, Yoga #(+ Mountain or Lake Med.)#", "TBD"),
             ("\(WeekHeadings.informalPracticeSheet.rawValue) - Communication Calendar", "TBD")
-        ],
-        guidedMeditationPlaceholder: [
-            ("Mountain Meditation (20 min)", "TBD"),
-            ("Lake Meditation (20 min)", "TBD")
         ]
     )
 }

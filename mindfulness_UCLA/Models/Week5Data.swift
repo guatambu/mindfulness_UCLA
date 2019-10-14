@@ -69,10 +69,6 @@ struct Week5Data {
         practiceSheetsURLList: [
             ("\(WeekHeadings.formalPracticeSheet.rawValue) - #\"Turning Toward\" Meditation#", "TBD"),
             ("\(WeekHeadings.informalPracticeSheet.rawValue) - #\"Turning Toward\" informal practices#", "TBD")
-        ],
-        guidedMeditationPlaceholder: [
-            ("Meditation for Difficult Emotions (22 min)", "TBD"),
-            ("Meditation for Physical Pain (25 min)", "TBD")
         ]
     )
 }

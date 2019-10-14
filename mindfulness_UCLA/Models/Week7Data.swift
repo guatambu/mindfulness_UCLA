@@ -61,9 +61,6 @@ struct Week7Data {
         practiceSheetsURLList: [
             ("\(WeekHeadings.formalPracticeSheet.rawValue) - Body Scan, Sitting, Yoga #~(+ Lovingkindness)~#", "TBD"),
             ("\(WeekHeadings.informalPracticeSheet.rawValue) - Any #~(Simple Awareness, Mindful Eating, STOP, Soften..., etc.)~#", "TBD")
-        ],
-        guidedMeditationPlaceholder: [
-            ("Lovingkindness Meditation (13 min)", "TBD")
         ]
     )
 }

@@ -23,6 +23,7 @@
 		FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */; };
 		FA61C2AE234EBC40007F0AD3 /* CourseContentModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */; };
 		FA61C2B02352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */; };
+		FA61C2B223530070007F0AD3 /* CourseContentDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */; };
 		FAC891502341EB070018338C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8914F2341EB070018338C /* AppDelegate.swift */; };
 		FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */; };
 		FAC8915A2341EB090018338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC891592341EB090018338C /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week9Data.swift; sourceTree = "<group>"; };
 		FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentModelController.swift; sourceTree = "<group>"; };
 		FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailsTableViewController.swift; sourceTree = "<group>"; };
+		FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FAC8914C2341EB070018338C /* mindfulness_UCLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindfulness_UCLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC8914F2341EB070018338C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC891572341EB070018338C /* mindfulness_UCLA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mindfulness_UCLA.xcdatamodel; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */,
 				FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */,
 				FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */,
+				FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */,
 				FAC8918C23457EC90018338C /* GuidedMeditationsTableViewController.swift */,
 				FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */,
 				FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */,
@@ -342,6 +345,7 @@
 				FA61C2AE234EBC40007F0AD3 /* CourseContentModelController.swift in Sources */,
 				FAC8918D23457EC90018338C /* GuidedMeditationsTableViewController.swift in Sources */,
 				FA4B9D6C2349C5D8004D1B7C /* Week7Data.swift in Sources */,
+				FA61C2B223530070007F0AD3 /* CourseContentDetailTableViewCell.swift in Sources */,
 				FA4B9D682349C5BF004D1B7C /* Week5Data.swift in Sources */,
 				FA4B9D602349BAE3004D1B7C /* Week1Data.swift in Sources */,
 				FA4B9D642349C5A8004D1B7C /* Week3Data.swift in Sources */,

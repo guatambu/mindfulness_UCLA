@@ -10,71 +10,50 @@ import Foundation
 
 struct Week8Data {
     
-    // THIS IS NOT THE CORRECT DATA FOR WEEK 8 //
-    
     static let courseContent = WeekCourseContent(
-        lessonTitle: "Week 5 - Dealing with Difficult Emotions or Physical Pain",
-        lessonSubTitle: "Turning Toward...",
-        introTextParagraph1: ("Dealing with Difficult Emotions or Physical Pain", "So far in this course, when some difficulty presents itself during meditation in the form of a thought, emotion, or physical sensation, we have been simply acknowledging it and then “firmly but gently” returning to the object of awareness (for instance, breath in the sitting meditation). This week, we introduce a new way to deal with difficult emotions or physical pain, called #*\"Turning Toward\"*# that involves intentionally exploring the difficulty rather than moving away from it. This is a powerful method, but it is deeply counter-intuitive, because the last thing we think we want to do is to move closer to what's been troubling us."),
-        introTextParagraph2: ("", "When used as an informal practice, #*\"Turning Toward\"*# can be thought of as a more nuanced form of STOP (\"One-Minute Breathing Space\") that allows for a fuller exploration of what's happening. Although such an exploration might sound scary and uncomfortable, this is a gentle process, and is done in a special way, one that draws on the skills of awareness and non-judgment that you've been building so far in this course."),
-        introTextParagraph3: nil,
-        videosTextParagraph1: ("videos", "In *Turning Toward Difficulty* and *The Fist Exercise*, Vidyamala Burch describes this surprising and counter-intuitive way of dealing with difficult issues. In *One Moment at a Time*, she describes the moment her approach to dealing with her chronic pain changed and her life's work in understanding and teaching this approach began. The other videos, including *Pain x Resistance = Suffering*, deal with a variety of issues having to do with this week's topic, and in *The Three Components of Self-Compassion*, Kristin Neff talks about the importance of dealing with difficult emotional and physical issues with self-kindness and gentleness. If you are dealing with significant physical pain, be sure to watch Tara Brach's *Working Skillfully* with Pain and *Guided Reflection on Inhabiting this Body* in the supplementary section."),
+        lessonTitle: "Week 8 - Conclusion",
+        lessonSubTitle: "Developing a Practice of Your Own",
+        introTextParagraph1: ("time to reflect...", "This brings us to the final week of the course, and if you have been watching the videos, reading the recommended material, and doing the practices, you have accomplished a lot! As a result of your dedicated learning and practice, it's likely that there have been some changes in you since you began, so now might be a good time to ask: #*What changes have you noticed since you began the course?*# The changes may be different than you expected and they might not be monumental. They could include subtle shifts, such as discovering that you are sometimes able to find space in the middle of a busy day, or that you are a little more resilient in encounters with others, or you're just a little kinder to yourself in difficult situations. It's often the subtle changes that are actually most profound, because they indicate learning that has been integrated, that they come from the inside-out rather than top-down."),
+        introTextParagraph2: ("developing a practice of your own", "Although there are videos and readings for this week, there are no practice sheets. Sometimes, we say that the eighth week of an MBSR class starts now but does not really have an end. If this course has been useful for you so far, you may want to consider the question: *How will you continue practicing mindfulness in your daily life, on your own?*  You may decide that you would like to continue the practice in a formal way, incorporating in your schedule a sitting meditation or yoga, for instance, or you may already have an idea of how you would incorporate into your life one or more of the many informal practices (e.g., simple awareness, mindful eating, STOP, \"Turning Toward\")."),
+        introTextParagraph3:("", "Of the people who take the MBSR course and have found ways to incorporate mindfulness into their lives, every one of them does it in a unique way, a way that suits their temperament and needs.  One person might continue with a 30-minute per day meditation practice, another might take a regular yoga class, another may have made their daily walk into a meditation using present-moment awareness of their inner and outer worlds as they walk, and yet another may intentionally use one or more of the many informal practices throughout their day.  The important thing is not the specific practices you choose, but that you make them yours, and that they resonate with you in a way that they help you to be more alive, engaged and joyful in your daily life."),
+        videosTextParagraph1: ("videos", "There is much evidence that gratitude is key to a happy and fulfilled life so it seems fitting to include *Gratitude* and *The 365 Grateful Project* in the last set of videos for the course. *How My Son Ruined My Life*, by James Baraz's mother is funny but poignant and continues on that theme. In *Listening as an Act of Love*, Jon Kabat-Zinn reinforces the key role that compassion and self-compassion play in this course. *Grand Central Station* is a short, sweet piece about having compassion for those around us. The last video is *The Rabbi's Gift*, a beautiful story illustrating the transformative power of seeing the goodness in others (and ourselves). The video is narrated by M. Scott Peck himself."),
         videosTextParagraph2: nil,
         videosTextParagraph3: nil,
-        readingsTextParagraph1: ("readings", "*Responding to Emotional or Physical Pain* describes how \"Turning Toward\" differs from more typical ways of dealing with difficulty. *\"Turning Toward\"* Difficult Emotions and *\"Turning Toward\" Physical Pain* are one-page descriptions that will be used for the informal practice this week. Vidyamala Burch's *Five-Step Model* inspired these informal practices and the corresponding \"Turning Toward\" meditations. Tara Brach's *Radical Acceptance* comes from her book by the same name and talks about the two \"wings\" of Radical Acceptance, clear seeing and self-compassion, both very important for \"Turning Toward\". #If you or a loved one is dealing with back pain, *The Strange Case of Chronic Back Pain*, in the Supplementary section, is a must-read.#"),
+        readingsTextParagraph1: ("readings", "The readings include two one-page documents by Jon Kabat-Zinn having to do with developing a daily mindfulness practice, an article by Rachel Naomi Remen about serving vs. helping, and a printable version of The Rabbi's Gift."),
         readingsTextParagraph2: nil,
         readingsTextParagraph3: nil,
-        dailyPracticesTextParagraph1: ("daily practices", "For the *formal practice*, we introduce the *\"Turning Toward\" Meditation*. You will do this the first two days of this week, and on the following days you can choose from any of the practices you've learned so far. The \"Turning Toward\" meditation prepares you for doing the \"Turning Toward\" informal practice."),
-        dailyPracticesTextParagraph2: ("", "The *informal practice* will be to practice \"Turning Toward\" an unwanted emotion or physical pain that may have come up during the day. #Be sure to print and review *\"Turning Toward\" Difficult Emotions* and *\"Turning Toward\" Physical Pain* to use as guides for these informal practices.#"),
+        dailyPracticesTextParagraph1: ("certificate of completion", "If you have completed the practices each week and absorbed the videos and readings, #*Congratulations!*#  Completing this course is not a minor accomplishment - it takes significant commitment to do the required practice and study on your own. If you would like a certificate documenting your completion of this online course, see *Requesting a Certificate of Completion*."),
+        dailyPracticesTextParagraph2: ("", "Even if you choose not to get a certificate, it might be fun to look at the *Graduate Map* which has pins in every city for which there is an online graduate."),
         dailyPracticesTextParagraph3: nil,
-        miscellaneousTextParagraph1: ("", ""),
-        miscellaneousTextParagraph2: nil,
-        miscellaneousTextParagraph3: nil,
+        miscellaneousTextParagraph1: ("taking it from here...", "The many audio, video and written resources embedded in the eight weeks are regularly updated with new material, including *Graduate Program Readings*, which are updated monthly. To see what has changed on the site recently, see *What's New*. There are many other *Resources* available on this site, including recommendations for *Meditation Groups* and *Retreat Centers*."),
+        miscellaneousTextParagraph2: ("", "If you are interested in deepening your learning through an instructor-training program, there are many good training centers, some of which are listed on the *Mindfulness Training Centers* page. Still another way to keep learning is to look at the *Gallery of Learning*. There you will find current letters of some of the other graduates (published with their permission) - skimming through those can be like a mini-refresher."),
+        miscellaneousTextParagraph3: ("", "#I hope this course has been useful and wish you the best on your journey from here!#"),
         weekVideoURLList: [
-            ("*Turning Toward Difficulty* ~- Vidyamala Burch [12 min]]~", "https://www.youtube.com/watch?v=8aAATYSvNjc&index=1&list=PLbiVpU59JkVYtEL6-21TOfe3IELNMmOhO"),
-            ("*The Fist Exercise* ~- Vidyamala Burch [12 min]~", "https://www.youtube.com/watch?v=v6gFJRxgz5A&list=PLbiVpU59JkVYtEL6-21TOfe3IELNMmOhO&index=2"),
-            ("*One Moment at a Time* ~- Vidyamala Burch [2 min]~", "https://www.youtube.com/watch?v=Ez9s124sL8I&index=3&list=PLbiVpU59JkVYtEL6-21TOfe3IELNMmOhO"),
-            ("*The Gift and Power of Emotional Courage* ~- Susan David [16 min]~", "https://www.youtube.com/watch?v=NDQ1Mi5I4rg&list=PLbiVpU59JkVYtEL6-21TOfe3IELNMmOhO&index=4"),
-            ("*Mindfulness and Painful Emotions* ~- Steven Hayes (2 min)~", "https://www.youtube.com/watch?v=SHnULfYKXcI&index=5&list=PLbiVpU59JkVYtEL6-21TOfe3IELNMmOhO"),
-            ("*Pain x Resistance = Suffering * ~- Tara Brach (8 min)~", "https://www.youtube.com/watch?v=O8-exWpcngc&index=6&list=PLbiVpU59JkVYtEL6-21TOfe3IELNMmOhO"),
-            ("*The Three Components of Self-Compassion * ~- Kristin Neff [6 min]~", "https://www.youtube.com/watch?v=w3aba1ok5lE&list=PLbiVpU59JkVYtEL6-21TOfe3IELNMmOhO&index=8")
+            ("*Gratitude* ~- Louie Schwartzberg (and voice of David Steindl-Rast) [9 min]~", "https://www.youtube.com/watch?v=gXDMoiEkyuQ&index=1&list=PLbiVpU59JkVYwWcoOV-Bx6ieMKpMlbBb0"),
+            ("*The 365 Grateful Project* ~- Hailey Bartholomew [12 min]~", "https://www.youtube.com/watch?v=zaufonUBjoQ&list=PLbiVpU59JkVYwWcoOV-Bx6ieMKpMlbBb0&index=2"),
+            ("*How My Son Ruined My Life* ~- Selma & James Baraz [7 min]~", "https://www.youtube.com/watch?v=ojF-o_eWp-o&list=PLbiVpU59JkVYwWcoOV-Bx6ieMKpMlbBb0&index=3"),
+            ("*Listening as an Act of Love* ~- Jon Kabat-Zinn [7 min]~", "https://www.youtube.com/watch?v=TnJkVIO_adY&list=PLbiVpU59JkVYwWcoOV-Bx6ieMKpMlbBb0&index=4"),
+            ("*Grand Central Station* ~- Sharon Salzberg [2 min]~", "https://www.youtube.com/watch?v=m0bg0fJRGfc&list=PLbiVpU59JkVYwWcoOV-Bx6ieMKpMlbBb0&index=5"),
+            ("*The Rabbi's Gift* ~- M. Scott Peck [6 min]~", "https://www.youtube.com/watch?v=3z1pIrV2F6c&list=PLbiVpU59JkVYwWcoOV-Bx6ieMKpMlbBb0&index=6")
         ],
         weekReadingURLList: [
-            ("*Responding to Emotional or Physical Pain * ~- Dave Potter~", "https://palousemindfulness.com/docs/responding-to-difficulty.pdf"),
-            ("*\"Turning Toward\" Difficult Emotions* ~- guideline for Informal Practice~", "https://palousemindfulness.com/docs/turning-toward-emotional.pdf"),
-            ("*\"Turning Toward\" Physical Pain* ~- guideline for Informal Practice~", "https://palousemindfulness.com/docs/turning-toward-physical.pdf"),
-            ("*The Five-Step Model* ~- Vidyamala Burch~", "https://palousemindfulness.com/docs/vidyamala-5steps.pdf"),
-            ("*Radical Acceptance* ~- Tara Brach~", "https://palousemindfulness.com/docs/radical-acceptance.pdf")
+            ("*Deepening a Personal Meditation Practice* ~- Jon Kabat-Zinn~", "https://palousemindfulness.com/docs/jkz_deepening.pdf"),
+            ("*Suggestions for Daily Practice* ~- Jon Kabat-Zinne~", "https://palousemindfulness.com/docs/jkz_suggestions.pdf"),
+            ("*In the Service of Life* ~- Rachel Naomi Remen~", "https://palousemindfulness.com/docs/turning-toward-physical.pdf"),
+            ("*The Rabbi's Gift* ~- M. Scott Peck~", "https://palousemindfulness.com/docs/RabbisGift.pdf")
         ],
         supplementalMaterialsURLList: [
-            ("*\"Inner Listening\" - An Introduction to Focusing* ~article and videos by Ann Weiser-Cornell~", "https://palousemindfulness.com/graduates/Inner-Listening.html"),
-            ("*Working Skillfully with Pain*  ~video by Tara Brach (4 min)~", "https://www.youtube.com/watch?v=XHlflWZSYlY"),
-            ("*Guided Reflection on Inhabiting this Body* ~video by Tara Brach (13 min)~", "https://www.youtube.com/watch?v=r73A9tXmAuY"),
-            ("*Lower Back Ache?* ~New York Times article~", "https://mobile.nytimes.com/2017/02/13/health/lower-back-pain-surgery-guidelines.html"),
-            ("*The Strange Case of Chronic Back Pain* ~article by Ron Siegel~", "https://palousemindfulness.com/docs/siegel-backpain.pdf"),
-            ("*Back Sense: Halting the Cycle of Chronic Back Pain* ~book by Ron Siegel~", "http://www.amazon.com/Back-Sense-Revolutionary-Approach-Halting/dp/0767905814"),
-            ("*Working with Pain - Mindfulness Strategies* ~articles, talks, and meditations by Tara Brach~", "https://www.tarabrach.com/pain/"),
-            ("*How To Be Sick* ~book by Toni Bernhard~", "http://www.amazon.com/How-Sick-Buddhist-Inspired-Chronically-Caregivers/dp/0861716264"),
-            ("*Dealing with Panic Attacks* ~article by Steven Hayes (3 min)~", "https://www.youtube.com/watch?v=Kr7mhCCiSoY&list=PLbiVpU59JkVYtEL6-21TOfe3IELNMmOhO&index=6"),
-            ("*Mindfulness and Physical Pain* ~video by Kelly McGonigal (4 min)~", "https://www.youtube.com/watch?v=mCrsJIRtiqI&index=7&list=PLbiVpU59JkVYtEL6-21TOfe3IELNMmOhO"),
-            ("*Buddhism's Pain Relief* ~article by Rick Heller~", "https://palousemindfulness.com/docs/buddhism-pain.pdf"),
-            ("*Awakening Self-Compassion* ~video by Tara Brach [23 min]~", "https://www.youtube.com/watch?v=yXIOHYxllbc"),
-            ("*Emotional Agility: Get Unstuck, Embrace Change* ~book by Susan David~", "https://www.amazon.com/Emotional-Agility-Unstuck-Embrace-Change-ebook/dp/B016JPTPDW"),
-            ("*Mindfulness-Based Pain Management* ~video by Vidyamala Burch [21 min]~", "https://www.youtube.com/watch?v=N10_dcIZp2k&index=2&list=PLbiVpU59JkVYO8bBU09fKOIOd9kUJMG4f"),
-            ("*Living Well With Pain & Illness* ~book by Vidyamala Burch~", "http://www.amazon.com/Living-Well-Pain-Illness-Suffering/dp/1591797470"),
-            ("*YOU Are Not Your Pain* ~book by Vidyamala Burch~", "https://www.amazon.com/You-Are-Your-Pain-Well-Being/dp/125005267X"),
-            ("*Vidyamala Burch interview* ~video (more detail about Vidyamala's story) [58 min]~", "https://www.youtube.com/watch?v=3TUxs8HOCRo"),
-            ("*Choosing to Live Well with Pain & Illness* ~audio interview of Vidyamala Burch [39 min]~", "https://palousemindfulness.com/meditations/vidyamala-choosing.html"),
-            ("*Choosing to Live Well with Pain & Illness* ~transcript of above interview~", "https://palousemindfulness.com/docs/vidyamala-choosing.pdf")
+            ("*Sanctuary* ~video by Jack Kornfield [19 min]~", "https://www.youtube.com/watch?v=ZODoQgx8fMk"),
+            ("*The Habits of Happiness*  ~video by Matthieu Ricard (20 min)~", "https://www.youtube.com/watch?v=l5-ZuB38hKY"),
+            ("*How Gratitude Alters the Heart & Brain* ~article by Arjun Walia~", "https://www.collective-evolution.com/2019/02/14/scientists-show-how-gratitude-literally-alters-the-human-heart-molecular-structure-of-the-brain"),
+            ("*Thanks - How Practicing Gratitude Can Make You Happier* ~book by Robert Emmons~", "https://www.amazon.com/Thanks-Practicing-Gratitude-Make-Happier/dp/0547085737"),
+            ("*The Happy Secret to Better Work* ~video by Shawn Achor [12 min]~", "https://www.youtube.com/watch?v=fLJsdqxnZb0"),
+            ("*Happiness* ~video by Tara Brach [20 min]~", "https://www.youtube.com/watch?v=igGoRkOFbwM&list=PLbiVpU59JkVYwWcoOV-Bx6ieMKpMlbBb0&index=3"),
+            ("*Mindfulness is Not A Crystal Ball* ~video by Susan Kaiser Greenland [2 min]~", "https://www.youtube.com/watch?v=kRd19hFrR0c&list=PLbiVpU59JkVYwWcoOV-Bx6ieMKpMlbBb0&index=1"),
+            ("*Blowing Bubbles* ~video by Sharon Salzberg [2 min]~", "https://www.youtube.com/watch?v=EPFx0EcEIKY"),
+            ("*Layers of Awareness* ~diagram~", "https://palousemindfulness.com/docs/layers.pdf")
             
         ],
-        practiceSheetsURLList: [
-            ("\(WeekHeadings.formalPracticeSheet.rawValue) - #\"Turning Toward\" Meditation#", "TBD"),
-            ("\(WeekHeadings.informalPracticeSheet.rawValue) - #\"Turning Toward\" informal practices#", "TBD")
-        ],
-        guidedMeditationPlaceholder: [
-            ("Meditation for Difficult Emotions (22 min)", "TBD"),
-            ("Meditation for Physical Pain (25 min)", "TBD")
-        ]
+        practiceSheetsURLList: []
     )
 }

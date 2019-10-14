@@ -124,7 +124,6 @@ extension WeekCourseMaterialsTableViewController {
         let readingsList = weekData.weekReadingURLList
         let practiceSheets = weekData.practiceSheetsURLList
         let supplementalMaterials = weekData.supplementalMaterialsURLList
-        let guidedMeditation = weekData.guidedMeditationPlaceholder
         
         // unwrap optional properties
         let intro2 = weekData.introTextParagraph2 ?? ("","")
@@ -223,13 +222,6 @@ extension WeekCourseMaterialsTableViewController {
             validSupplementalMaterialsStrings = supplementalMaterials
             // append the validSupplementalMaterialsStrings array to the validOrderedContentStrings array
             validOverviewOrderedContentStrings.append(validSupplementalMaterialsStrings)
-        }
-        // check for valid guidedMeditation strings
-        if guidedMeditation.count != 0 {
-            // set the validGuidedMeditationStrings array properties
-            validGuidedMeditationStrings = guidedMeditation
-            // append the validGuidedMeditationStrings array to the validOrderedContentStrings array
-            validOverviewOrderedContentStrings.append(validGuidedMeditationStrings)
         }
     }
 }

@@ -56,7 +56,6 @@ struct Week4Data {
             ("\(WeekHeadings.formalPracticeSheet.rawValue) - Mindful Yoga (Yoga 2), Sitting Meditation", "TBD"),
             ("\(WeekHeadings.informalPracticeSheet.rawValue) - STOP: The One Minute Breathing Space", "TBD"),
             ("\(WeekHeadings.midwaySelfAssessment.rawValue) - Complete during last day of practice", "TBD")
-        ],
-        guidedMeditationPlaceholder: [("Mindful Yoga 2 (36 min)", "https://www.youtube.com/watch?v=gmdUOia58rY&index=4&list=PLbiVpU59JkVaFMGi0A8Im_hfSh-SWsFwg")]
+        ]
     )
 }

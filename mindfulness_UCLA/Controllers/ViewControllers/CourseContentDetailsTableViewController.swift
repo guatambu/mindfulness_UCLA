@@ -2,7 +2,7 @@
 //  CourseContentDetailsTableViewController.swift
 //  mindfulness_UCLA
 //
-//  Created by Kelly Johnson on 10/12/19.
+//  Created by Michael Guatambu Davis on 10/12/19.
 //  Copyright © 2019 DunDak, LLC. All rights reserved.
 //
 

@@ -95,8 +95,7 @@ class CourseContentModelController {
                                               weekVideoURLList: weekVideoURLList,
                                               weekReadingURLList: weekReadingURLList,
                                               supplementalMaterialsURLList: supplementalMaterialsURLList,
-                                              practiceSheetsURLList: practiceSheetsURLList,
-                                              guidedMeditationPlaceholder: guidedMeditationPlaceholder)
+                                              practiceSheetsURLList: practiceSheetsURLList)
         
         courses.append(weekCourseContent)
     }
@@ -193,9 +192,7 @@ class CourseContentModelController {
         if let practiceSheetsURLList = practiceSheetsURLList {
             course.practiceSheetsURLList = practiceSheetsURLList
         }
-        if let guidedMeditationPlaceholder = guidedMeditationPlaceholder {
-            course.guidedMeditationPlaceholder = guidedMeditationPlaceholder
-        }
+
     }
     
     // Delete
@@ -203,5 +200,4 @@ class CourseContentModelController {
         guard let index = self.courses.firstIndex(of: course) else { return }
         self.courses.remove(at: index)
     }
-    
 }

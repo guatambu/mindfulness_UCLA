@@ -47,12 +47,6 @@ class WeekCourseContent{
     // it is an array because it is possible to have more than one file
     // the .0 being a heading/title as a String, and the .1 being the file URL/path as a String
     var practiceSheetsURLList: [(String, String)]
-    /* guidedMeditationPlaceholder is a place holder for the appropriate .mp3 audio file associated with each week. */
-    // it may be as simple as the string to call the file up from the App Resources folder
-    // it is an array because it is possible to have more than one file
-    // the .0 being a heading/title as a String, and the .1 being the file URL/path as a String
-    var guidedMeditationPlaceholder: [(String, String)]
-    
     
     // MARK: Initialization
     init(lessonTitle: String,
@@ -75,8 +69,7 @@ class WeekCourseContent{
          weekVideoURLList: [(String, String)],
          weekReadingURLList: [(String, String)],
          supplementalMaterialsURLList: [(String, String)],
-         practiceSheetsURLList: [(String, String)],
-         guidedMeditationPlaceholder: [(String, String)]
+         practiceSheetsURLList: [(String, String)]
         ) {
         self.lessonTitle = lessonTitle
         self.lessonSubTitle = lessonSubTitle
@@ -99,7 +92,6 @@ class WeekCourseContent{
         self.weekReadingURLList = weekReadingURLList
         self.supplementalMaterialsURLList = supplementalMaterialsURLList
         self.practiceSheetsURLList = practiceSheetsURLList
-        self.guidedMeditationPlaceholder = guidedMeditationPlaceholder
     }
 }
 

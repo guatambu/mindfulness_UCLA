@@ -51,9 +51,6 @@ struct Week1Data {
         practiceSheetsURLList: [
             ("\(WeekHeadings.formalPracticeSheet.rawValue) - Body Scan", "TBD"),
             ("\(WeekHeadings.informalPracticeSheet.rawValue) - Simple Awareness and/or Mindful Eating", "TBD")
-        ],
-        guidedMeditationPlaceholder: [
-            ("*Body Scan (32 min)*", "TBD")
         ]
     )
 }
