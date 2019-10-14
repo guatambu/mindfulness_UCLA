@@ -528,18 +528,45 @@
         <scene sceneID="D7p-sV-vud">
             <objects>
                 <tableViewController storyboardIdentifier="toCourseContentDetails" id="7Vq-1e-UBa" customClass="CourseContentDetailsTableViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gV1-wb-VfU">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="gV1-wb-VfU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseContentDetailCell" id="OqS-Dg-ems" customClass="CourseContentDetailTableViewCell" customModule="mindfulness_UCLA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseContentDetailCell" rowHeight="80" id="OqS-Dg-ems" customClass="CourseContentDetailTableViewCell" customModule="mindfulness_UCLA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OqS-Dg-ems" id="TQg-a6-o8t">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(headingLabel)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lny-30-B17">
+                                            <rect key="frame" x="24" y="19" width="272" height="18.5"/>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                            <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="(bodyTextLabel)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIU-aO-mtV">
+                                            <rect key="frame" x="24" y="37.5" width="272" height="39.5"/>
+                                            <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="12"/>
+                                            <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sIU-aO-mtV" firstAttribute="leading" secondItem="TQg-a6-o8t" secondAttribute="leadingMargin" constant="8" id="2HC-mu-WkN"/>
+                                        <constraint firstItem="lny-30-B17" firstAttribute="top" secondItem="TQg-a6-o8t" secondAttribute="topMargin" constant="8" id="3JW-O6-air"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lny-30-B17" secondAttribute="trailing" constant="8" id="4cw-GS-0pN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sIU-aO-mtV" secondAttribute="trailing" constant="8" id="Evu-vr-m0Z"/>
+                                        <constraint firstItem="sIU-aO-mtV" firstAttribute="bottom" secondItem="TQg-a6-o8t" secondAttribute="bottomMargin" constant="8" id="WDp-ca-tDP"/>
+                                        <constraint firstItem="lny-30-B17" firstAttribute="leading" secondItem="TQg-a6-o8t" secondAttribute="leadingMargin" constant="8" id="WNp-Av-7B5"/>
+                                        <constraint firstItem="sIU-aO-mtV" firstAttribute="top" secondItem="lny-30-B17" secondAttribute="bottom" id="v37-Uc-b2l"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bodyTextLabel" destination="sIU-aO-mtV" id="ZcL-xe-TW0"/>
+                                    <outlet property="headingLabel" destination="lny-30-B17" id="9Jc-rA-ScQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

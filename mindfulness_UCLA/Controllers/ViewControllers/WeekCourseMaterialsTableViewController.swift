@@ -31,7 +31,7 @@ class WeekCourseMaterialsTableViewController: UITableViewController {
     var validMiscStrings: [(String, String)] = []
     var validVideosListStrings: [(String, String)] = []
     var validReadingsListStrings: [(String, String)] = []
-    var validpPacticeSheetsStrings: [(String, String)] = []
+    var validPacticeSheetsStrings: [(String, String)] = []
     var validSupplementalMaterialsStrings: [(String, String)] = []
     var validGuidedMeditationStrings: [(String, String)] = []
     
@@ -100,10 +100,8 @@ class WeekCourseMaterialsTableViewController: UITableViewController {
         destViewController.validReadingStrings = validReadingStrings
         destViewController.validReadingsListStrings = validReadingsListStrings
         destViewController.validPracticeStrings = validPracticeStrings
-        destViewController.validpPacticeSheetsStrings = validpPacticeSheetsStrings
+        destViewController.validPacticeSheetsStrings = validPacticeSheetsStrings
         destViewController.validSupplementalMaterialsStrings = validSupplementalMaterialsStrings
-        destViewController.validGuidedMeditationStrings = validGuidedMeditationStrings
-        
     }
 }
 

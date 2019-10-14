@@ -7,22 +7,58 @@
 //
 
 // TODO: - here we are going to format each individual cell's content.  this will be where the majority of the formatting's and content display's heavy lifting will take place
-// NOTE: - we may need more than one type of protoype cell and corresponding cusotm tableViewCell... TBD
 
 
 import UIKit
 
 class CourseContentDetailTableViewCell: UITableViewCell {
+    
+    // MARK: - Properties
+    
+    @IBOutlet weak var headingLabel: UILabel!
+    @IBOutlet weak var bodyTextLabel: UILabel!
+    
+    // array that holds the valid checked string tuples used to present the overview details
+    var tupleStrings: (String, String)? {
+        
+        didSet {
+            updateViews()
+        }
+    }
+    
+    
+    // MARK: - awakeFromNib()
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    // MARK: - Cell Formatting Funcitons
+    func updateViews() {
+        // run error check for valid tupleStrings property
+        guard let tupleStrings = tupleStrings else {
+            print("ERROR: nil vlaue found for tupleStrings property in CourseContentDetailTableViewCell.swift -> updateViews - line 41.")
+            return
+        }
+        // success, so on to cell formatting
+        if tupleStrings.0 != "" {
+            // format the headingLabel
+            headingLabel.text = tupleStrings.0
+            headingLabel.isHidden = false
+            
+        } else {
+            // hide the headingLAbel
+            headingLabel.isHidden = true
+        }
+        if tupleStrings.1 != "" {
+            // format the bodyTextLabel
+            bodyTextLabel.text = tupleStrings.1
+            bodyTextLabel.isHidden = false
+            
+        } else {
+            // hide the bodyTextLabel
+            bodyTextLabel.isHidden = true
+        }
     }
-
 }
