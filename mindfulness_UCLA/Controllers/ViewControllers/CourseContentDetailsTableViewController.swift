@@ -13,7 +13,7 @@ class CourseContentDetailsTableViewController: UITableViewController {
     // MARK: Properties
     
     // array that holds the valid checked string tuples used to present the overview details
-    var validOverviewOrderedContentStrings: [ [(String, String)] ]?
+    var validOverviewOrderedContentStrings: /* [ [(String, String)] ]? */ [ (String, String) ]?
     // arrays to hold string tuples that are checked for valid content
     var validVideoStrings: [(String, String)]?
     var validVideosListStrings: [(String, String)]?
@@ -28,6 +28,11 @@ class CourseContentDetailsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // configure the tableView for self sizing cells
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 80
+
 
     }
 
@@ -44,17 +49,19 @@ class CourseContentDetailsTableViewController: UITableViewController {
         
         // if valid overview content, then we loop through the array of arrays
         if let validOverviewOrderedContentStrings = validOverviewOrderedContentStrings {
-            // loop through the array of arrays
-            for tupleArray in validOverviewOrderedContentStrings {
-                // ensuring there is no empty array here
-                if !tupleArray.isEmpty {
-                    // increment totalRows with each individual tuple arrays count
-                    totalRows += tupleArray.count
-                } else {
-                    // handle the empty array error case
-                    print("ERROR: empty tuple array in validOverviewOrderedContentStrings array in CourseContentDetailsTableViewController.swift -> tableView(numberOfRowsInSection:) - line 54.")
-                }
-            }
+            
+            totalRows = validOverviewOrderedContentStrings.count
+//            // loop through the array of arrays
+//            for tupleArray in validOverviewOrderedContentStrings {
+//                // ensuring there is no empty array here
+//                if !tupleArray.isEmpty {
+//                    // increment totalRows with each individual tuple arrays count
+//                    totalRows += tupleArray.count
+//                } else {
+//                    // handle the empty array error case
+//                    print("ERROR: empty tuple array in validOverviewOrderedContentStrings array in CourseContentDetailsTableViewController.swift -> tableView(numberOfRowsInSection:) - line 54.")
+//                }
+//            }
         }
         // if valid videos content, then we loop through the array of arrays
         if let validVideosListStrings = validVideosListStrings {
@@ -86,7 +93,53 @@ class CourseContentDetailsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseContentDetailCell", for: indexPath) as? CourseContentDetailTableViewCell else {
+            
+            return UITableViewCell()
+        }
+        
+        // TODO: this will look similar to the ^^^ above ^^^ tableView(_ tableView: UITableView, numberOfRowsInSection:) implementation where we will run our error checks through the various arrays to then get the proper tuple to pass to the cell
+        
+        // NOTE: for the overview cells, we will be using the indexPath.row value on the array in the 2nd dimension, not the top level array
+        
+        // if valid overview content, then we loop through the array of arrays
+        if let validOverviewOrderedContentStrings = validOverviewOrderedContentStrings {
+            
+            cell.tupleStrings = validOverviewOrderedContentStrings[indexPath.row]
+            //            // loop through the array of arrays
+            //            for tupleArray in validOverviewOrderedContentStrings {
+            //                // ensuring there is no empty array here
+            //                if !tupleArray.isEmpty {
+            //                    // increment totalRows with each individual tuple arrays count
+            //                    totalRows += tupleArray.count
+            //                } else {
+            //                    // handle the empty array error case
+            //                    print("ERROR: empty tuple array in validOverviewOrderedContentStrings array in CourseContentDetailsTableViewController.swift -> tableView(numberOfRowsInSection:) - line 54.")
+            //                }
+            //            }
+        }
+        // if valid videos content, then we loop through the array of arrays
+//        if let validVideosListStrings = validVideosListStrings {
+//            // set totalRows to individual tuple arrays count
+//            cell.tupleStrings = validVideosListStrings[indexPath.row]
+//        }
+//        // if valid readings content, then we loop through the array of arrays
+//        if let validReadingsListStrings = validReadingsListStrings {
+//            // set totalRows to individual tuple arrays count
+//            cell.tupleStrings = validReadingsListStrings[indexPath.row]
+//        }
+//        // if valid praactice sheets content, then we loop through the array of arrays
+//        if let validPacticeSheetsStrings = validPacticeSheetsStrings {
+//            // set totalRows to individual tuple arrays count
+//            cell.tupleStrings = validPacticeSheetsStrings[indexPath.row]
+//        }
+//        // if valid supplemental materials content, then we loop through the array of arrays
+//        if let validSupplementalMaterialsStrings = validSupplementalMaterialsStrings {
+//            // set totalRows to individual tuple arrays count
+//            cell.tupleStrings = validSupplementalMaterialsStrings[indexPath.row]
+//        }
+        
+        return cell
     }
 
 }

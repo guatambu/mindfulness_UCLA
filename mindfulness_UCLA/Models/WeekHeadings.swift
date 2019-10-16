@@ -11,8 +11,10 @@ import Foundation
 enum WeekHeadings: String {
     
     case overview = "overview"
+    case introduction = "introduction"
     case videos = "videos"
     case readings = "readings"
+    case miscellaneousText = "miscellaneous"
     case dailyPractice = "daily practice"
     case practiceSheets = "practice sheets"
     case supplementalMaterials = "supplementary materials related to this week's topic"

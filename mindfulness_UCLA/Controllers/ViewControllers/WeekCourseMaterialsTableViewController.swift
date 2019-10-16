@@ -36,7 +36,7 @@ class WeekCourseMaterialsTableViewController: UITableViewController {
     var validGuidedMeditationStrings: [(String, String)] = []
     
     // array that holds the valid checked string tuples used to present the overview details
-    var validOverviewOrderedContentStrings: [ [(String, String)] ] = []
+    var validOverviewOrderedContentStrings: /* [ [(String, String)] ]*/ [ (String, String) ]  = []
     
 
     // MARK: ViewController Lifecycle Funcitons
@@ -106,6 +106,8 @@ class WeekCourseMaterialsTableViewController: UITableViewController {
 }
 
 
+// NOTE: - please consider whether it is simpler to just append the tuples to the validOverviewOrderedContentStrings array rather than the array of tuples, it may be that the array of arrays makes later indexPath values unnecessarily complex
+
 extension WeekCourseMaterialsTableViewController {
     // function to be called in viewDidLoad() to prepare the data for implementation
     func setupWeekData() {
@@ -142,12 +144,17 @@ extension WeekCourseMaterialsTableViewController {
         let practiceStrings: [(String, String)] = [practice1, practice2, practice3]
         let miscStrings: [(String, String)] = [misc1, misc2, misc3]
         
+        // reset tthe valid overvoew array
+        validOverviewOrderedContentStrings = []
+        
         // check for valid (i.e. contains more than an empty string) intro strings
         for string in introStrings {
             
             if string.1 != "" {
                 // append to the validIntroStrings array
                 validIntroStrings.append(string)
+                // appemd to the validOverviewOrderedContentStrings array as well
+                validOverviewOrderedContentStrings.append(string)
             }
         }
         // check for valid (i.e. contains more than an empty string) video strings
@@ -156,6 +163,8 @@ extension WeekCourseMaterialsTableViewController {
             if string.1 != "" {
                 // append to the validVideoStrings array
                 validVideoStrings.append(string)
+                // appemd to the validOverviewOrderedContentStrings array as well
+                validOverviewOrderedContentStrings.append(string)
             }
         }
         // check for valid (i.e. contains more than an empty string) reading strings
@@ -164,6 +173,8 @@ extension WeekCourseMaterialsTableViewController {
             if string.1 != "" {
                 // append to the validReadingsStrings array
                 validReadingStrings.append(string)
+                // appemd to the validOverviewOrderedContentStrings array as well
+                validOverviewOrderedContentStrings.append(string)
             }
         }
         // check for valid (i.e. contains more than an empty string) practice strings
@@ -172,6 +183,8 @@ extension WeekCourseMaterialsTableViewController {
             if string.1 != "" {
                 // append to the validPracticeStrings array
                 validPracticeStrings.append(string)
+                // appemd to the validOverviewOrderedContentStrings array as well
+                validOverviewOrderedContentStrings.append(string)
             }
         }
         // check for valid (i.e. contains more than an empty string) misc strings
@@ -180,46 +193,48 @@ extension WeekCourseMaterialsTableViewController {
             if string.1 != "" {
                 // append to the validMiscStrings array
                 validMiscStrings.append(string)
+                // appemd to the validOverviewOrderedContentStrings array as well
+                validOverviewOrderedContentStrings.append(string)
             }
         }
-        // append the checked introStrings array to the validOrderedContentStrings array
-        validOverviewOrderedContentStrings.append(introStrings)
-        // append the checked introStrings array to the validOrderedContentStrings array
-        validOverviewOrderedContentStrings.append(videoStrings)
-        // append the checked introStrings array to the validOrderedContentStrings array
-        validOverviewOrderedContentStrings.append(readingStrings)
-        // append the checked introStrings array to the validOrderedContentStrings array
-        validOverviewOrderedContentStrings.append(practiceStrings)
-        // append the checked introStrings array to the validOrderedContentStrings array
-        validOverviewOrderedContentStrings.append(miscStrings)
+//        // append the checked introStrings array to the validOrderedContentStrings array
+//        validOverviewOrderedContentStrings.append(introStrings)
+//        // append the checked introStrings array to the validOrderedContentStrings array
+//        validOverviewOrderedContentStrings.append(videoStrings)
+//        // append the checked introStrings array to the validOrderedContentStrings array
+//        validOverviewOrderedContentStrings.append(readingStrings)
+//        // append the checked introStrings array to the validOrderedContentStrings array
+//        validOverviewOrderedContentStrings.append(practiceStrings)
+//        // append the checked introStrings array to the validOrderedContentStrings array
+//        validOverviewOrderedContentStrings.append(miscStrings)
         
         // check for valid videosList strings
         if videosList.count != 0 {
             // set the validVideosListStrings array properties
             validVideosListStrings = videosList
-            // append the validVideosListStrings array to the validOrderedContentStrings array
-            validOverviewOrderedContentStrings.append(validVideosListStrings)
+//            // append the validVideosListStrings array to the validOrderedContentStrings array
+//            validOverviewOrderedContentStrings.append(validVideosListStrings)
         }
         // check for valid readingsList strings
         if readingsList.count != 0 {
             // set the validReadingsListStrings array properties
             validReadingsListStrings = readingsList
-            // append the validReadingsListStrings array to the validOrderedContentStrings array
-            validOverviewOrderedContentStrings.append(validReadingsListStrings)
+//            // append the validReadingsListStrings array to the validOrderedContentStrings array
+//            validOverviewOrderedContentStrings.append(validReadingsListStrings)
         }
         // check for valid practiceSheets strings
         if practiceSheets.count != 0 {
             // set the validPracticeStrings array properties
             validPracticeStrings = practiceSheets
-            // append the validPracticeStrings array to the validOrderedContentStrings array
-            validOverviewOrderedContentStrings.append(validPracticeStrings)
+//            // append the validPracticeStrings array to the validOrderedContentStrings array
+//            validOverviewOrderedContentStrings.append(validPracticeStrings)
         }
         // check for valid supplementalMaterials strings
         if supplementalMaterials.count != 0 {
             // set the validSupplementalMaterialsStrings array properties
             validSupplementalMaterialsStrings = supplementalMaterials
-            // append the validSupplementalMaterialsStrings array to the validOrderedContentStrings array
-            validOverviewOrderedContentStrings.append(validSupplementalMaterialsStrings)
+//            // append the validSupplementalMaterialsStrings array to the validOrderedContentStrings array
+//            validOverviewOrderedContentStrings.append(validSupplementalMaterialsStrings)
         }
     }
 }
