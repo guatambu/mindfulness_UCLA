@@ -31,7 +31,7 @@ class WeekCourseMaterialsTableViewController: UITableViewController {
     var validMiscStrings: [(String, String)] = []
     var validVideosListStrings: [(String, String)] = []
     var validReadingsListStrings: [(String, String)] = []
-    var validPacticeSheetsStrings: [(String, String)] = []
+    var validPracticeSheetsStrings: [(String, String)] = []
     var validSupplementalMaterialsStrings: [(String, String)] = []
     var validGuidedMeditationStrings: [(String, String)] = []
     
@@ -69,8 +69,10 @@ class WeekCourseMaterialsTableViewController: UITableViewController {
         // Configure the cell...
         if indexPath.row == 0 {
             
-            cell.textLabel?.text = "week \(indexPath.row + 1) \(weekHeadings[indexPath.row].rawValue)"
-            
+            if let week = week {
+                
+                cell.textLabel?.text = "week \(week + 1) \(weekHeadings[indexPath.row].rawValue)"
+            }
         } else {
             
             cell.textLabel?.text = weekHeadings[indexPath.row].rawValue
@@ -94,14 +96,37 @@ class WeekCourseMaterialsTableViewController: UITableViewController {
         backButtonItem.title = " "
         navigationItem.backBarButtonItem = backButtonItem
         // pass any properties to next ViewController
-        destViewController.validOverviewOrderedContentStrings = validOverviewOrderedContentStrings
-        destViewController.validVideoStrings = validVideoStrings
-        destViewController.validVideosListStrings = validVideosListStrings
-        destViewController.validReadingStrings = validReadingStrings
-        destViewController.validReadingsListStrings = validReadingsListStrings
-        destViewController.validPracticeStrings = validPracticeStrings
-        destViewController.validPacticeSheetsStrings = validPacticeSheetsStrings
-        destViewController.validSupplementalMaterialsStrings = validSupplementalMaterialsStrings
+        switch indexPath.row {
+            
+        case 0:
+            destViewController.validOverviewOrderedContentStrings = validOverviewOrderedContentStrings
+            destViewController.detailTitle = "week \((week ?? 0) + 1) \(weekHeadings[indexPath.row].rawValue)"
+            
+        case 1 :
+            destViewController.validVideoStrings = validVideoStrings
+            destViewController.validVideosListStrings = validVideosListStrings
+            destViewController.detailTitle = weekHeadings[indexPath.row].rawValue
+            
+        case 2:
+            destViewController.validReadingStrings = validReadingStrings
+            destViewController.validReadingsListStrings = validReadingsListStrings
+            destViewController.detailTitle = weekHeadings[indexPath.row].rawValue
+            
+        case 3:
+            destViewController.validPracticeStrings = validPracticeStrings
+            destViewController.detailTitle = weekHeadings[indexPath.row].rawValue
+            
+        case 4:
+            destViewController.validPracticeSheetsStrings = validPracticeSheetsStrings
+            destViewController.detailTitle = weekHeadings[indexPath.row].rawValue
+            
+        case 5:
+            destViewController.validSupplementalMaterialsStrings = validSupplementalMaterialsStrings
+            destViewController.detailTitle = weekHeadings[indexPath.row].rawValue
+            
+        default:
+            return
+        }
     }
 }
 
@@ -197,44 +222,41 @@ extension WeekCourseMaterialsTableViewController {
                 validOverviewOrderedContentStrings.append(string)
             }
         }
-//        // append the checked introStrings array to the validOrderedContentStrings array
-//        validOverviewOrderedContentStrings.append(introStrings)
-//        // append the checked introStrings array to the validOrderedContentStrings array
-//        validOverviewOrderedContentStrings.append(videoStrings)
-//        // append the checked introStrings array to the validOrderedContentStrings array
-//        validOverviewOrderedContentStrings.append(readingStrings)
-//        // append the checked introStrings array to the validOrderedContentStrings array
-//        validOverviewOrderedContentStrings.append(practiceStrings)
-//        // append the checked introStrings array to the validOrderedContentStrings array
-//        validOverviewOrderedContentStrings.append(miscStrings)
-        
         // check for valid videosList strings
         if videosList.count != 0 {
             // set the validVideosListStrings array properties
             validVideosListStrings = videosList
-//            // append the validVideosListStrings array to the validOrderedContentStrings array
-//            validOverviewOrderedContentStrings.append(validVideosListStrings)
+            // loop through the array and append them to validOverviewOrderedContentStrings
+            for tuple in videosList {
+                validOverviewOrderedContentStrings.append(tuple)
+            }
         }
         // check for valid readingsList strings
         if readingsList.count != 0 {
             // set the validReadingsListStrings array properties
             validReadingsListStrings = readingsList
-//            // append the validReadingsListStrings array to the validOrderedContentStrings array
-//            validOverviewOrderedContentStrings.append(validReadingsListStrings)
+            // loop through the array and append them to validOverviewOrderedContentStrings
+            for tuple in readingsList {
+                validOverviewOrderedContentStrings.append(tuple)
+            }
         }
         // check for valid practiceSheets strings
         if practiceSheets.count != 0 {
             // set the validPracticeStrings array properties
-            validPracticeStrings = practiceSheets
-//            // append the validPracticeStrings array to the validOrderedContentStrings array
-//            validOverviewOrderedContentStrings.append(validPracticeStrings)
+            validPracticeSheetsStrings = practiceSheets
+            // loop through the array and append them to validOverviewOrderedContentStrings
+            for tuple in practiceSheets {
+                validOverviewOrderedContentStrings.append(tuple)
+            }
         }
         // check for valid supplementalMaterials strings
         if supplementalMaterials.count != 0 {
             // set the validSupplementalMaterialsStrings array properties
             validSupplementalMaterialsStrings = supplementalMaterials
-//            // append the validSupplementalMaterialsStrings array to the validOrderedContentStrings array
-//            validOverviewOrderedContentStrings.append(validSupplementalMaterialsStrings)
+            // loop through the array and append them to validOverviewOrderedContentStrings
+            for tuple in supplementalMaterials {
+                validOverviewOrderedContentStrings.append(tuple)
+            }
         }
     }
 }
