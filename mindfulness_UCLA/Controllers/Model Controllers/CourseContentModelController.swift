@@ -200,4 +200,7 @@ class CourseContentModelController {
         guard let index = self.courses.firstIndex(of: course) else { return }
         self.courses.remove(at: index)
     }
+    
+    // MARK: - TextKit functions
+    
 }

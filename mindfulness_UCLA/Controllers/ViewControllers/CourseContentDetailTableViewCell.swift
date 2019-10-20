@@ -34,7 +34,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    // MARK: - Cell Formatting Funcitons
+    // MARK: - Cell Formatting Functions
     func updateViews() {
         // run error check for valid tupleStrings property
         guard let tupleStrings = tupleStrings else {
@@ -43,8 +43,9 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         }
         // success, so on to cell formatting
         if tupleStrings.0 != "" {
+
             // format the headingLabel
-            headingLabel.text = tupleStrings.0
+            headingLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.0)
             headingLabel.isHidden = false
             
         } else {
@@ -53,12 +54,45 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         }
         if tupleStrings.1 != "" {
             // format the bodyTextLabel
-            bodyTextLabel.text = tupleStrings.1
+            bodyTextLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.1)
             bodyTextLabel.isHidden = false
             
         } else {
             // hide the bodyTextLabel
             bodyTextLabel.isHidden = true
         }
+    }
+    
+    func applyStylesToRange(stringToFormat: String)  -> NSMutableAttributedString {
+        // 1
+        let fontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body)
+        let boldFontDescriptor = fontDescriptor.withSymbolicTraits(.traitBold)
+        let boldFont = UIFont(descriptor: boldFontDescriptor!, size: 0)
+        let normalFont = UIFont.preferredFont(forTextStyle: .body)
+        
+        // 2
+        let regexStr = "(\\*\\w+(\\s\\w+)*\\*)"
+        let regex = try! NSRegularExpression(pattern: regexStr)
+        let boldAttributes = [NSAttributedString.Key.font: boldFont]
+        let normalAttributes = [NSAttributedString.Key.font: normalFont]
+        
+        // 3
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: stringToFormat)
+        
+        let searchRange = NSMakeRange(0, stringToFormat.count)
+        
+        regex.enumerateMatches(in: stringToFormat, range: searchRange) {
+            match, flags, stop in
+            
+            if let matchRange = match?.range(at: 1) {
+                attributedString.addAttributes(boldAttributes, range: matchRange)
+                // 4
+                let maxRange = matchRange.location + matchRange.length
+                if maxRange + 1 < attributedString.length {
+                    attributedString.addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
+                }
+            }
+        }
+        return attributedString
     }
 }
