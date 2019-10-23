@@ -17,6 +17,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
     
     @IBOutlet weak var headingLabel: UILabel!
     @IBOutlet weak var bodyTextLabel: UILabel!
+    @IBOutlet weak var openWebViewButton: UIButton!
     
     
     // array that holds the valid checked string tuples used to present the overview details
@@ -35,6 +36,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         // Initialization code
     }
     
+    
     // MARK: - Cell Formatting Functions
     func updateViews() {
         // run error check for valid tupleStrings property
@@ -44,19 +46,42 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         }
         // success, so on to cell formatting
         if tupleStrings.0 != "" {
-
+                
             // format the headingLabel
             headingLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.0)
             headingLabel.isHidden = false
-            
+        
         } else {
             // hide the headingLAbel
             headingLabel.isHidden = true
         }
+        
         if tupleStrings.1 != "" {
-            // format the bodyTextLabel
-            bodyTextLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.1)
-            bodyTextLabel.isHidden = false
+            
+            if tupleStrings.1.contains("http") {
+                
+                // hide the headingLabel
+                headingLabel.isHidden = true
+                // hide the bodyTextLabel
+                bodyTextLabel.isHidden = true
+                // show the button
+                openWebViewButton.isHidden = false
+                openWebViewButton.isEnabled = true
+                // format the button for appearance
+                openWebViewButton.titleLabel?.attributedText = applyStylesToRange(stringToFormat: tupleStrings.1)
+                
+            } else {
+                
+                // show the bodyTextLabel
+                bodyTextLabel.isHidden = false
+                // format the bodyTextLabel
+                bodyTextLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.1)
+                bodyTextLabel.isHidden = false
+                // hide the button
+                openWebViewButton.isHidden = true
+                openWebViewButton.isEnabled = false
+                
+            }
             
         } else {
             // hide the bodyTextLabel
@@ -64,6 +89,31 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         }
     }
     
+    
+    // MARK: Actions
+    
+    // function to present modally a webView
+    @IBAction func openWebViewButtonTapped(_ sender: UIButton) {
+        
+        openWebView()
+    }
+}
+
+
+
+// TODO: now we use the provided links in the various tuples to open a webview in app and display the link's page content.  this in app webview will need to be presented modally, and will want to have a 'X' button to close it and a left and a right arrow to navigate forward and back for some simple/basic internet navigation.
+
+// TODO:  review GilSans as text type because it appears we get 
+
+
+
+extension CourseContentDetailTableViewCell {
+    
+    // MARK: Helper Functions
+    
+    // function to provide necessary text formatting/styling to text in a String type
+    // convert string type to an attributed NSMutableAttributedString type
+    // returns the NSMutableAttributedString
     func applyStylesToRange(stringToFormat: String)  -> NSMutableAttributedString {
         
         // create bold typeface font attribute
@@ -87,8 +137,8 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         let smallItalicAttributes = [NSAttributedString.Key.font: smallItalicFont]
         
         // now pursue the string formatting search
-       let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: stringToFormat)
-
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: stringToFormat)
+        
         let range = NSMakeRange(0, stringToFormat.utf16.count)
         
         var charactersRemovedFromString = 0
@@ -110,7 +160,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
             print("charactersRemovedFromString: \(charactersRemovedFromString)")
             
             if boldCounter == 0 {
-
+                
                 charactersRemovedFromString = 0
             }
             
@@ -244,11 +294,10 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         
         return attributedString
     }
+    
+    // function to create a webView and presnet it modally
+    func openWebView() {
+        
+        
+    }
 }
-
-
-
-// TODO: now we use the provided links in the various tuples to open a webview in app and display the link's page content.  this in app webview will need to be presented modally, and will want to have a 'X' button to close it and a left and a right arrow to navigate forward and back for some simple/basic internet navigation.
-
-// TODO:  review GilSans as text type because it appears we get 
-

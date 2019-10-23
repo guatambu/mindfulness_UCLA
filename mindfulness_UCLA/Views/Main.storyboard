@@ -583,6 +583,16 @@
                                                     <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF3-0f-Alf">
+                                                    <rect key="frame" x="0.0" y="58" width="272" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                                    <state key="normal" title="(text for link)">
+                                                        <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="openWebViewButtonTapped:" destination="OqS-Dg-ems" eventType="touchUpInside" id="CNb-w1-xAQ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="lny-30-B17" firstAttribute="top" secondItem="I4a-QD-MaD" secondAttribute="top" id="EJy-Dw-0l5"/>
@@ -605,6 +615,7 @@
                                 <connections>
                                     <outlet property="bodyTextLabel" destination="sIU-aO-mtV" id="ZcL-xe-TW0"/>
                                     <outlet property="headingLabel" destination="lny-30-B17" id="9Jc-rA-ScQ"/>
+                                    <outlet property="openWebViewButton" destination="bF3-0f-Alf" id="oEb-4U-Ppx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
