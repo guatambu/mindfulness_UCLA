@@ -7,23 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4B9D4823459620004D1B7C /* Timer_White_40px.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D4723459620004D1B7C /* Timer_White_40px.png */; };
+		FA4B9D4C23470BC5004D1B7C /* Video_Courses_Yoga_cropped.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D4B23470BC5004D1B7C /* Video_Courses_Yoga_cropped.jpeg */; };
+		FA4B9D4E23470DD3004D1B7C /* WeekHeadings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D4D23470DD3004D1B7C /* WeekHeadings.swift */; };
+		FA4B9D502349ADDC004D1B7C /* WeekCourseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */; };
+		FA4B9D522349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D512349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files */; };
+		FA4B9D602349BAE3004D1B7C /* Week1Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */; };
+		FA4B9D622349C59B004D1B7C /* Week2Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D612349C59B004D1B7C /* Week2Data.swift */; };
+		FA4B9D642349C5A8004D1B7C /* Week3Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D632349C5A8004D1B7C /* Week3Data.swift */; };
+		FA4B9D662349C5B4004D1B7C /* Week4Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D652349C5B4004D1B7C /* Week4Data.swift */; };
+		FA4B9D682349C5BF004D1B7C /* Week5Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D672349C5BF004D1B7C /* Week5Data.swift */; };
+		FA4B9D6A2349C5CB004D1B7C /* Week6Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D692349C5CB004D1B7C /* Week6Data.swift */; };
+		FA4B9D6C2349C5D8004D1B7C /* Week7Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D6B2349C5D8004D1B7C /* Week7Data.swift */; };
+		FA4B9D6E2349C5E5004D1B7C /* Week8Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */; };
+		FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */; };
+		FA61C2AE234EBC40007F0AD3 /* CourseContentModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */; };
+		FA61C2B02352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */; };
+		FA61C2B223530070007F0AD3 /* CourseContentDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */; };
 		FAC891502341EB070018338C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8914F2341EB070018338C /* AppDelegate.swift */; };
 		FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */; };
 		FAC8915A2341EB090018338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC891592341EB090018338C /* Assets.xcassets */; };
-		FAC8915D2341EB090018338C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC8915B2341EB090018338C /* LaunchScreen.storyboard */; };
 		FAC8916A2341EB5E0018338C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC891682341EB5D0018338C /* LaunchScreen.storyboard */; };
 		FAC8916B2341EB5E0018338C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC891692341EB5E0018338C /* Main.storyboard */; };
+		FAC891792341EF370018338C /* TImer_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916C2341EF340018338C /* TImer_Blue.png */; };
+		FAC8917A2341EF370018338C /* Getting_Started_Lotus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */; };
+		FAC8917C2341EF370018338C /* Course_Content_Mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */; };
+		FAC8917D2341EF370018338C /* Audio_Tracks_Meditation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC891702341EF350018338C /* Audio_Tracks_Meditation.jpg */; };
+		FAC8917E2341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891712341EF350018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png */; };
+		FAC8917F2341EF370018338C /* Timer_Large_Detail.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891722341EF350018338C /* Timer_Large_Detail.png */; };
+		FAC891802341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891732341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png */; };
+		FAC891812341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891742341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png */; };
+		FAC891832341EF370018338C /* Timer_Large_Detail_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */; };
+		FAC891852341EF370018338C /* Video_Courses_Yoga.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FAC891782341EF370018338C /* Video_Courses_Yoga.jpeg */; };
+		FAC8918723457E640018338C /* DashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918623457E640018338C /* DashboardTableViewController.swift */; };
+		FAC8918923457E8C0018338C /* GettingStartedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918823457E8C0018338C /* GettingStartedTableViewController.swift */; };
+		FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */; };
+		FAC8918D23457EC90018338C /* GuidedMeditationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918C23457EC90018338C /* GuidedMeditationsTableViewController.swift */; };
+		FAC8918F23457EE10018338C /* VideoCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */; };
+		FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */; };
+		FAC8919323457F3B0018338C /* MeditationTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */; };
+		FAC89195234580250018338C /* Timer_Large_Detail_Background_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */; };
+		FACDBA51235E555E00B538EC /* ReGexPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA50235E555E00B538EC /* ReGexPatterns.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA4B9D4723459620004D1B7C /* Timer_White_40px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_White_40px.png; sourceTree = "<group>"; };
+		FA4B9D4B23470BC5004D1B7C /* Video_Courses_Yoga_cropped.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Video_Courses_Yoga_cropped.jpeg; sourceTree = "<group>"; };
+		FA4B9D4D23470DD3004D1B7C /* WeekHeadings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeadings.swift; sourceTree = "<group>"; };
+		FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCourseContent.swift; sourceTree = "<group>"; };
+		FA4B9D512349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mindfulness_UCLA_practice_sheet_files; sourceTree = "<group>"; };
+		FA4B9D542349B989004D1B7C /* sittingmeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sittingmeditation.mp3; sourceTree = "<group>"; };
+		FA4B9D552349B989004D1B7C /* lovingkindness.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lovingkindness.mp3; sourceTree = "<group>"; };
+		FA4B9D562349B989004D1B7C /* RAIN.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = RAIN.mp3; sourceTree = "<group>"; };
+		FA4B9D572349B989004D1B7C /* silent30min_guided_meditation_audio_file.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silent30min_guided_meditation_audio_file.mp3; sourceTree = "<group>"; };
+		FA4B9D582349B989004D1B7C /* turning-toward-physical.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "turning-toward-physical.mp3"; sourceTree = "<group>"; };
+		FA4B9D592349B989004D1B7C /* lake.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lake.mp3; sourceTree = "<group>"; };
+		FA4B9D5A2349B989004D1B7C /* mountain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mountain.mp3; sourceTree = "<group>"; };
+		FA4B9D5B2349B989004D1B7C /* soften-soothe-allow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "soften-soothe-allow.mp3"; sourceTree = "<group>"; };
+		FA4B9D5C2349B989004D1B7C /* turning-toward-emotional (1).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "turning-toward-emotional (1).mp3"; sourceTree = "<group>"; };
+		FA4B9D5D2349B989004D1B7C /* bodyscan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bodyscan.mp3; sourceTree = "<group>"; };
+		FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week1Data.swift; sourceTree = "<group>"; };
+		FA4B9D612349C59B004D1B7C /* Week2Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week2Data.swift; sourceTree = "<group>"; };
+		FA4B9D632349C5A8004D1B7C /* Week3Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week3Data.swift; sourceTree = "<group>"; };
+		FA4B9D652349C5B4004D1B7C /* Week4Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4Data.swift; sourceTree = "<group>"; };
+		FA4B9D672349C5BF004D1B7C /* Week5Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week5Data.swift; sourceTree = "<group>"; };
+		FA4B9D692349C5CB004D1B7C /* Week6Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week6Data.swift; sourceTree = "<group>"; };
+		FA4B9D6B2349C5D8004D1B7C /* Week7Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week7Data.swift; sourceTree = "<group>"; };
+		FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week8Data.swift; sourceTree = "<group>"; };
+		FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week9Data.swift; sourceTree = "<group>"; };
+		FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentModelController.swift; sourceTree = "<group>"; };
+		FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailsTableViewController.swift; sourceTree = "<group>"; };
+		FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FAC8914C2341EB070018338C /* mindfulness_UCLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindfulness_UCLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC8914F2341EB070018338C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC891572341EB070018338C /* mindfulness_UCLA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mindfulness_UCLA.xcdatamodel; sourceTree = "<group>"; };
 		FAC891592341EB090018338C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FAC8915C2341EB090018338C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC8915E2341EB090018338C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC891682341EB5D0018338C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC891692341EB5E0018338C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FAC8916C2341EF340018338C /* TImer_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TImer_Blue.png; sourceTree = "<group>"; };
+		FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Getting_Started_Lotus.jpg; sourceTree = "<group>"; };
+		FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Course_Content_Mountain.jpg; sourceTree = "<group>"; };
+		FAC891702341EF350018338C /* Audio_Tracks_Meditation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Audio_Tracks_Meditation.jpg; sourceTree = "<group>"; };
+		FAC891712341EF350018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png; sourceTree = "<group>"; };
+		FAC891722341EF350018338C /* Timer_Large_Detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail.png; sourceTree = "<group>"; };
+		FAC891732341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UCLA_Meditation_Course_Lotus_Flower_Original_Image.png; sourceTree = "<group>"; };
+		FAC891742341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png; sourceTree = "<group>"; };
+		FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail_Blue.png; sourceTree = "<group>"; };
+		FAC891782341EF370018338C /* Video_Courses_Yoga.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Video_Courses_Yoga.jpeg; sourceTree = "<group>"; };
+		FAC8918623457E640018338C /* DashboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewController.swift; sourceTree = "<group>"; };
+		FAC8918823457E8C0018338C /* GettingStartedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedTableViewController.swift; sourceTree = "<group>"; };
+		FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentTableViewController.swift; sourceTree = "<group>"; };
+		FAC8918C23457EC90018338C /* GuidedMeditationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationsTableViewController.swift; sourceTree = "<group>"; };
+		FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCoursesTableViewController.swift; sourceTree = "<group>"; };
+		FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCourseMaterialsTableViewController.swift; sourceTree = "<group>"; };
+		FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerViewController.swift; sourceTree = "<group>"; };
+		FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail_Background_Color.png; sourceTree = "<group>"; };
+		FACDBA50235E555E00B538EC /* ReGexPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGexPatterns.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +117,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA4B9D532349B989004D1B7C /* mindfulness_UCLA_app_guided_meditations_audio_files */ = {
+			isa = PBXGroup;
+			children = (
+				FA4B9D542349B989004D1B7C /* sittingmeditation.mp3 */,
+				FA4B9D552349B989004D1B7C /* lovingkindness.mp3 */,
+				FA4B9D562349B989004D1B7C /* RAIN.mp3 */,
+				FA4B9D572349B989004D1B7C /* silent30min_guided_meditation_audio_file.mp3 */,
+				FA4B9D582349B989004D1B7C /* turning-toward-physical.mp3 */,
+				FA4B9D592349B989004D1B7C /* lake.mp3 */,
+				FA4B9D5A2349B989004D1B7C /* mountain.mp3 */,
+				FA4B9D5B2349B989004D1B7C /* soften-soothe-allow.mp3 */,
+				FA4B9D5C2349B989004D1B7C /* turning-toward-emotional (1).mp3 */,
+				FA4B9D5D2349B989004D1B7C /* bodyscan.mp3 */,
+			);
+			path = mindfulness_UCLA_app_guided_meditations_audio_files;
+			sourceTree = "<group>";
+		};
+		FA4B9D5E2349B9B9004D1B7C /* mindfulness_UCLA_graphics_assets */ = {
+			isa = PBXGroup;
+			children = (
+				FAC891702341EF350018338C /* Audio_Tracks_Meditation.jpg */,
+				FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */,
+				FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */,
+				FAC8916C2341EF340018338C /* TImer_Blue.png */,
+				FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */,
+				FAC891722341EF350018338C /* Timer_Large_Detail.png */,
+				FA4B9D4723459620004D1B7C /* Timer_White_40px.png */,
+				FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */,
+				FAC891742341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png */,
+				FAC891712341EF350018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png */,
+				FAC891732341EF360018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png */,
+				FA4B9D4B23470BC5004D1B7C /* Video_Courses_Yoga_cropped.jpeg */,
+				FAC891782341EF370018338C /* Video_Courses_Yoga.jpeg */,
+			);
+			path = mindfulness_UCLA_graphics_assets;
+			sourceTree = "<group>";
+		};
+		FA61C2AB234EBBE4007F0AD3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8918623457E640018338C /* DashboardTableViewController.swift */,
+				FAC8918823457E8C0018338C /* GettingStartedTableViewController.swift */,
+				FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */,
+				FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */,
+				FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */,
+				FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */,
+				FAC8918C23457EC90018338C /* GuidedMeditationsTableViewController.swift */,
+				FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */,
+				FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA61C2AC234EBC07007F0AD3 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
 		FAC891432341EB070018338C = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +197,9 @@
 		FAC8914E2341EB070018338C /* mindfulness_UCLA */ = {
 			isa = PBXGroup;
 			children = (
+				FAC891652341EB390018338C /* Models */,
 				FAC891672341EB490018338C /* Views */,
 				FAC891662341EB420018338C /* Controllers */,
-				FAC891652341EB390018338C /* Models */,
 				FAC891642341EB2D0018338C /* App Resources */,
 				FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */,
 			);
@@ -70,7 +211,9 @@
 			children = (
 				FAC8914F2341EB070018338C /* AppDelegate.swift */,
 				FAC891592341EB090018338C /* Assets.xcassets */,
-				FAC8915B2341EB090018338C /* LaunchScreen.storyboard */,
+				FA4B9D532349B989004D1B7C /* mindfulness_UCLA_app_guided_meditations_audio_files */,
+				FA4B9D512349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files */,
+				FA4B9D5E2349B9B9004D1B7C /* mindfulness_UCLA_graphics_assets */,
 				FAC8915E2341EB090018338C /* Info.plist */,
 			);
 			path = "App Resources";
@@ -79,6 +222,18 @@
 		FAC891652341EB390018338C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA4B9D4D23470DD3004D1B7C /* WeekHeadings.swift */,
+				FACDBA50235E555E00B538EC /* ReGexPatterns.swift */,
+				FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */,
+				FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */,
+				FA4B9D612349C59B004D1B7C /* Week2Data.swift */,
+				FA4B9D632349C5A8004D1B7C /* Week3Data.swift */,
+				FA4B9D652349C5B4004D1B7C /* Week4Data.swift */,
+				FA4B9D672349C5BF004D1B7C /* Week5Data.swift */,
+				FA4B9D692349C5CB004D1B7C /* Week6Data.swift */,
+				FA4B9D6B2349C5D8004D1B7C /* Week7Data.swift */,
+				FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */,
+				FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -86,6 +241,8 @@
 		FAC891662341EB420018338C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA61C2AC234EBC07007F0AD3 /* Model Controllers */,
+				FA61C2AB234EBBE4007F0AD3 /* ViewControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -157,10 +314,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4B9D522349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files in Resources */,
 				FAC8916A2341EB5E0018338C /* LaunchScreen.storyboard in Resources */,
-				FAC8915D2341EB090018338C /* LaunchScreen.storyboard in Resources */,
+				FAC891852341EF370018338C /* Video_Courses_Yoga.jpeg in Resources */,
+				FAC891812341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png in Resources */,
+				FA4B9D4823459620004D1B7C /* Timer_White_40px.png in Resources */,
+				FAC891792341EF370018338C /* TImer_Blue.png in Resources */,
+				FAC8917A2341EF370018338C /* Getting_Started_Lotus.jpg in Resources */,
+				FAC8917E2341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png in Resources */,
+				FAC89195234580250018338C /* Timer_Large_Detail_Background_Color.png in Resources */,
+				FA4B9D4C23470BC5004D1B7C /* Video_Courses_Yoga_cropped.jpeg in Resources */,
+				FAC891802341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png in Resources */,
 				FAC8915A2341EB090018338C /* Assets.xcassets in Resources */,
+				FAC8917F2341EF370018338C /* Timer_Large_Detail.png in Resources */,
 				FAC8916B2341EB5E0018338C /* Main.storyboard in Resources */,
+				FAC891832341EF370018338C /* Timer_Large_Detail_Blue.png in Resources */,
+				FAC8917D2341EF370018338C /* Audio_Tracks_Meditation.jpg in Resources */,
+				FAC8917C2341EF370018338C /* Course_Content_Mountain.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,23 +341,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4B9D662349C5B4004D1B7C /* Week4Data.swift in Sources */,
+				FA4B9D622349C59B004D1B7C /* Week2Data.swift in Sources */,
+				FAC8918F23457EE10018338C /* VideoCoursesTableViewController.swift in Sources */,
 				FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */,
+				FA61C2AE234EBC40007F0AD3 /* CourseContentModelController.swift in Sources */,
+				FAC8918D23457EC90018338C /* GuidedMeditationsTableViewController.swift in Sources */,
+				FA4B9D6C2349C5D8004D1B7C /* Week7Data.swift in Sources */,
+				FA61C2B223530070007F0AD3 /* CourseContentDetailTableViewCell.swift in Sources */,
+				FA4B9D682349C5BF004D1B7C /* Week5Data.swift in Sources */,
+				FA4B9D602349BAE3004D1B7C /* Week1Data.swift in Sources */,
+				FA4B9D642349C5A8004D1B7C /* Week3Data.swift in Sources */,
+				FAC8918723457E640018338C /* DashboardTableViewController.swift in Sources */,
+				FA4B9D4E23470DD3004D1B7C /* WeekHeadings.swift in Sources */,
+				FA4B9D6E2349C5E5004D1B7C /* Week8Data.swift in Sources */,
+				FA4B9D502349ADDC004D1B7C /* WeekCourseContent.swift in Sources */,
+				FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */,
+				FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */,
+				FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */,
+				FACDBA51235E555E00B538EC /* ReGexPatterns.swift in Sources */,
+				FA61C2B02352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift in Sources */,
+				FAC8918923457E8C0018338C /* GettingStartedTableViewController.swift in Sources */,
 				FAC891502341EB070018338C /* AppDelegate.swift in Sources */,
+				FA4B9D6A2349C5CB004D1B7C /* Week6Data.swift in Sources */,
+				FAC8919323457F3B0018338C /* MeditationTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FAC8915B2341EB090018338C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAC8915C2341EB090018338C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FAC8915F2341EB090018338C /* Debug */ = {
@@ -312,7 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N9FXT6FZ5X;
-				INFOPLIST_FILE = mindfulness_UCLA/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/mindfulness_UCLA/App Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N9FXT6FZ5X;
-				INFOPLIST_FILE = mindfulness_UCLA/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/mindfulness_UCLA/App Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
