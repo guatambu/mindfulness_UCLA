@@ -47,6 +47,7 @@
 		FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */; };
 		FAC8919323457F3B0018338C /* MeditationTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */; };
 		FAC89195234580250018338C /* Timer_Large_Detail_Background_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */; };
+		FACDBA51235E555E00B538EC /* ReGexPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA50235E555E00B538EC /* ReGexPatterns.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCourseMaterialsTableViewController.swift; sourceTree = "<group>"; };
 		FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerViewController.swift; sourceTree = "<group>"; };
 		FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail_Background_Color.png; sourceTree = "<group>"; };
+		FACDBA50235E555E00B538EC /* ReGexPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGexPatterns.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4B9D4D23470DD3004D1B7C /* WeekHeadings.swift */,
+				FACDBA50235E555E00B538EC /* ReGexPatterns.swift */,
 				FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */,
 				FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */,
 				FA4B9D612349C59B004D1B7C /* Week2Data.swift */,
@@ -356,6 +359,7 @@
 				FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */,
 				FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */,
 				FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */,
+				FACDBA51235E555E00B538EC /* ReGexPatterns.swift in Sources */,
 				FA61C2B02352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift in Sources */,
 				FAC8918923457E8C0018338C /* GettingStartedTableViewController.swift in Sources */,
 				FAC891502341EB070018338C /* AppDelegate.swift in Sources */,
