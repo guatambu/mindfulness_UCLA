@@ -66,30 +66,24 @@ class CourseContentDetailTableViewCell: UITableViewCell {
     
     func applyStylesToRange(stringToFormat: String)  -> NSMutableAttributedString {
         
-//        // create normal body font attribute
-//        let fontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body)
-        let fontDescriptor = UIFontDescriptor.init(name: "GillSans", size: 16)
-        let normalFont = UIFont(descriptor: fontDescriptor, size: 16)
-        let normalAttributes = [NSAttributedString.Key.font: normalFont]
-        
         // create bold typeface font attribute
-        let boldFontDescriptor = fontDescriptor.withSymbolicTraits(.traitBold)
-        let boldFont = UIFont(descriptor: boldFontDescriptor!, size: 16)
+        let boldFontDescriptor = UIFontDescriptor.init(name: "GillSans", size: 20)
+        let boldFont = UIFont(descriptor: boldFontDescriptor, size: 20)
         let boldAttributes = [NSAttributedString.Key.font: boldFont]
         
         // create italic typeface font attribute
-        let italicFontDescriptor = fontDescriptor.withSymbolicTraits(UIFontDescriptor.SymbolicTraits.traitItalic)
-        let italicFont = UIFont(descriptor: italicFontDescriptor!, size: 16)
+        let italicFontDescriptor = UIFontDescriptor.init(name: "GillSans-LightItalic", size: 20)
+        let italicFont = UIFont(descriptor: italicFontDescriptor, size: 20)
         let italicAttributes = [NSAttributedString.Key.font: italicFont]
         
         // create bold italics typeface font attributes
-        let boldItalicFontDescriptor = fontDescriptor.withSymbolicTraits(UIFontDescriptor.SymbolicTraits(arrayLiteral: .traitBold, .traitItalic))
-        let boldItalicFont = UIFont(descriptor: boldItalicFontDescriptor!, size: 16)
+        let boldItalicFontDescriptor = UIFontDescriptor.init(name: "GillSans-Italic", size: 20)
+        let boldItalicFont = UIFont(descriptor: boldItalicFontDescriptor, size: 20)
         let boldItalicAttributes = [NSAttributedString.Key.font: boldItalicFont]
         
         // create small italics typeface font attributes
-        let smallItalicFontDescriptor = fontDescriptor.withSymbolicTraits(UIFontDescriptor.SymbolicTraits(arrayLiteral: .traitItalic))
-        let smallItalicFont = UIFont(descriptor: smallItalicFontDescriptor!, size: 12)
+        let smallItalicFontDescriptor = UIFontDescriptor.init(name: "GillSans-LightItalic", size: 16)
+        let smallItalicFont = UIFont(descriptor: smallItalicFontDescriptor, size: 16)
         let smallItalicAttributes = [NSAttributedString.Key.font: smallItalicFont]
         
         // now pursue the string formatting search
@@ -115,14 +109,14 @@ class CourseContentDetailTableViewCell: UITableViewCell {
             print("i: \(boldCounter)")
             print("charactersRemovedFromString: \(charactersRemovedFromString)")
             
-//            if i == 0 {
-//
-//                charactersRemovedFromString = 0
-//            }
+            if boldCounter == 0 {
+
+                charactersRemovedFromString = 0
+            }
             
             let newRange = NSMakeRange(match.range.location - charactersRemovedFromString, match.range.length)
             
-            attributedString.addAttributes(normalAttributes, range:newRange)
+            attributedString.addAttributes(boldAttributes, range:newRange)
             
             let rangeOfFirstCharacter = NSMakeRange(match.range.location - charactersRemovedFromString, 1)
             
@@ -254,39 +248,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
 
 
 
-//        for (pattern, attributes) in replacements {
-//
-//            let regex = try! NSRegularExpression(pattern: pattern)
-//
-//            regex.enumerateMatches(in: stringToFormat, range: searchRange) {
-//                match, flags, stop in
-//
-//                if let matchRange = match?.range(at: 1) {
-//
-//                    print("Matched pattern: \(pattern)")
-//
-//                    let newRange = NSMakeRange(matchRange.location - numberOfCharactersRemovedFromStringToFormat, matchRange.length)
-//
-//                    attributedString.addAttributes(attributes, range: newRange)
-//
-////                    let maxRange = matchRange.location + matchRange.length
-////
-////                    if maxRange + 1 < attributedString.length {
-////                        attributedString.addAttributes(normalAttributes, range: NSMakeRange(maxRange, 1))
-////                    }
-//
-//                    let rangeOfFirstCharacterToRemove = NSRange(location: matchRange.location - numberOfCharactersRemovedFromStringToFormat, length: 1)
-//
-//                    attributedString.replaceCharacters(in: rangeOfFirstCharacterToRemove, with: "")
-//
-//
-//                    numberOfCharactersRemovedFromStringToFormat += 2
-//
-//                    let rangeOfLastCharacterToRemove = NSRange(location: matchRange.location + matchRange.length - numberOfCharactersRemovedFromStringToFormat, length: 1)
-//
-//                    attributedString.replaceCharacters(in: rangeOfLastCharacterToRemove, with: "")
-//                }
-//            }
-//        }
+// TODO: now we use the provided links in the various tuples to open a webview in app and display the link's page content.  this in app webview will need to be presented modally, and will want to have a 'X' button to close it and a left and a right arrow to navigate forward and back for some simple/basic internet navigation.
 
+// TODO:  review GilSans as text type because it appears we get 
 
