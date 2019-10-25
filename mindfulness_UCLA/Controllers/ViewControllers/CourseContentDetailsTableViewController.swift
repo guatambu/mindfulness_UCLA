@@ -33,6 +33,10 @@ class CourseContentDetailsTableViewController: UITableViewController,
 
     // MARK: - ViewController Lifecycle Functions
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
