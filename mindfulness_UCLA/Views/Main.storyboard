@@ -571,37 +571,48 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-QD-MaD">
                                             <rect key="frame" x="24" y="11" width="272" height="58"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(headingLabel)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lny-30-B17">
-                                                    <rect key="frame" x="0.0" y="0.0" width="272" height="23"/>
-                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
-                                                    <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-av-sck">
+                                                    <rect key="frame" x="0.0" y="0.0" width="272" height="35"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(headingLabel)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lny-30-B17">
+                                                            <rect key="frame" x="0.0" y="0.0" width="272" height="35"/>
+                                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                                            <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF3-0f-Alf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="272" height="35"/>
+                                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="9"/>
+                                                            <state key="normal" title="no text button over enitre headingLabel">
+                                                                <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="openWebViewButtonTapped:" destination="OqS-Dg-ems" eventType="touchUpInside" id="CNb-w1-xAQ"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="bF3-0f-Alf" secondAttribute="trailing" id="3pk-gI-VfB"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lny-30-B17" secondAttribute="bottom" id="azH-rH-3xs"/>
+                                                        <constraint firstItem="bF3-0f-Alf" firstAttribute="top" secondItem="2D3-av-sck" secondAttribute="top" id="edw-Ei-4Di"/>
+                                                        <constraint firstItem="lny-30-B17" firstAttribute="leading" secondItem="2D3-av-sck" secondAttribute="leading" id="ftf-Ff-ukK"/>
+                                                        <constraint firstItem="bF3-0f-Alf" firstAttribute="leading" secondItem="2D3-av-sck" secondAttribute="leading" id="kDe-RC-rm4"/>
+                                                        <constraint firstItem="lny-30-B17" firstAttribute="top" secondItem="2D3-av-sck" secondAttribute="top" id="mSE-cQ-4WM"/>
+                                                        <constraint firstAttribute="bottom" secondItem="bF3-0f-Alf" secondAttribute="bottom" id="wLh-jC-y3s"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lny-30-B17" secondAttribute="trailing" id="zl5-i3-d6Z"/>
+                                                    </constraints>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="(bodyTextLabel)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIU-aO-mtV">
-                                                    <rect key="frame" x="0.0" y="23" width="272" height="35"/>
+                                                    <rect key="frame" x="0.0" y="35" width="272" height="23"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="20"/>
                                                     <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF3-0f-Alf">
-                                                    <rect key="frame" x="0.0" y="58" width="272" height="0.0"/>
-                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
-                                                    <state key="normal" title="(text for link)">
-                                                        <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="openWebViewButtonTapped:" destination="OqS-Dg-ems" eventType="touchUpInside" id="CNb-w1-xAQ"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="lny-30-B17" firstAttribute="top" secondItem="I4a-QD-MaD" secondAttribute="top" id="EJy-Dw-0l5"/>
-                                                <constraint firstAttribute="trailing" secondItem="lny-30-B17" secondAttribute="trailing" id="Gtx-3O-kwy"/>
-                                                <constraint firstAttribute="bottom" secondItem="sIU-aO-mtV" secondAttribute="bottom" id="Xm1-Ms-i8M"/>
-                                                <constraint firstItem="lny-30-B17" firstAttribute="leading" secondItem="I4a-QD-MaD" secondAttribute="leading" id="ZNv-ma-o3D"/>
-                                                <constraint firstAttribute="trailing" secondItem="sIU-aO-mtV" secondAttribute="trailing" id="heJ-d4-5Lu"/>
-                                                <constraint firstItem="sIU-aO-mtV" firstAttribute="top" secondItem="lny-30-B17" secondAttribute="bottom" id="nKt-Qb-Q3r"/>
-                                                <constraint firstItem="sIU-aO-mtV" firstAttribute="leading" secondItem="I4a-QD-MaD" secondAttribute="leading" id="ypi-us-REu"/>
+                                                <constraint firstItem="2D3-av-sck" firstAttribute="leading" secondItem="I4a-QD-MaD" secondAttribute="leading" id="TtI-uq-RPU"/>
+                                                <constraint firstAttribute="trailing" secondItem="2D3-av-sck" secondAttribute="trailing" id="yeQ-ts-Z1k"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>

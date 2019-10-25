@@ -19,6 +19,9 @@ class CourseContentDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var bodyTextLabel: UILabel!
     @IBOutlet weak var openWebViewButton: UIButton!
     
+    var isLinkActive = true
+    
+    var delegate: CourseContentDetailsTableViewCellDelegate?
     
     // array that holds the valid checked string tuples used to present the overview details
     var tupleStrings: (String, String)? {
@@ -41,9 +44,12 @@ class CourseContentDetailTableViewCell: UITableViewCell {
     func updateViews() {
         // run error check for valid tupleStrings property
         guard let tupleStrings = tupleStrings else {
-            print("ERROR: nil vlaue found for tupleStrings property in CourseContentDetailTableViewCell.swift -> updateViews - line 41.")
+            print("ERROR: nil vlaue found for tupleStrings or isLinkActive property in CourseContentDetailTableViewCell.swift -> updateViews - line 46.")
             return
         }
+
+        print("isLinkActive: \(isLinkActive)")
+        
         // success, so on to cell formatting
         if tupleStrings.0 != "" {
                 
@@ -58,17 +64,31 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         
         if tupleStrings.1 != "" {
             
-            if tupleStrings.1.contains("http") {
+            if tupleStrings.1.contains("http") && isLinkActive {
                 
+                // format the headingLabel
+                headingLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.0)
                 // hide the headingLabel
-                headingLabel.isHidden = true
+                headingLabel.isHidden = false
                 // hide the bodyTextLabel
                 bodyTextLabel.isHidden = true
                 // show the button
                 openWebViewButton.isHidden = false
                 openWebViewButton.isEnabled = true
+                openWebViewButton.setTitle("", for: UIControl.State.normal)
                 // format the button for appearance
-                openWebViewButton.titleLabel?.attributedText = applyStylesToRange(stringToFormat: tupleStrings.1)
+                
+            } else if tupleStrings.1.contains("http") && !isLinkActive {
+                
+                // format the headingLabel
+                headingLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.0)
+                // hide the headingLabel
+                headingLabel.isHidden = false
+                // hide the bodyTextLabel
+                bodyTextLabel.isHidden = true
+                // hide the button
+                openWebViewButton.isHidden = true
+                openWebViewButton.isEnabled = false
                 
             } else {
                 
@@ -76,7 +96,6 @@ class CourseContentDetailTableViewCell: UITableViewCell {
                 bodyTextLabel.isHidden = false
                 // format the bodyTextLabel
                 bodyTextLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.1)
-                bodyTextLabel.isHidden = false
                 // hide the button
                 openWebViewButton.isHidden = true
                 openWebViewButton.isEnabled = false
@@ -95,7 +114,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
     // function to present modally a webView
     @IBAction func openWebViewButtonTapped(_ sender: UIButton) {
         
-        openWebView()
+        delegate?.openWebViewButtonTapped(cell: self)
     }
 }
 
@@ -293,11 +312,5 @@ extension CourseContentDetailTableViewCell {
         print("attributedString: \(attributedString)")
         
         return attributedString
-    }
-    
-    // function to create a webView and presnet it modally
-    func openWebView() {
-        
-        
     }
 }
