@@ -49,6 +49,7 @@
 		FAC89195234580250018338C /* Timer_Large_Detail_Background_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */; };
 		FACDBA51235E555E00B538EC /* ReGexPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA50235E555E00B538EC /* ReGexPatterns.swift */; };
 		FACDBA5323622D2B00B538EC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA5223622D2B00B538EC /* Protocols.swift */; };
+		FACDBA5723638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA5623638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail_Background_Color.png; sourceTree = "<group>"; };
 		FACDBA50235E555E00B538EC /* ReGexPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGexPatterns.swift; sourceTree = "<group>"; };
 		FACDBA5223622D2B00B538EC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		FACDBA5623638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioGuidedMeditationMetaDataStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 		FAC891652341EB390018338C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FACDBA5623638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift */,
 				FA4B9D4D23470DD3004D1B7C /* WeekHeadings.swift */,
 				FACDBA50235E555E00B538EC /* ReGexPatterns.swift */,
 				FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */,
@@ -351,6 +354,7 @@
 				FA61C2AE234EBC40007F0AD3 /* CourseContentModelController.swift in Sources */,
 				FACDBA5323622D2B00B538EC /* Protocols.swift in Sources */,
 				FAC8918D23457EC90018338C /* GuidedMeditationsTableViewController.swift in Sources */,
+				FACDBA5723638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift in Sources */,
 				FA4B9D6C2349C5D8004D1B7C /* Week7Data.swift in Sources */,
 				FA61C2B223530070007F0AD3 /* CourseContentDetailTableViewCell.swift in Sources */,
 				FA4B9D682349C5BF004D1B7C /* Week5Data.swift in Sources */,

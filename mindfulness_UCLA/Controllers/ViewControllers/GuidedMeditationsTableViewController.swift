@@ -7,29 +7,42 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GuidedMeditationsTableViewController: UITableViewController {
+    
+    // MARK: - Properties
+    
+    
+    
+    let audioMeditationTuples =
+        [
+            (AudioGuidedMeditationMEtaDataStrings.sittingMeditation, AudioGuidedMeditationsLocalFilePaths.sittingMeditation),
+            (AudioGuidedMeditationMEtaDataStrings.lovingKindnessMeditaiton, AudioGuidedMeditationsLocalFilePaths.lovingKindnessMeditaiton),
+            (AudioGuidedMeditationMEtaDataStrings.RAINMeditation, AudioGuidedMeditationsLocalFilePaths.RAINMeditation),
+            (AudioGuidedMeditationMEtaDataStrings.silent30minGuidedMeditation, AudioGuidedMeditationsLocalFilePaths.silent30minGuidedMeditation),
+            (AudioGuidedMeditationMEtaDataStrings.turningTowardPhysicalPainMeditaiton, AudioGuidedMeditationsLocalFilePaths.turningTowardPhysicalPainMeditaiton),
+            (AudioGuidedMeditationMEtaDataStrings.lakeMeditation, AudioGuidedMeditationsLocalFilePaths.lakeMeditation),
+            (AudioGuidedMeditationMEtaDataStrings.mountainMeditation, AudioGuidedMeditationsLocalFilePaths.mountainMeditation),
+            (AudioGuidedMeditationMEtaDataStrings.softenSootheAllowMeditation, AudioGuidedMeditationsLocalFilePaths.softenSootheAllowMeditation),
+            (AudioGuidedMeditationMEtaDataStrings.turningTowardEmotionalPainMeditaiton, AudioGuidedMeditationsLocalFilePaths.turningTowardEmotionalPainMeditaiton),
+            (AudioGuidedMeditationMEtaDataStrings.bodyScanMeditation, AudioGuidedMeditationsLocalFilePaths.bodyScanMeditation),
+        ]
+    
+    
+    // MARK: - ViewController Lifecycle Functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        title = "guided meditations"
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return audioMeditationTuples.count
     }
 
   
