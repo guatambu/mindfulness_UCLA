@@ -13,21 +13,7 @@ class GuidedMeditationsTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    
-    
-    let audioMeditationTuples =
-        [
-            (AudioGuidedMeditationMEtaDataStrings.sittingMeditation, AudioGuidedMeditationsLocalFilePaths.sittingMeditation),
-            (AudioGuidedMeditationMEtaDataStrings.lovingKindnessMeditaiton, AudioGuidedMeditationsLocalFilePaths.lovingKindnessMeditaiton),
-            (AudioGuidedMeditationMEtaDataStrings.RAINMeditation, AudioGuidedMeditationsLocalFilePaths.RAINMeditation),
-            (AudioGuidedMeditationMEtaDataStrings.silent30minGuidedMeditation, AudioGuidedMeditationsLocalFilePaths.silent30minGuidedMeditation),
-            (AudioGuidedMeditationMEtaDataStrings.turningTowardPhysicalPainMeditaiton, AudioGuidedMeditationsLocalFilePaths.turningTowardPhysicalPainMeditaiton),
-            (AudioGuidedMeditationMEtaDataStrings.lakeMeditation, AudioGuidedMeditationsLocalFilePaths.lakeMeditation),
-            (AudioGuidedMeditationMEtaDataStrings.mountainMeditation, AudioGuidedMeditationsLocalFilePaths.mountainMeditation),
-            (AudioGuidedMeditationMEtaDataStrings.softenSootheAllowMeditation, AudioGuidedMeditationsLocalFilePaths.softenSootheAllowMeditation),
-            (AudioGuidedMeditationMEtaDataStrings.turningTowardEmotionalPainMeditaiton, AudioGuidedMeditationsLocalFilePaths.turningTowardEmotionalPainMeditaiton),
-            (AudioGuidedMeditationMEtaDataStrings.bodyScanMeditation, AudioGuidedMeditationsLocalFilePaths.bodyScanMeditation),
-        ]
+    let audioMeditations: [GuidedMeditation] = [BodyScan.metaData, Sitting.metaData, DifficultEmotions.metaData, PhysicalPain.metaData, Mountain.metaData, Lake.metaData, Lovingkindness.metaData, SootheSoftenAllow.metaData, RAIN.metaData, Silent.metaData]
     
     
     // MARK: - ViewController Lifecycle Functions
@@ -42,7 +28,7 @@ class GuidedMeditationsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return audioMeditationTuples.count
+        return audioMeditations.count
     }
 
   
