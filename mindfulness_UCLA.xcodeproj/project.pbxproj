@@ -61,6 +61,7 @@
 		FACDBA6B23639A5A00B538EC /* SootheSoftenAllow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6A23639A5A00B538EC /* SootheSoftenAllow.swift */; };
 		FACDBA6D23639A6A00B538EC /* RAIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6C23639A6A00B538EC /* RAIN.swift */; };
 		FACDBA6F23639A7A00B538EC /* Silent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6E23639A7A00B538EC /* Silent.swift */; };
+		FACDBA712363D1C300B538EC /* GuidedMeditationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,7 @@
 		FACDBA6A23639A5A00B538EC /* SootheSoftenAllow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SootheSoftenAllow.swift; sourceTree = "<group>"; };
 		FACDBA6C23639A6A00B538EC /* RAIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAIN.swift; sourceTree = "<group>"; };
 		FACDBA6E23639A7A00B538EC /* Silent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silent.swift; sourceTree = "<group>"; };
+		FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */,
 				FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */,
 				FAC8918C23457EC90018338C /* GuidedMeditationsTableViewController.swift */,
+				FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */,
 				FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */,
 				FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */,
 			);
@@ -405,6 +408,7 @@
 				FAC8918D23457EC90018338C /* GuidedMeditationsTableViewController.swift in Sources */,
 				FACDBA6D23639A6A00B538EC /* RAIN.swift in Sources */,
 				FACDBA5723638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift in Sources */,
+				FACDBA712363D1C300B538EC /* GuidedMeditationTableViewCell.swift in Sources */,
 				FA4B9D6C2349C5D8004D1B7C /* Week7Data.swift in Sources */,
 				FA61C2B223530070007F0AD3 /* CourseContentDetailTableViewCell.swift in Sources */,
 				FACDBA59236396E800B538EC /* GuidedMeditation.swift in Sources */,
