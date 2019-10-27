@@ -648,49 +648,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="g6p-Dz-nR5">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="g6p-Dz-nR5" userLabel="Player Header View">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTb-YO-TKM">
-                                    <rect key="frame" x="133" y="50" width="67" height="31"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(track title)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4V-9e-Gaq">
+                                    <rect key="frame" x="16" y="24" width="288" height="18.5"/>
                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
-                                    <state key="normal" title="Play/Pause">
+                                    <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTb-YO-TKM" userLabel="Play/Pause Button">
+                                    <rect key="frame" x="144" y="50.5" width="32" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="ReD-vq-zNI"/>
+                                        <constraint firstAttribute="width" constant="32" id="tKf-ic-5ks"/>
+                                    </constraints>
+                                    <state key="normal" image="Play_Button_Blue_90">
                                         <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="playPauseButtonTapped:" destination="1Gq-7l-Gib" eventType="touchUpInside" id="wdw-ZG-T4h"/>
+                                    </connections>
                                 </button>
-                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-aH-8Wt">
-                                    <rect key="frame" x="107" y="73" width="118" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </slider>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30:23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrr-cg-pmU">
-                                    <rect key="frame" x="30" y="80" width="27" height="14"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
-                                    <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="32:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9J-rd-d32">
-                                    <rect key="frame" x="260" y="80" width="27" height="14"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
-                                    <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(track title)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4V-9e-Gaq">
-                                    <rect key="frame" x="133" y="28" width="55" height="14"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
-                                    <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RAF-N5-InY" userLabel="Track Progress Stack View">
+                                    <rect key="frame" x="16" y="98.5" width="288" height="21.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrr-cg-pmU">
+                                            <rect key="frame" x="0.0" y="0.0" width="32" height="21.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="zkW-Nk-SoI"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                                            <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-aH-8Wt">
+                                            <rect key="frame" x="38" y="0.0" width="212" height="22.5"/>
+                                            <connections>
+                                                <action selector="trackSliderMoved:" destination="1Gq-7l-Gib" eventType="valueChanged" id="uvq-AY-1HI"/>
+                                            </connections>
+                                        </slider>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9J-rd-d32">
+                                            <rect key="frame" x="256" y="0.0" width="32" height="21.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="RIf-Ae-0et"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                                            <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="pTb-YO-TKM" firstAttribute="centerX" secondItem="g6p-Dz-nR5" secondAttribute="centerX" id="2LX-bQ-bvz"/>
+                                <constraint firstItem="pTb-YO-TKM" firstAttribute="top" secondItem="t4V-9e-Gaq" secondAttribute="bottom" constant="8" id="2ht-kT-sHK"/>
+                                <constraint firstAttribute="bottom" secondItem="RAF-N5-InY" secondAttribute="bottom" constant="8" id="M9q-SW-nmk"/>
+                                <constraint firstItem="t4V-9e-Gaq" firstAttribute="leading" secondItem="g6p-Dz-nR5" secondAttribute="leading" constant="16" id="NUY-II-zgG"/>
+                                <constraint firstAttribute="trailing" secondItem="RAF-N5-InY" secondAttribute="trailing" constant="16" id="W7z-5E-7vy"/>
+                                <constraint firstAttribute="trailing" secondItem="t4V-9e-Gaq" secondAttribute="trailing" constant="16" id="aYy-Lk-xgM"/>
+                                <constraint firstItem="t4V-9e-Gaq" firstAttribute="top" secondItem="g6p-Dz-nR5" secondAttribute="top" constant="24" id="cCh-og-a8b"/>
+                                <constraint firstItem="RAF-N5-InY" firstAttribute="leading" secondItem="g6p-Dz-nR5" secondAttribute="leading" constant="16" id="kWP-8q-KYB"/>
+                                <constraint firstItem="fvg-aH-8Wt" firstAttribute="top" secondItem="pTb-YO-TKM" secondAttribute="bottom" constant="16" id="lIZ-Al-eO1"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="guidedMeditationsCell" rowHeight="80" id="w7F-BN-bQN" customClass="GuidedMeditationTableViewCell" customModule="mindfulness_UCLA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="148" width="320" height="80"/>
+                                <rect key="frame" x="0.0" y="156" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w7F-BN-bQN" id="Ub3-5F-52X">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
@@ -735,6 +761,13 @@
                             <outlet property="delegate" destination="1Gq-7l-Gib" id="Nqf-b4-JHQ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="lefthandTrackProgressLabel" destination="yrr-cg-pmU" id="11C-vy-AH6"/>
+                        <outlet property="playPauseButton" destination="pTb-YO-TKM" id="bmA-Jv-cr9"/>
+                        <outlet property="righthandTrackDurationLabel" destination="w9J-rd-d32" id="1Kg-UT-hz2"/>
+                        <outlet property="trackSlider" destination="fvg-aH-8Wt" id="QIe-Os-USJ"/>
+                        <outlet property="trackTitleLabel" destination="t4V-9e-Gaq" id="ifl-4p-dzf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfl-Sz-4Mn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -782,6 +815,7 @@
         <image name="Audio_Tracks_Meditation" width="2000" height="1333.5"/>
         <image name="Course_Content_Mountain" width="960" height="540"/>
         <image name="Getting_Started" width="2592" height="1728"/>
+        <image name="Play_Button_Blue_90" width="45" height="45"/>
         <image name="Timer_Large_Detail_Background_Blue" width="425.5" height="512"/>
         <image name="Timer_White_40px" width="20" height="20"/>
         <image name="Video_Courses_Yoga" width="1024" height="605"/>

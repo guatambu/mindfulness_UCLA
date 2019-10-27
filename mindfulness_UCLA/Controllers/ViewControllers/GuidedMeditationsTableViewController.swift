@@ -13,7 +13,24 @@ class GuidedMeditationsTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    let audioMeditations: [GuidedMeditation] = [BodyScan.metaData, Sitting.metaData, DifficultEmotions.metaData, PhysicalPain.metaData, Mountain.metaData, Lake.metaData, Lovingkindness.metaData, SootheSoftenAllow.metaData, RAIN.metaData, Silent.metaData]
+    @IBOutlet weak var trackTitleLabel: UILabel!
+    @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var lefthandTrackProgressLabel: UILabel!
+    @IBOutlet weak var righthandTrackDurationLabel: UILabel!
+    @IBOutlet weak var trackSlider: UISlider!
+    
+    var audioPlayer = AVAudioPlayer()
+    
+    let audioMeditations: [GuidedMeditation] = [BodyScan.metaData,
+                                                Sitting.metaData,
+                                                DifficultEmotions.metaData,
+                                                PhysicalPain.metaData,
+                                                Mountain.metaData,
+                                                Lake.metaData,
+                                                Lovingkindness.metaData,
+                                                SootheSoftenAllow.metaData,
+                                                RAIN.metaData,
+                                                Silent.metaData]
     
     
     // MARK: - ViewController Lifecycle Functions
@@ -23,6 +40,27 @@ class GuidedMeditationsTableViewController: UITableViewController {
         
         title = "guided meditations"
     }
+    
+    
+    // MARK: - Actions
+    
+    @IBAction func trackSliderMoved(_ sender: UISlider) {
+        
+    }
+    
+    @IBAction func playPauseButtonTapped(_ sender: UIButton) {
+        
+        // let currentTime = audioPlayer.currentTime
+        
+        if audioPlayer.isPlaying {
+            
+            audioPlayer.pause()
+        } else {
+            
+            audioPlayer.play()  // atTime: currentTime)
+        }
+    }
+    
 
     // MARK: - Table view data source
 
@@ -50,7 +88,61 @@ class GuidedMeditationsTableViewController: UITableViewController {
     }
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        
+        let audioMeditationToPlay = audioMeditations[indexPath.row]
+        
+        trackTitleLabel.text = audioMeditationToPlay.title
+        
+        playLocalAudioMeditation(path: audioMeditationToPlay.path)
     }
+}
 
+
+// MARK: - AVAudioPlayer functions
+extension GuidedMeditationsTableViewController {
+    
+    // function that takes the GuidedMEditation.path string property and converts it to local file path string and passes to the audioPlayer object to play the track
+    func playLocalAudioMeditation(path: String) {
+    
+        guard let localFilePath = Bundle.main.path(forResource: "\(path)", ofType: "mp3") else {
+            
+            print("ERROR: nil value found for localFilePath in GuidedMeditationsTableViewController.swift -> playLocalAudioMeditation(path:) - line 102.")
+            return
+        }
+        
+        let url = URL(fileURLWithPath: localFilePath)
+        
+        playUsingAVAudioPlayer(url: url)
+    }
+    
+    // function to initiate the playing of a track given a local file URL
+    func playUsingAVAudioPlayer(url: URL) {
+        
+        do {
+            
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            audioPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            audioPlayer.play()
+            
+        } catch {
+            
+            print("ERROR: problem while trying to play local audio file... \(error.localizedDescription) in GuidedMeditationsTableViewController.swift -> playUsingAVAudioPlayer(url:) - line 121.")
+        }
+        
+        lefthandTrackProgressLabel.text = "0:00"
+        righthandTrackDurationLabel.text = "\(audioPlayer.duration)"
+    }
+    
+    // function to handle the slider progress matched to the progress of the track that is playing
+    func sliderTracksProgress() {
+        
+    }
+    
+    // function to handle the display of the proper track time progress numerically in the leftHandTrackProgressLabel and the track's total duration in the rightHandTrackDurationLabel
+    func displayTrackProgress() {
+        
+    }
 }

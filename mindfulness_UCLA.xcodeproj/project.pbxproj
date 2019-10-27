@@ -62,6 +62,18 @@
 		FACDBA6D23639A6A00B538EC /* RAIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6C23639A6A00B538EC /* RAIN.swift */; };
 		FACDBA6F23639A7A00B538EC /* Silent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6E23639A7A00B538EC /* Silent.swift */; };
 		FACDBA712363D1C300B538EC /* GuidedMeditationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */; };
+		FACDBA7423652E7000B538EC /* mindfulness-pause-90.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA7223652E7000B538EC /* mindfulness-pause-90.png */; };
+		FACDBA7523652E7000B538EC /* mindfulness-play-90.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA7323652E7000B538EC /* mindfulness-play-90.png */; };
+		FACDBA7623654D9C00B538EC /* sittingmeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D542349B989004D1B7C /* sittingmeditation.mp3 */; };
+		FACDBA7723654D9C00B538EC /* lovingkindness.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D552349B989004D1B7C /* lovingkindness.mp3 */; };
+		FACDBA7823654D9C00B538EC /* RAIN.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D562349B989004D1B7C /* RAIN.mp3 */; };
+		FACDBA7923654D9C00B538EC /* silent30min_guided_meditation_audio_file.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D572349B989004D1B7C /* silent30min_guided_meditation_audio_file.mp3 */; };
+		FACDBA7A23654D9C00B538EC /* turning-toward-physical.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D582349B989004D1B7C /* turning-toward-physical.mp3 */; };
+		FACDBA7B23654D9C00B538EC /* lake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D592349B989004D1B7C /* lake.mp3 */; };
+		FACDBA7C23654D9C00B538EC /* mountain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5A2349B989004D1B7C /* mountain.mp3 */; };
+		FACDBA7D23654D9C00B538EC /* soften-soothe-allow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5B2349B989004D1B7C /* soften-soothe-allow.mp3 */; };
+		FACDBA7E23654D9C00B538EC /* turning-toward-emotional (1).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5C2349B989004D1B7C /* turning-toward-emotional (1).mp3 */; };
+		FACDBA7F23654D9C00B538EC /* bodyscan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5D2349B989004D1B7C /* bodyscan.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +144,8 @@
 		FACDBA6C23639A6A00B538EC /* RAIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAIN.swift; sourceTree = "<group>"; };
 		FACDBA6E23639A7A00B538EC /* Silent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silent.swift; sourceTree = "<group>"; };
 		FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationTableViewCell.swift; sourceTree = "<group>"; };
+		FACDBA7223652E7000B538EC /* mindfulness-pause-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mindfulness-pause-90.png"; sourceTree = "<group>"; };
+		FACDBA7323652E7000B538EC /* mindfulness-play-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mindfulness-play-90.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +182,8 @@
 				FAC891702341EF350018338C /* Audio_Tracks_Meditation.jpg */,
 				FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */,
 				FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */,
+				FACDBA7223652E7000B538EC /* mindfulness-pause-90.png */,
+				FACDBA7323652E7000B538EC /* mindfulness-play-90.png */,
 				FAC8916C2341EF340018338C /* TImer_Blue.png */,
 				FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */,
 				FAC891722341EF350018338C /* Timer_Large_Detail.png */,
@@ -372,6 +388,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACDBA7623654D9C00B538EC /* sittingmeditation.mp3 in Resources */,
+				FACDBA7723654D9C00B538EC /* lovingkindness.mp3 in Resources */,
+				FACDBA7823654D9C00B538EC /* RAIN.mp3 in Resources */,
+				FACDBA7923654D9C00B538EC /* silent30min_guided_meditation_audio_file.mp3 in Resources */,
+				FACDBA7A23654D9C00B538EC /* turning-toward-physical.mp3 in Resources */,
+				FACDBA7B23654D9C00B538EC /* lake.mp3 in Resources */,
+				FACDBA7C23654D9C00B538EC /* mountain.mp3 in Resources */,
+				FACDBA7D23654D9C00B538EC /* soften-soothe-allow.mp3 in Resources */,
+				FACDBA7E23654D9C00B538EC /* turning-toward-emotional (1).mp3 in Resources */,
+				FACDBA7F23654D9C00B538EC /* bodyscan.mp3 in Resources */,
 				FA4B9D522349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files in Resources */,
 				FAC8916A2341EB5E0018338C /* LaunchScreen.storyboard in Resources */,
 				FAC891852341EF370018338C /* Video_Courses_Yoga.jpeg in Resources */,
@@ -380,7 +406,9 @@
 				FAC891792341EF370018338C /* TImer_Blue.png in Resources */,
 				FAC8917A2341EF370018338C /* Getting_Started_Lotus.jpg in Resources */,
 				FAC8917E2341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png in Resources */,
+				FACDBA7423652E7000B538EC /* mindfulness-pause-90.png in Resources */,
 				FAC89195234580250018338C /* Timer_Large_Detail_Background_Color.png in Resources */,
+				FACDBA7523652E7000B538EC /* mindfulness-play-90.png in Resources */,
 				FA4B9D4C23470BC5004D1B7C /* Video_Courses_Yoga_cropped.jpeg in Resources */,
 				FAC891802341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png in Resources */,
 				FAC8915A2341EB090018338C /* Assets.xcassets in Resources */,

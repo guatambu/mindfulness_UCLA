@@ -12,52 +12,52 @@ enum AudioGuidedMeditationMetaDataStrings: String {
     
     // 1
     case bodyScanMeditationTitle = "bodyscan meditation (32 min)"
-    case bodyScanMeditationPath = "bodyscan.mp3"
+    case bodyScanMeditationPath = "bodyscan"
     case bodyScanMeditationDuration = "32:56"
     
     // 2
     case sittingMeditationTitle = "sitting meditation (32 min)"
-    case sittingMeditationPath = "sittingmeditation.mp3"
+    case sittingMeditationPath = "sittingmeditation"
     case sittingMeditationDuration = "32:00"
     
     // 3
     case difficultEmotionsMeditationTitle = "turning toward meditation for difficult emotions (22 min)"
-    case difficultEmotionsMeditationPath = "turning-toward-emotional (1).mp3"
+    case difficultEmotionsMeditationPath = "turning-toward-emotional (1)"
     case difficultEmotionsMeditationDuration = "23:08"
     
     // 4
     case physicalPainMeditaitonTitle = "turning toward meditation for physical pain (25 min)"
-    case physicalPainMeditaitonPath = "turning-toward-physical.mp3"
+    case physicalPainMeditaitonPath = "turning-toward-physical"
     case physicalPainMeditaitonDuration = "24:31"
     
     // 5
     case mountainMeditationTitle = "mountain meditation (20 min)"
-    case mountainMeditationPath = "mountain.mp3"
+    case mountainMeditationPath = "mountain"
     case mountainMeditationDuration = "19:59"
     
     // 6
     case lakeMeditationTitle = "lake meditation (20 min)"
-    case lakeMeditationPath = "lake.mp3"
+    case lakeMeditationPath = "lake"
     case lakeMeditationDuration = "20:05"
     
     // 7
     case lovingkindnessMeditaitonTitle = "lovingkindness meditation (13 min)"
-    case lovingkindnessMeditaitonPath = "lovingkindness.mp3"
+    case lovingkindnessMeditaitonPath = "lovingkindness"
     case lovingkindnessMeditaitonDuration = "13:17"
     
     // 8
     case softenSootheAllowMeditationTitle = "\"soften, soothe, allow\" meditation (15 min)"
-    case softenSootheAllowMeditationPath = "soften-soothe-allow.mp3"
+    case softenSootheAllowMeditationPath = "soften-soothe-allow"
     case softenSootheAllowMeditationDuration = "16:01"
     
     // 9
     case RAINMeditationTitle = "RAIN meditation (11 min)"
-    case RAINMeditationPath = "RAIN.mp3"
+    case RAINMeditationPath = "RAIN"
     case RAINMeditationDuration = "10:41"
     
     // 10
     case silent30minGuidedMeditationTitle = "silent meditation (30 min)"
-    case silent30minGuidedMeditationPath = "silent30min_guided_meditation_audio_file.mp3"
+    case silent30minGuidedMeditationPath = "silent30min_guided_meditation_audio_file"
     case silent30minGuidedMeditationDuration = "30:19"
     
 }
