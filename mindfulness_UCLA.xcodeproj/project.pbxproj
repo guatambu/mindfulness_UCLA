@@ -48,6 +48,33 @@
 		FAC8919323457F3B0018338C /* MeditationTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */; };
 		FAC89195234580250018338C /* Timer_Large_Detail_Background_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */; };
 		FACDBA51235E555E00B538EC /* ReGexPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA50235E555E00B538EC /* ReGexPatterns.swift */; };
+		FACDBA5323622D2B00B538EC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA5223622D2B00B538EC /* Protocols.swift */; };
+		FACDBA5723638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA5623638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift */; };
+		FACDBA59236396E800B538EC /* GuidedMeditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA58236396E800B538EC /* GuidedMeditation.swift */; };
+		FACDBA5D2363980F00B538EC /* BodyScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA5C2363980F00B538EC /* BodyScan.swift */; };
+		FACDBA5F2363997400B538EC /* Sitting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA5E2363997400B538EC /* Sitting.swift */; };
+		FACDBA61236399EB00B538EC /* PhysicalPain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA60236399EB00B538EC /* PhysicalPain.swift */; };
+		FACDBA6323639A0100B538EC /* DifficultEmotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6223639A0100B538EC /* DifficultEmotions.swift */; };
+		FACDBA6523639A1200B538EC /* Mountain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6423639A1200B538EC /* Mountain.swift */; };
+		FACDBA6723639A1C00B538EC /* Lake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6623639A1C00B538EC /* Lake.swift */; };
+		FACDBA6923639A3100B538EC /* Lovingkindness.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6823639A3100B538EC /* Lovingkindness.swift */; };
+		FACDBA6B23639A5A00B538EC /* SootheSoftenAllow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6A23639A5A00B538EC /* SootheSoftenAllow.swift */; };
+		FACDBA6D23639A6A00B538EC /* RAIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6C23639A6A00B538EC /* RAIN.swift */; };
+		FACDBA6F23639A7A00B538EC /* Silent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA6E23639A7A00B538EC /* Silent.swift */; };
+		FACDBA712363D1C300B538EC /* GuidedMeditationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */; };
+		FACDBA7423652E7000B538EC /* mindfulness-pause-90.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA7223652E7000B538EC /* mindfulness-pause-90.png */; };
+		FACDBA7523652E7000B538EC /* mindfulness-play-90.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA7323652E7000B538EC /* mindfulness-play-90.png */; };
+		FACDBA7623654D9C00B538EC /* sittingmeditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D542349B989004D1B7C /* sittingmeditation.mp3 */; };
+		FACDBA7723654D9C00B538EC /* lovingkindness.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D552349B989004D1B7C /* lovingkindness.mp3 */; };
+		FACDBA7823654D9C00B538EC /* RAIN.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D562349B989004D1B7C /* RAIN.mp3 */; };
+		FACDBA7923654D9C00B538EC /* silent30min_guided_meditation_audio_file.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D572349B989004D1B7C /* silent30min_guided_meditation_audio_file.mp3 */; };
+		FACDBA7A23654D9C00B538EC /* turning-toward-physical.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D582349B989004D1B7C /* turning-toward-physical.mp3 */; };
+		FACDBA7B23654D9C00B538EC /* lake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D592349B989004D1B7C /* lake.mp3 */; };
+		FACDBA7C23654D9C00B538EC /* mountain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5A2349B989004D1B7C /* mountain.mp3 */; };
+		FACDBA7D23654D9C00B538EC /* soften-soothe-allow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5B2349B989004D1B7C /* soften-soothe-allow.mp3 */; };
+		FACDBA7E23654D9C00B538EC /* turning-toward-emotional (1).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5C2349B989004D1B7C /* turning-toward-emotional (1).mp3 */; };
+		FACDBA7F23654D9C00B538EC /* bodyscan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5D2349B989004D1B7C /* bodyscan.mp3 */; };
+		FACDBA8123655AC200B538EC /* GuidedMeditationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,15 +93,15 @@
 		FA4B9D5B2349B989004D1B7C /* soften-soothe-allow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "soften-soothe-allow.mp3"; sourceTree = "<group>"; };
 		FA4B9D5C2349B989004D1B7C /* turning-toward-emotional (1).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "turning-toward-emotional (1).mp3"; sourceTree = "<group>"; };
 		FA4B9D5D2349B989004D1B7C /* bodyscan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bodyscan.mp3; sourceTree = "<group>"; };
-		FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week1Data.swift; sourceTree = "<group>"; };
-		FA4B9D612349C59B004D1B7C /* Week2Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week2Data.swift; sourceTree = "<group>"; };
-		FA4B9D632349C5A8004D1B7C /* Week3Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week3Data.swift; sourceTree = "<group>"; };
-		FA4B9D652349C5B4004D1B7C /* Week4Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4Data.swift; sourceTree = "<group>"; };
-		FA4B9D672349C5BF004D1B7C /* Week5Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week5Data.swift; sourceTree = "<group>"; };
-		FA4B9D692349C5CB004D1B7C /* Week6Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week6Data.swift; sourceTree = "<group>"; };
-		FA4B9D6B2349C5D8004D1B7C /* Week7Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week7Data.swift; sourceTree = "<group>"; };
-		FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week8Data.swift; sourceTree = "<group>"; };
-		FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week9Data.swift; sourceTree = "<group>"; };
+		FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week1Data.swift; path = ../Week1Data.swift; sourceTree = "<group>"; };
+		FA4B9D612349C59B004D1B7C /* Week2Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week2Data.swift; path = ../Week2Data.swift; sourceTree = "<group>"; };
+		FA4B9D632349C5A8004D1B7C /* Week3Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week3Data.swift; path = ../Week3Data.swift; sourceTree = "<group>"; };
+		FA4B9D652349C5B4004D1B7C /* Week4Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week4Data.swift; path = ../Week4Data.swift; sourceTree = "<group>"; };
+		FA4B9D672349C5BF004D1B7C /* Week5Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week5Data.swift; path = ../Week5Data.swift; sourceTree = "<group>"; };
+		FA4B9D692349C5CB004D1B7C /* Week6Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week6Data.swift; path = ../Week6Data.swift; sourceTree = "<group>"; };
+		FA4B9D6B2349C5D8004D1B7C /* Week7Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week7Data.swift; path = ../Week7Data.swift; sourceTree = "<group>"; };
+		FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week8Data.swift; path = ../Week8Data.swift; sourceTree = "<group>"; };
+		FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week9Data.swift; path = ../Week9Data.swift; sourceTree = "<group>"; };
 		FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentModelController.swift; sourceTree = "<group>"; };
 		FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailsTableViewController.swift; sourceTree = "<group>"; };
 		FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -104,6 +131,23 @@
 		FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerViewController.swift; sourceTree = "<group>"; };
 		FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail_Background_Color.png; sourceTree = "<group>"; };
 		FACDBA50235E555E00B538EC /* ReGexPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGexPatterns.swift; sourceTree = "<group>"; };
+		FACDBA5223622D2B00B538EC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		FACDBA5623638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioGuidedMeditationMetaDataStrings.swift; sourceTree = "<group>"; };
+		FACDBA58236396E800B538EC /* GuidedMeditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditation.swift; sourceTree = "<group>"; };
+		FACDBA5C2363980F00B538EC /* BodyScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyScan.swift; sourceTree = "<group>"; };
+		FACDBA5E2363997400B538EC /* Sitting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitting.swift; sourceTree = "<group>"; };
+		FACDBA60236399EB00B538EC /* PhysicalPain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalPain.swift; sourceTree = "<group>"; };
+		FACDBA6223639A0100B538EC /* DifficultEmotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultEmotions.swift; sourceTree = "<group>"; };
+		FACDBA6423639A1200B538EC /* Mountain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mountain.swift; sourceTree = "<group>"; };
+		FACDBA6623639A1C00B538EC /* Lake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lake.swift; sourceTree = "<group>"; };
+		FACDBA6823639A3100B538EC /* Lovingkindness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lovingkindness.swift; sourceTree = "<group>"; };
+		FACDBA6A23639A5A00B538EC /* SootheSoftenAllow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SootheSoftenAllow.swift; sourceTree = "<group>"; };
+		FACDBA6C23639A6A00B538EC /* RAIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAIN.swift; sourceTree = "<group>"; };
+		FACDBA6E23639A7A00B538EC /* Silent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silent.swift; sourceTree = "<group>"; };
+		FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationTableViewCell.swift; sourceTree = "<group>"; };
+		FACDBA7223652E7000B538EC /* mindfulness-pause-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mindfulness-pause-90.png"; sourceTree = "<group>"; };
+		FACDBA7323652E7000B538EC /* mindfulness-play-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mindfulness-play-90.png"; sourceTree = "<group>"; };
+		FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +184,8 @@
 				FAC891702341EF350018338C /* Audio_Tracks_Meditation.jpg */,
 				FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */,
 				FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */,
+				FACDBA7223652E7000B538EC /* mindfulness-pause-90.png */,
+				FACDBA7323652E7000B538EC /* mindfulness-play-90.png */,
 				FAC8916C2341EF340018338C /* TImer_Blue.png */,
 				FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */,
 				FAC891722341EF350018338C /* Timer_Large_Detail.png */,
@@ -163,7 +209,9 @@
 				FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */,
 				FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */,
 				FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */,
+				FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */,
 				FAC8918C23457EC90018338C /* GuidedMeditationsTableViewController.swift */,
+				FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */,
 				FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */,
 				FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */,
 			);
@@ -197,6 +245,7 @@
 		FAC8914E2341EB070018338C /* mindfulness_UCLA */ = {
 			isa = PBXGroup;
 			children = (
+				FACDBA5223622D2B00B538EC /* Protocols.swift */,
 				FAC891652341EB390018338C /* Models */,
 				FAC891672341EB490018338C /* Views */,
 				FAC891662341EB420018338C /* Controllers */,
@@ -222,18 +271,11 @@
 		FAC891652341EB390018338C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FACDBA5623638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift */,
 				FA4B9D4D23470DD3004D1B7C /* WeekHeadings.swift */,
 				FACDBA50235E555E00B538EC /* ReGexPatterns.swift */,
-				FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */,
-				FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */,
-				FA4B9D612349C59B004D1B7C /* Week2Data.swift */,
-				FA4B9D632349C5A8004D1B7C /* Week3Data.swift */,
-				FA4B9D652349C5B4004D1B7C /* Week4Data.swift */,
-				FA4B9D672349C5BF004D1B7C /* Week5Data.swift */,
-				FA4B9D692349C5CB004D1B7C /* Week6Data.swift */,
-				FA4B9D6B2349C5D8004D1B7C /* Week7Data.swift */,
-				FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */,
-				FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */,
+				FACDBA5A236397CF00B538EC /* Course Contents */,
+				FACDBA5B236397F300B538EC /* Guided Meditations */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +296,41 @@
 				FAC891692341EB5E0018338C /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FACDBA5A236397CF00B538EC /* Course Contents */ = {
+			isa = PBXGroup;
+			children = (
+				FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */,
+				FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */,
+				FA4B9D612349C59B004D1B7C /* Week2Data.swift */,
+				FA4B9D632349C5A8004D1B7C /* Week3Data.swift */,
+				FA4B9D652349C5B4004D1B7C /* Week4Data.swift */,
+				FA4B9D672349C5BF004D1B7C /* Week5Data.swift */,
+				FA4B9D692349C5CB004D1B7C /* Week6Data.swift */,
+				FA4B9D6B2349C5D8004D1B7C /* Week7Data.swift */,
+				FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */,
+				FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */,
+			);
+			path = "Course Contents";
+			sourceTree = "<group>";
+		};
+		FACDBA5B236397F300B538EC /* Guided Meditations */ = {
+			isa = PBXGroup;
+			children = (
+				FACDBA58236396E800B538EC /* GuidedMeditation.swift */,
+				FACDBA5C2363980F00B538EC /* BodyScan.swift */,
+				FACDBA5E2363997400B538EC /* Sitting.swift */,
+				FACDBA60236399EB00B538EC /* PhysicalPain.swift */,
+				FACDBA6223639A0100B538EC /* DifficultEmotions.swift */,
+				FACDBA6423639A1200B538EC /* Mountain.swift */,
+				FACDBA6623639A1C00B538EC /* Lake.swift */,
+				FACDBA6823639A3100B538EC /* Lovingkindness.swift */,
+				FACDBA6A23639A5A00B538EC /* SootheSoftenAllow.swift */,
+				FACDBA6C23639A6A00B538EC /* RAIN.swift */,
+				FACDBA6E23639A7A00B538EC /* Silent.swift */,
+			);
+			path = "Guided Meditations";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +391,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACDBA7623654D9C00B538EC /* sittingmeditation.mp3 in Resources */,
+				FACDBA7723654D9C00B538EC /* lovingkindness.mp3 in Resources */,
+				FACDBA7823654D9C00B538EC /* RAIN.mp3 in Resources */,
+				FACDBA7923654D9C00B538EC /* silent30min_guided_meditation_audio_file.mp3 in Resources */,
+				FACDBA7A23654D9C00B538EC /* turning-toward-physical.mp3 in Resources */,
+				FACDBA7B23654D9C00B538EC /* lake.mp3 in Resources */,
+				FACDBA7C23654D9C00B538EC /* mountain.mp3 in Resources */,
+				FACDBA7D23654D9C00B538EC /* soften-soothe-allow.mp3 in Resources */,
+				FACDBA7E23654D9C00B538EC /* turning-toward-emotional (1).mp3 in Resources */,
+				FACDBA7F23654D9C00B538EC /* bodyscan.mp3 in Resources */,
 				FA4B9D522349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files in Resources */,
 				FAC8916A2341EB5E0018338C /* LaunchScreen.storyboard in Resources */,
 				FAC891852341EF370018338C /* Video_Courses_Yoga.jpeg in Resources */,
@@ -322,7 +409,9 @@
 				FAC891792341EF370018338C /* TImer_Blue.png in Resources */,
 				FAC8917A2341EF370018338C /* Getting_Started_Lotus.jpg in Resources */,
 				FAC8917E2341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png in Resources */,
+				FACDBA7423652E7000B538EC /* mindfulness-pause-90.png in Resources */,
 				FAC89195234580250018338C /* Timer_Large_Detail_Background_Color.png in Resources */,
+				FACDBA7523652E7000B538EC /* mindfulness-play-90.png in Resources */,
 				FA4B9D4C23470BC5004D1B7C /* Video_Courses_Yoga_cropped.jpeg in Resources */,
 				FAC891802341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image.png in Resources */,
 				FAC8915A2341EB090018338C /* Assets.xcassets in Resources */,
@@ -346,23 +435,38 @@
 				FAC8918F23457EE10018338C /* VideoCoursesTableViewController.swift in Sources */,
 				FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */,
 				FA61C2AE234EBC40007F0AD3 /* CourseContentModelController.swift in Sources */,
+				FACDBA5323622D2B00B538EC /* Protocols.swift in Sources */,
 				FAC8918D23457EC90018338C /* GuidedMeditationsTableViewController.swift in Sources */,
+				FACDBA8123655AC200B538EC /* GuidedMeditationsViewController.swift in Sources */,
+				FACDBA6D23639A6A00B538EC /* RAIN.swift in Sources */,
+				FACDBA5723638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift in Sources */,
+				FACDBA712363D1C300B538EC /* GuidedMeditationTableViewCell.swift in Sources */,
 				FA4B9D6C2349C5D8004D1B7C /* Week7Data.swift in Sources */,
 				FA61C2B223530070007F0AD3 /* CourseContentDetailTableViewCell.swift in Sources */,
+				FACDBA59236396E800B538EC /* GuidedMeditation.swift in Sources */,
 				FA4B9D682349C5BF004D1B7C /* Week5Data.swift in Sources */,
+				FACDBA5D2363980F00B538EC /* BodyScan.swift in Sources */,
 				FA4B9D602349BAE3004D1B7C /* Week1Data.swift in Sources */,
 				FA4B9D642349C5A8004D1B7C /* Week3Data.swift in Sources */,
 				FAC8918723457E640018338C /* DashboardTableViewController.swift in Sources */,
 				FA4B9D4E23470DD3004D1B7C /* WeekHeadings.swift in Sources */,
 				FA4B9D6E2349C5E5004D1B7C /* Week8Data.swift in Sources */,
+				FACDBA61236399EB00B538EC /* PhysicalPain.swift in Sources */,
 				FA4B9D502349ADDC004D1B7C /* WeekCourseContent.swift in Sources */,
+				FACDBA6523639A1200B538EC /* Mountain.swift in Sources */,
 				FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */,
 				FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */,
+				FACDBA6923639A3100B538EC /* Lovingkindness.swift in Sources */,
 				FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */,
 				FACDBA51235E555E00B538EC /* ReGexPatterns.swift in Sources */,
+				FACDBA6323639A0100B538EC /* DifficultEmotions.swift in Sources */,
+				FACDBA6B23639A5A00B538EC /* SootheSoftenAllow.swift in Sources */,
+				FACDBA6F23639A7A00B538EC /* Silent.swift in Sources */,
 				FA61C2B02352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift in Sources */,
 				FAC8918923457E8C0018338C /* GettingStartedTableViewController.swift in Sources */,
 				FAC891502341EB070018338C /* AppDelegate.swift in Sources */,
+				FACDBA6723639A1C00B538EC /* Lake.swift in Sources */,
+				FACDBA5F2363997400B538EC /* Sitting.swift in Sources */,
 				FA4B9D6A2349C5CB004D1B7C /* Week6Data.swift in Sources */,
 				FAC8919323457F3B0018338C /* MeditationTimerViewController.swift in Sources */,
 			);
