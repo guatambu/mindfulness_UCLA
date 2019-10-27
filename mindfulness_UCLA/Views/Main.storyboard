@@ -183,14 +183,14 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <segue destination="1Gq-7l-Gib" kind="show" id="BjY-By-FID"/>
+                                            <segue destination="oOn-E4-Lyz" kind="show" id="0mK-WV-hiR"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="USn-i1-JPN" userLabel="Video Courses Table View Cell">
                                         <rect key="frame" x="0.0" y="720" width="320" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="USn-i1-JPN" id="jLd-so-Zcw">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="239.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nht-5j-jTQ" userLabel="Video Classes View">
@@ -640,138 +640,154 @@
             </objects>
             <point key="canvasLocation" x="3476" y="41"/>
         </scene>
-        <!--Guided Meditations Table View Controller-->
-        <scene sceneID="77d-0d-iOp">
+        <!--Guided Meditations View Controller-->
+        <scene sceneID="zbH-ZF-7TP">
             <objects>
-                <tableViewController title="guided meditations" id="1Gq-7l-Gib" userLabel="Guided Meditations Table View Controller" customClass="GuidedMeditationsTableViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uIf-sf-TKJ">
+                <viewController id="oOn-E4-Lyz" customClass="GuidedMeditationsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OOH-BH-nzA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="g6p-Dz-nR5" userLabel="Player Header View">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(track title)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4V-9e-Gaq">
-                                    <rect key="frame" x="16" y="24" width="288" height="18.5"/>
-                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
-                                    <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTb-YO-TKM" userLabel="Play/Pause Button">
-                                    <rect key="frame" x="144" y="50.5" width="32" height="32"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="32" id="ReD-vq-zNI"/>
-                                        <constraint firstAttribute="width" constant="32" id="tKf-ic-5ks"/>
-                                    </constraints>
-                                    <state key="normal" image="Play_Button_Blue_90">
-                                        <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="playPauseButtonTapped:" destination="1Gq-7l-Gib" eventType="touchUpInside" id="wdw-ZG-T4h"/>
-                                    </connections>
-                                </button>
-                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RAF-N5-InY" userLabel="Track Progress Stack View">
-                                    <rect key="frame" x="16" y="98.5" width="288" height="21.5"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrr-cg-pmU">
-                                            <rect key="frame" x="0.0" y="0.0" width="32" height="21.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="32" id="zkW-Nk-SoI"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
-                                            <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fvg-aH-8Wt">
-                                            <rect key="frame" x="38" y="0.0" width="212" height="22.5"/>
-                                            <connections>
-                                                <action selector="trackSliderMoved:" destination="1Gq-7l-Gib" eventType="valueChanged" id="uvq-AY-1HI"/>
-                                            </connections>
-                                        </slider>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9J-rd-d32">
-                                            <rect key="frame" x="256" y="0.0" width="32" height="21.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="32" id="RIf-Ae-0et"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
-                                            <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="pTb-YO-TKM" firstAttribute="centerX" secondItem="g6p-Dz-nR5" secondAttribute="centerX" id="2LX-bQ-bvz"/>
-                                <constraint firstItem="pTb-YO-TKM" firstAttribute="top" secondItem="t4V-9e-Gaq" secondAttribute="bottom" constant="8" id="2ht-kT-sHK"/>
-                                <constraint firstAttribute="bottom" secondItem="RAF-N5-InY" secondAttribute="bottom" constant="8" id="M9q-SW-nmk"/>
-                                <constraint firstItem="t4V-9e-Gaq" firstAttribute="leading" secondItem="g6p-Dz-nR5" secondAttribute="leading" constant="16" id="NUY-II-zgG"/>
-                                <constraint firstAttribute="trailing" secondItem="RAF-N5-InY" secondAttribute="trailing" constant="16" id="W7z-5E-7vy"/>
-                                <constraint firstAttribute="trailing" secondItem="t4V-9e-Gaq" secondAttribute="trailing" constant="16" id="aYy-Lk-xgM"/>
-                                <constraint firstItem="t4V-9e-Gaq" firstAttribute="top" secondItem="g6p-Dz-nR5" secondAttribute="top" constant="24" id="cCh-og-a8b"/>
-                                <constraint firstItem="RAF-N5-InY" firstAttribute="leading" secondItem="g6p-Dz-nR5" secondAttribute="leading" constant="16" id="kWP-8q-KYB"/>
-                                <constraint firstItem="fvg-aH-8Wt" firstAttribute="top" secondItem="pTb-YO-TKM" secondAttribute="bottom" constant="16" id="lIZ-Al-eO1"/>
-                            </constraints>
-                        </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="guidedMeditationsCell" rowHeight="80" id="w7F-BN-bQN" customClass="GuidedMeditationTableViewCell" customModule="mindfulness_UCLA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="156" width="320" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w7F-BN-bQN" id="Ub3-5F-52X">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3Wj-gQ-j5w">
-                                            <rect key="frame" x="16" y="24" width="288" height="31.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIQ-4P-gLJ" userLabel="Player Header View">
+                                <rect key="frame" x="0.0" y="64" width="320" height="138"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxU-gT-cBQ">
+                                        <rect key="frame" x="16" y="24" width="288" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Ydi-he-cz5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                        <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnF-cw-1r3" userLabel="Play/Pause Button">
+                                        <rect key="frame" x="136" y="52" width="48" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="CRP-9G-V2O"/>
+                                            <constraint firstAttribute="width" constant="48" id="ESU-XV-kHB"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" image="Play_Button_Blue_90">
+                                            <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playPauseButtonTapped:" destination="oOn-E4-Lyz" eventType="touchUpInside" id="eny-tX-aod"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q98-dg-w0n" userLabel="Track Progress Stack View">
+                                        <rect key="frame" x="16" y="100" width="288" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpg-xI-pLS">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="jos-qL-Qc5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                                                <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="m70-lR-fs5">
+                                                <rect key="frame" x="38" y="0.0" width="212" height="31"/>
+                                                <connections>
+                                                    <action selector="trackSliderMoved:" destination="oOn-E4-Lyz" eventType="valueChanged" id="B5x-g4-Ts8"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUh-bo-ypR">
+                                                <rect key="frame" x="256" y="0.0" width="32" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="ixR-Cb-lnx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                                                <color key="textColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fnF-cw-1r3" firstAttribute="centerX" secondItem="XIQ-4P-gLJ" secondAttribute="centerX" id="5ph-CP-OQ0"/>
+                                    <constraint firstItem="UxU-gT-cBQ" firstAttribute="leading" secondItem="XIQ-4P-gLJ" secondAttribute="leading" constant="16" id="7He-IO-ZQj"/>
+                                    <constraint firstItem="Q98-dg-w0n" firstAttribute="leading" secondItem="XIQ-4P-gLJ" secondAttribute="leading" constant="16" id="8Oe-wT-ml5"/>
+                                    <constraint firstItem="m70-lR-fs5" firstAttribute="top" secondItem="fnF-cw-1r3" secondAttribute="bottom" constant="16" id="9Fd-re-jlB"/>
+                                    <constraint firstAttribute="trailing" secondItem="UxU-gT-cBQ" secondAttribute="trailing" constant="16" id="CA7-vL-RuT"/>
+                                    <constraint firstItem="fnF-cw-1r3" firstAttribute="top" secondItem="UxU-gT-cBQ" secondAttribute="bottom" constant="8" id="Krz-S4-YaW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Q98-dg-w0n" secondAttribute="bottom" constant="8" id="bfj-aN-RV3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q98-dg-w0n" secondAttribute="trailing" constant="16" id="jSX-x3-Oim"/>
+                                    <constraint firstItem="UxU-gT-cBQ" firstAttribute="top" secondItem="XIQ-4P-gLJ" secondAttribute="top" constant="24" id="rfL-xB-7C8"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IZv-lR-3mh">
+                                <rect key="frame" x="0.0" y="202" width="320" height="366"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="guidedMeditationsCell" rowHeight="80" id="V3w-Ri-RTC" customClass="GuidedMeditationTableViewCell" customModule="mindfulness_UCLA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V3w-Ri-RTC" id="cY4-GB-YGu">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="(guided meditation)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fSE-pG-qtt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="224" height="31.5"/>
-                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="24"/>
-                                                    <color key="textColor" red="0.26274509800000001" green="0.42352941179999998" blue="0.61960784310000006" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="(24:00)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qi-lO-vhq" userLabel="(duration)">
-                                                    <rect key="frame" x="240" y="0.0" width="48" height="31.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="48" id="eGR-uk-FoW"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="16"/>
-                                                    <color key="textColor" red="0.26274509800000001" green="0.42352941179999998" blue="0.61960784310000006" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gRU-2F-VtM">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="79.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="(guided meditation)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vsg-is-Gjt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="224" height="79.5"/>
+                                                            <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="24"/>
+                                                            <color key="textColor" red="0.26274509800000001" green="0.42352941179999998" blue="0.61960784310000006" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="(24:00)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTC-pu-nMe" userLabel="(duration)">
+                                                            <rect key="frame" x="240" y="0.0" width="48" height="79.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="48" id="ewI-eQ-QAy"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="16"/>
+                                                            <color key="textColor" red="0.26274509800000001" green="0.42352941179999998" blue="0.61960784310000006" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="3Wj-gQ-j5w" firstAttribute="leading" secondItem="Ub3-5F-52X" secondAttribute="leading" constant="16" id="2Vz-pB-u05"/>
-                                        <constraint firstAttribute="trailing" secondItem="3Wj-gQ-j5w" secondAttribute="trailing" constant="16" id="7sB-0c-7XG"/>
-                                        <constraint firstItem="3Wj-gQ-j5w" firstAttribute="top" secondItem="Ub3-5F-52X" secondAttribute="top" constant="24" id="GiN-Gy-Cx1"/>
-                                        <constraint firstAttribute="bottom" secondItem="3Wj-gQ-j5w" secondAttribute="bottom" constant="24" id="rRy-ab-IiB"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="meditationDurationLabel" destination="8Qi-lO-vhq" id="SqE-DI-M8D"/>
-                                    <outlet property="meditationTitleLabel" destination="fSE-pG-qtt" id="e36-8q-uJx"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="1Gq-7l-Gib" id="O7c-m6-ICE"/>
-                            <outlet property="delegate" destination="1Gq-7l-Gib" id="Nqf-b4-JHQ"/>
-                        </connections>
-                    </tableView>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="gRU-2F-VtM" secondAttribute="bottom" id="2ig-2P-yqC"/>
+                                                <constraint firstAttribute="trailing" secondItem="gRU-2F-VtM" secondAttribute="trailing" constant="16" id="MhR-xk-hNa"/>
+                                                <constraint firstItem="gRU-2F-VtM" firstAttribute="leading" secondItem="cY4-GB-YGu" secondAttribute="leading" constant="16" id="bav-T7-7zf"/>
+                                                <constraint firstItem="gRU-2F-VtM" firstAttribute="top" secondItem="cY4-GB-YGu" secondAttribute="top" id="qaB-jr-v3l"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="meditationDurationLabel" destination="uTC-pu-nMe" id="kGU-s9-3rK"/>
+                                            <outlet property="meditationTitleLabel" destination="Vsg-is-Gjt" id="0zI-f8-3Z9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VoV-LG-NqI" firstAttribute="trailing" secondItem="XIQ-4P-gLJ" secondAttribute="trailing" id="A7J-cc-scc"/>
+                            <constraint firstItem="XIQ-4P-gLJ" firstAttribute="top" secondItem="VoV-LG-NqI" secondAttribute="top" id="B8b-4M-yOt"/>
+                            <constraint firstItem="VoV-LG-NqI" firstAttribute="bottom" secondItem="IZv-lR-3mh" secondAttribute="bottom" id="EGR-ss-ghf"/>
+                            <constraint firstItem="VoV-LG-NqI" firstAttribute="trailing" secondItem="IZv-lR-3mh" secondAttribute="trailing" id="Fh1-lO-R4D"/>
+                            <constraint firstItem="IZv-lR-3mh" firstAttribute="leading" secondItem="VoV-LG-NqI" secondAttribute="leading" id="LrV-Go-VEb"/>
+                            <constraint firstItem="IZv-lR-3mh" firstAttribute="top" secondItem="XIQ-4P-gLJ" secondAttribute="bottom" id="Zjf-wr-tyR"/>
+                            <constraint firstItem="XIQ-4P-gLJ" firstAttribute="leading" secondItem="OOH-BH-nzA" secondAttribute="leading" id="l9w-lx-fGp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VoV-LG-NqI"/>
+                    </view>
                     <connections>
-                        <outlet property="lefthandTrackProgressLabel" destination="yrr-cg-pmU" id="11C-vy-AH6"/>
-                        <outlet property="playPauseButton" destination="pTb-YO-TKM" id="bmA-Jv-cr9"/>
-                        <outlet property="righthandTrackDurationLabel" destination="w9J-rd-d32" id="1Kg-UT-hz2"/>
-                        <outlet property="trackSlider" destination="fvg-aH-8Wt" id="QIe-Os-USJ"/>
-                        <outlet property="trackTitleLabel" destination="t4V-9e-Gaq" id="ifl-4p-dzf"/>
+                        <outlet property="lefthandTrackProgressLabel" destination="Hpg-xI-pLS" id="Uxe-es-yse"/>
+                        <outlet property="meditationsTableView" destination="IZv-lR-3mh" id="rjW-4r-9ds"/>
+                        <outlet property="playPauseButton" destination="fnF-cw-1r3" id="7r1-8w-BcP"/>
+                        <outlet property="righthandTrackDurationLabel" destination="CUh-bo-ypR" id="72d-jf-x2z"/>
+                        <outlet property="trackSlider" destination="m70-lR-fs5" id="mqf-kY-pYb"/>
+                        <outlet property="trackTitleLabel" destination="UxU-gT-cBQ" id="1v9-Zy-sdQ"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tfl-Sz-4Mn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8QZ-Sc-ZMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676.25" y="893.66197183098598"/>
+            <point key="canvasLocation" x="1695" y="894"/>
         </scene>
         <!--Video Courses Table View Controller-->
         <scene sceneID="04h-Jb-8mu">

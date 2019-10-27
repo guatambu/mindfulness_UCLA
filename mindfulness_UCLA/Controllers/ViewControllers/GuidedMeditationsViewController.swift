@@ -1,16 +1,16 @@
 //
-//  GuidedMeditationsTableViewController.swift
+//  GuidedMeditationsViewController.swift
 //  mindfulness_UCLA
 //
-//  Created by Kelly Johnson on 10/2/19.
+//  Created by Michael Guatambu Davis on 10/26/19.
 //  Copyright © 2019 DunDak, LLC. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class GuidedMeditationsTableViewController: UITableViewController {
-    
+class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     // MARK: - Properties
     
     @IBOutlet weak var trackTitleLabel: UILabel!
@@ -18,6 +18,8 @@ class GuidedMeditationsTableViewController: UITableViewController {
     @IBOutlet weak var lefthandTrackProgressLabel: UILabel!
     @IBOutlet weak var righthandTrackDurationLabel: UILabel!
     @IBOutlet weak var trackSlider: UISlider!
+    @IBOutlet weak var meditationsTableView: UITableView!
+    
     
     var audioPlayer = AVAudioPlayer()
     
@@ -34,9 +36,12 @@ class GuidedMeditationsTableViewController: UITableViewController {
     
     
     // MARK: - ViewController Lifecycle Functions
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        meditationsTableView.delegate = self
+        meditationsTableView.dataSource = self
         
         title = "guided meditations"
         
@@ -71,16 +76,16 @@ class GuidedMeditationsTableViewController: UITableViewController {
         }
     }
     
-
+    
     // MARK: - Table view data source
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return audioMeditations.count
     }
-
-  
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "guidedMeditationsCell", for: indexPath) as? GuidedMeditationTableViewCell else {
             
@@ -88,16 +93,16 @@ class GuidedMeditationsTableViewController: UITableViewController {
             return UITableViewCell()
             
         }
-
+        
         // Configure the cell...
         let meditation = audioMeditations[indexPath.row]
         
         cell.meditation = meditation
-
+        
         return cell
     }
- 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let audioMeditationToPlay = audioMeditations[indexPath.row]
         
@@ -117,11 +122,11 @@ class GuidedMeditationsTableViewController: UITableViewController {
 
 
 // MARK: - AVAudioPlayer functions
-extension GuidedMeditationsTableViewController {
+extension GuidedMeditationsViewController {
     
     // function that takes the GuidedMEditation.path string property and converts it to local file path string and passes to the audioPlayer object to play the track
     func playLocalAudioMeditation(path: String) {
-    
+        
         guard let localFilePath = Bundle.main.path(forResource: "\(path)", ofType: "mp3") else {
             
             print("ERROR: nil value found for localFilePath in GuidedMeditationsTableViewController.swift -> playLocalAudioMeditation(path:) - line 102.")

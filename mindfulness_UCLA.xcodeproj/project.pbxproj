@@ -74,6 +74,7 @@
 		FACDBA7D23654D9C00B538EC /* soften-soothe-allow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5B2349B989004D1B7C /* soften-soothe-allow.mp3 */; };
 		FACDBA7E23654D9C00B538EC /* turning-toward-emotional (1).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5C2349B989004D1B7C /* turning-toward-emotional (1).mp3 */; };
 		FACDBA7F23654D9C00B538EC /* bodyscan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5D2349B989004D1B7C /* bodyscan.mp3 */; };
+		FACDBA8123655AC200B538EC /* GuidedMeditationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +147,7 @@
 		FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationTableViewCell.swift; sourceTree = "<group>"; };
 		FACDBA7223652E7000B538EC /* mindfulness-pause-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mindfulness-pause-90.png"; sourceTree = "<group>"; };
 		FACDBA7323652E7000B538EC /* mindfulness-play-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mindfulness-play-90.png"; sourceTree = "<group>"; };
+		FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */,
 				FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */,
 				FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */,
+				FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */,
 				FAC8918C23457EC90018338C /* GuidedMeditationsTableViewController.swift */,
 				FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */,
 				FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */,
@@ -434,6 +437,7 @@
 				FA61C2AE234EBC40007F0AD3 /* CourseContentModelController.swift in Sources */,
 				FACDBA5323622D2B00B538EC /* Protocols.swift in Sources */,
 				FAC8918D23457EC90018338C /* GuidedMeditationsTableViewController.swift in Sources */,
+				FACDBA8123655AC200B538EC /* GuidedMeditationsViewController.swift in Sources */,
 				FACDBA6D23639A6A00B538EC /* RAIN.swift in Sources */,
 				FACDBA5723638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift in Sources */,
 				FACDBA712363D1C300B538EC /* GuidedMeditationTableViewCell.swift in Sources */,
