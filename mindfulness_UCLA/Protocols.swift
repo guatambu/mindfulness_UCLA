@@ -10,9 +10,18 @@ import Foundation
 
 protocol CourseContentDetailsTableViewCellDelegate {
     
+    // TODO: update this protocol to include capacity to work with PDFKit, and add protocol method(s) to this protocol that will allow for the viewing and manipulation of the PDF file
+    
     // MARK: - Properties
-//    var isLinkActive: Bool? { get set }
     
     // MARK: functions
     func openWebViewButtonTapped(cell: CourseContentDetailTableViewCell)
+}
+
+protocol VideoCourseTableViewCellDelegate {
+    
+    // MARK: - Properties
+    
+    // MARK: functions
+    func openWebViewButtonTapped(cell: VideoCoursesTableViewCell)
 }

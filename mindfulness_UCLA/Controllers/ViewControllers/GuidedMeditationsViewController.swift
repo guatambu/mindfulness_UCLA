@@ -20,6 +20,8 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
     @IBOutlet weak var trackSlider: UISlider!
     @IBOutlet weak var meditationsTableView: UITableView!
     
+    var sliderTimer: Timer?
+    var trackLabelTimer: Timer?
     
     var audioPlayer = AVAudioPlayer()
     
@@ -51,13 +53,33 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         trackSlider.isEnabled = false
         lefthandTrackProgressLabel.isEnabled = false
         righthandTrackDurationLabel.isEnabled = false
+
     }
     
     
     // MARK: - Actions
     
-    @IBAction func trackSliderMoved(_ sender: UISlider) {
+    @IBAction func trackSliderMoved(_ sender: UISlider, forEvent event: UIEvent) {
         
+        audioPlayer.stop()
+        
+        audioPlayer.currentTime = TimeInterval(trackSlider.value)
+        audioPlayer.prepareToPlay()
+        
+        if let touchEvent = event.allTouches?.first {
+            
+            switch touchEvent.phase {
+                
+            case .ended:
+                
+                audioPlayer.play()
+                playPauseButton.setImage(UIImage(named: "mindfulness-pause-90"), for: UIControl.State.normal)
+                
+            default:
+                print("other touch events have been recorded")
+            }
+            
+        }
     }
     
     @IBAction func playPauseButtonTapped(_ sender: UIButton) {
@@ -67,11 +89,13 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         if audioPlayer.isPlaying {
             
             audioPlayer.pause()
+    
             playPauseButton.setImage(UIImage(named: "mindfulness-play-90"), for: UIControl.State.normal)
             
         } else {
             
             audioPlayer.play()
+            
             playPauseButton.setImage(UIImage(named: "mindfulness-pause-90"), for: UIControl.State.normal)
         }
     }
@@ -110,10 +134,20 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         
         playLocalAudioMeditation(path: audioMeditationToPlay.path)
         
+        
+        
         playPauseButton.setImage(UIImage(named: "mindfulness-pause-90"), for: UIControl.State.normal)
         // activate the player's appearance in the UI
         playPauseButton.isEnabled = true
+        
         trackSlider.isEnabled = true
+        trackSlider.maximumValue = Float(audioPlayer.duration)
+        
+        sliderTimer?.invalidate()
+        sliderTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.sliderTracksProgress), userInfo: nil, repeats: true)
+        trackLabelTimer?.invalidate()
+        trackLabelTimer = Timer.scheduledTimer(timeInterval: 1.00, target: self, selector: #selector(self.displayTrackProgress), userInfo: nil, repeats: true)
+        
         lefthandTrackProgressLabel.isEnabled = true
         righthandTrackDurationLabel.isEnabled = true
         
@@ -160,12 +194,15 @@ extension GuidedMeditationsViewController {
     }
     
     // function to handle the slider progress matched to the progress of the track that is playing
-    func sliderTracksProgress() {
+    @objc func sliderTracksProgress() {
         
+        trackSlider.value = Float(audioPlayer.currentTime)
     }
     
     // function to handle the display of the proper track time progress numerically in the leftHandTrackProgressLabel and the track's total duration in the rightHandTrackDurationLabel
-    func displayTrackProgress() {
+    @objc func displayTrackProgress() {
+        
+        lefthandTrackProgressLabel.text = convertSecondsToMinutes(time: audioPlayer.currentTime)
         
     }
     

@@ -6,9 +6,6 @@
 //  Copyright © 2019 DunDak, LLC. All rights reserved.
 //
 
-// TODO: - here we are going to format each individual cell's content.  this will be where the majority of the formatting's and content display's heavy lifting will take place
-
-
 import UIKit
 
 class CourseContentDetailTableViewCell: UITableViewCell {
@@ -20,6 +17,9 @@ class CourseContentDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var openWebViewButton: UIButton!
     
     var isLinkActive = true
+    
+    // TODO: update this property to allow capacity to work with PDFKit
+    var isPDFFile = true
     
     var delegate: CourseContentDetailsTableViewCellDelegate?
     
@@ -119,13 +119,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
 }
 
 
-
-// TODO: now we use the provided links in the various tuples to open a webview in app and display the link's page content.  this in app webview will need to be presented modally, and will want to have a 'X' button to close it and a left and a right arrow to navigate forward and back for some simple/basic internet navigation.
-
-// TODO:  review GilSans as text type because it appears we get 
-
-
-
+// MARK: - NSRegularExpression and text typeface formatting functions
 extension CourseContentDetailTableViewCell {
     
     // MARK: Helper Functions
@@ -307,7 +301,6 @@ extension CourseContentDetailTableViewCell {
             
             attributedString.replaceCharacters(in: rangeOfLastCharacter, with: "")
         }
-        
         
         print("attributedString: \(attributedString)")
         

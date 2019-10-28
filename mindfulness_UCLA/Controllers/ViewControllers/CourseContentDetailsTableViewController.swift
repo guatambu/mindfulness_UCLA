@@ -15,8 +15,6 @@ class CourseContentDetailsTableViewController: UITableViewController,
 
     // MARK: Properties
     
-    // property tracking whether any links are active
-//    var isLinkActive: Bool?
     // title string
     var detailTitle: String?
     // array that holds the valid checked string tuples used to present the overview details
@@ -26,7 +24,9 @@ class CourseContentDetailsTableViewController: UITableViewController,
     var validVideosListStrings: [ (String, String) ]?
     var validReadingStrings: [ (String, String) ]?
     var validReadingsListStrings: [ (String, String) ]?
+    // strings to display the text only about the practice sheets
     var validPracticeStrings: [ (String, String) ]?
+    // strings to display the active practice sheets to use with PDFKit
     var validPracticeSheetsStrings: [ (String, String) ]?
     var validSupplementalMaterialsStrings: [ (String, String) ]?
     
@@ -165,36 +165,44 @@ class CourseContentDetailsTableViewController: UITableViewController,
         if let validOverviewOrderedContentStrings = validOverviewOrderedContentStrings {
             
             cell.tupleStrings = validOverviewOrderedContentStrings[indexPath.row]
-            cell.isLinkActive = false        }
+            cell.isLinkActive = false
+            cell.isLinkActive = true
+            cell.isPDFFile = false
+        }
         // if valid videos content
-        else if let validVideosListStrings = validVideosListStrings {
+        if let validVideosListStrings = validVideosListStrings {
             // set totalRows to individual tuple arrays count
             cell.tupleStrings = validVideosListStrings[indexPath.row]
             cell.isLinkActive = true
+            cell.isPDFFile = false
         }
         // if valid readings content
         if let validReadingsListStrings = validReadingsListStrings {
             // set totalRows to individual tuple arrays count
             cell.tupleStrings = validReadingsListStrings[indexPath.row]
             cell.isLinkActive = true
+            cell.isPDFFile = false
         }
         // if valid practice strings content
         if let validPracticeStrings = validPracticeStrings {
             // set totalRows to individual tuple arrays count
             cell.tupleStrings = validPracticeStrings[indexPath.row]
-            cell.isLinkActive = true
+            cell.isLinkActive = false
+            cell.isPDFFile = false
         }
         // if valid practice sheets content
         if let validPracticeSheetsStrings = validPracticeSheetsStrings {
             // set totalRows to individual tuple arrays count
             cell.tupleStrings = validPracticeSheetsStrings[indexPath.row]
-            cell.isLinkActive = true
+            cell.isLinkActive = false
+            cell.isPDFFile = true
         }
         // if valid supplemental materials content arrays
         if let validSupplementalMaterialsStrings = validSupplementalMaterialsStrings {
             // set totalRows to individual tuple arrays count
             cell.tupleStrings = validSupplementalMaterialsStrings[indexPath.row]
             cell.isLinkActive = true
+            cell.isPDFFile = false
         }
         
         return cell
