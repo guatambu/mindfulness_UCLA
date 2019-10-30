@@ -16,7 +16,7 @@ class CourseContentDetailsTableViewController: UITableViewController {
     // MARK: Properties
     
     var webView: WKWebView!
-    
+    var pdfPath: String = ""
     // title string
     var detailTitle: String?
     // array that holds the valid checked string tuples used to present the overview details
@@ -52,10 +52,6 @@ class CourseContentDetailsTableViewController: UITableViewController {
         }
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        tableView.reloadData()
-//    }
-  
     
     // MARK: - Table view data source
 
@@ -102,7 +98,7 @@ class CourseContentDetailsTableViewController: UITableViewController {
         // in case the error case where ther are no valid rows to display in the tableView
         if totalRows == 0 {
             // handle the empty array error case
-            print("ERROR: totalRows == 0 in CourseContentDetailsTableViewController.swift -> tableView(numberOfRowsInSection:) - line 98.")
+            print("ERROR: totalRows == 0 in CourseContentDetailsTableViewController.swift -> tableView(numberOfRowsInSection:) - line 101.")
         }
         return totalRows
     }
@@ -187,13 +183,34 @@ extension CourseContentDetailsTableViewController:
     // function to create and display the pdf action sheet from screen bottom
     @objc func bringUpPDFActionSheet() {
         
+        if let pdfToOpen = Bundle.main.url(forResource: pdfPath, withExtension: "pdf", subdirectory: nil, localization: nil) {
+            
+            do {
+                
+                let pdfData = try Data(contentsOf: pdfToOpen)
+                
+                let activityViewController = UIActivityViewController(activityItems: [pdfData], applicationActivities: nil)
+                
+                activityViewController.excludedActivityTypes = [UIActivity.ActivityType.assignToContact, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToFlickr, UIActivity.ActivityType.postToTencentWeibo, UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.postToVimeo, UIActivity.ActivityType.postToWeibo, UIActivity.ActivityType.saveToCameraRoll]
+                
+                activityViewController.popoverPresentationController?.sourceView = self.view
+                present(activityViewController, animated: true, completion: nil)
+                
+            } catch {
+                
+                print("ERROR: no pdf documant found at provided pdfPath \(error.localizedDescription)")
+                
+            }
+        } else {
+            print("ERROR: no pdf documant found at provided pdfPath in Bundle.main.url in CourseContentDetailsTableViewController.swift -> bringUpPDFActionSheet() - line 203")
+        }
     }
     
     func openWebViewButtonTapped(cell: CourseContentDetailTableViewCell) {
         
         guard let indexPath = tableView.indexPath(for: cell) else {
             
-            print("ERROR: nil value found for indexPath in CourseContentDetailsTableViewController.swift -> openWebViewButtonTapped(cell:) - line 172.")
+            print("ERROR: nil value found for indexPath in CourseContentDetailsTableViewController.swift -> openWebViewButtonTapped(cell:) - line 211.")
             return
         }
         
@@ -238,6 +255,8 @@ extension CourseContentDetailsTableViewController:
                 
                 let pdfFilePath = tupleStrings.1
                 
+                pdfPath = pdfFilePath
+                
                 if let pdfToOpen = Bundle.main.url(forResource: pdfFilePath, withExtension: "pdf", subdirectory: nil, localization: nil) {
                     
                     do {
@@ -263,11 +282,11 @@ extension CourseContentDetailsTableViewController:
                         // create and configure share button
                         let shareButton = UIButton(frame: CGRect(x: ((shareFooterView.frame.size.width/2) - 16), y: ((shareFooterView.frame.size.height/2) - 24) , width: 32, height: 32))
                         shareButton.setImage(UIImage(named: "white-share-rounded-90"), for: UIControl.State.normal)
-                        dismissButton.addTarget(self, action: #selector(bringUpPDFActionSheet), for: UIControl.Event.touchUpInside)
+                        shareButton.addTarget(self, action: #selector(bringUpPDFActionSheet), for: UIControl.Event.touchUpInside)
                         shareFooterView.addSubview(shareButton)
                         
                     } catch {
-                        print("ERROR: couldn't create Data from pdfToOpen \(error.localizedDescription) in CourseContentDetailsTableViewController.swift -> openWebViewButtonTapped(cell:) - line 232")
+                        print("ERROR: couldn't create Data from pdfToOpen \(error.localizedDescription) in CourseContentDetailsTableViewController.swift -> openWebViewButtonTapped(cell:) - line 287.")
                     }
                 }
             }
