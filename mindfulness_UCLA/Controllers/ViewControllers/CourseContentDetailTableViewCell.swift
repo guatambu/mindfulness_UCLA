@@ -16,10 +16,8 @@ class CourseContentDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var bodyTextLabel: UILabel!
     @IBOutlet weak var openWebViewButton: UIButton!
     
-    var isLinkActive = true
-    
-    // TODO: update this property to allow capacity to work with PDFKit
-    var isPDFFile = true
+    var isLinkActive: Bool?
+    var isPDFFile: Bool?
     
     var delegate: CourseContentDetailsTableViewCellDelegate?
     
@@ -47,6 +45,15 @@ class CourseContentDetailTableViewCell: UITableViewCell {
             print("ERROR: nil vlaue found for tupleStrings or isLinkActive property in CourseContentDetailTableViewCell.swift -> updateViews - line 46.")
             return
         }
+        guard let isLinkActive = isLinkActive else {
+            print("ERROR: nil vlaue found for isLinkActive or isLinkActive property in CourseContentDetailTableViewCell.swift -> updateViews - line 49.")
+            return
+        }
+        guard let isPDFFile = isPDFFile else {
+            print("ERROR: nil vlaue found for isPDFFile or isLinkActive property in CourseContentDetailTableViewCell.swift -> updateViews - line 52.")
+            return
+        }
+        
 
         print("isLinkActive: \(isLinkActive)")
         
@@ -76,7 +83,6 @@ class CourseContentDetailTableViewCell: UITableViewCell {
                 openWebViewButton.isHidden = false
                 openWebViewButton.isEnabled = true
                 openWebViewButton.setTitle("", for: UIControl.State.normal)
-                // format the button for appearance
                 
             } else if tupleStrings.1.contains("http") && !isLinkActive {
                 
@@ -90,6 +96,19 @@ class CourseContentDetailTableViewCell: UITableViewCell {
                 openWebViewButton.isHidden = true
                 openWebViewButton.isEnabled = false
                 
+            } else if isPDFFile {
+                
+                // format the headingLabel
+                headingLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.0)
+                // hide the headingLabel
+                headingLabel.isHidden = false
+                // hide the bodyTextLabel
+                bodyTextLabel.isHidden = true
+                // show the button
+                openWebViewButton.isHidden = false
+                openWebViewButton.isEnabled = true
+                openWebViewButton.setTitle("", for: UIControl.State.normal)
+                
             } else {
                 
                 // show the bodyTextLabel
@@ -99,7 +118,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
                 // hide the button
                 openWebViewButton.isHidden = true
                 openWebViewButton.isEnabled = false
-                
+    
             }
             
         } else {

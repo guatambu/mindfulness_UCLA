@@ -11,7 +11,6 @@
 		FA4B9D4C23470BC5004D1B7C /* Video_Courses_Yoga_cropped.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D4B23470BC5004D1B7C /* Video_Courses_Yoga_cropped.jpeg */; };
 		FA4B9D4E23470DD3004D1B7C /* WeekHeadings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D4D23470DD3004D1B7C /* WeekHeadings.swift */; };
 		FA4B9D502349ADDC004D1B7C /* WeekCourseContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */; };
-		FA4B9D522349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D512349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files */; };
 		FA4B9D602349BAE3004D1B7C /* Week1Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */; };
 		FA4B9D622349C59B004D1B7C /* Week2Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D612349C59B004D1B7C /* Week2Data.swift */; };
 		FA4B9D642349C5A8004D1B7C /* Week3Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B9D632349C5A8004D1B7C /* Week3Data.swift */; };
@@ -80,6 +79,22 @@
 		FACDBA8A2366A5D900B538EC /* MindfulYoga2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA892366A5D900B538EC /* MindfulYoga2.swift */; };
 		FACDBA8D2366AEDD00B538EC /* Mindful_Yoga_2_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA8B2366AEDD00B538EC /* Mindful_Yoga_2_thumbnail.png */; };
 		FACDBA8E2366AEDD00B538EC /* Mindful_Yoga_1_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA8C2366AEDD00B538EC /* Mindful_Yoga_1_thumbnail.png */; };
+		FACDBA9C2367954100B538EC /* midway-assessment.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA9A2367952000B538EC /* midway-assessment.pdf */; };
+		FACDBA9D2367954100B538EC /* week1-formal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA922367951E00B538EC /* week1-formal.pdf */; };
+		FACDBA9E2367954100B538EC /* week1-informal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA982367951F00B538EC /* week1-informal.pdf */; };
+		FACDBA9F2367954100B538EC /* week2-formal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA992367952000B538EC /* week2-formal.pdf */; };
+		FACDBAA02367954100B538EC /* week2-informal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA9B2367952000B538EC /* week2-informal.pdf */; };
+		FACDBAA12367954100B538EC /* week3-informal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA962367951F00B538EC /* week3-informal.pdf */; };
+		FACDBAA22367954100B538EC /* week4-formal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA912367951E00B538EC /* week4-formal.pdf */; };
+		FACDBAA32367954100B538EC /* week4-informal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA952367951F00B538EC /* week4-informal.pdf */; };
+		FACDBAA42367954100B538EC /* week5-formal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA8F2367951D00B538EC /* week5-formal.pdf */; };
+		FACDBAA52367954100B538EC /* week5-informal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA972367951F00B538EC /* week5-informal.pdf */; };
+		FACDBAA62367954100B538EC /* week6-formal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA932367951E00B538EC /* week6-formal.pdf */; };
+		FACDBAA72367954100B538EC /* week7-formal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA902367951E00B538EC /* week7-formal.pdf */; };
+		FACDBAA82367954100B538EC /* week7-informal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA942367951F00B538EC /* week7-informal.pdf */; };
+		FACDBAAC2368D97E00B538EC /* blue-delete-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBAA92368D97D00B538EC /* blue-delete-100.png */; };
+		FACDBAAD2368D97E00B538EC /* white-share-rounded-90.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBAAA2368D97D00B538EC /* white-share-rounded-90.png */; };
+		FACDBAAE2368D97E00B538EC /* white-delete-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBAAB2368D97E00B538EC /* white-delete-100.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +102,6 @@
 		FA4B9D4B23470BC5004D1B7C /* Video_Courses_Yoga_cropped.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Video_Courses_Yoga_cropped.jpeg; sourceTree = "<group>"; };
 		FA4B9D4D23470DD3004D1B7C /* WeekHeadings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeadings.swift; sourceTree = "<group>"; };
 		FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCourseContent.swift; sourceTree = "<group>"; };
-		FA4B9D512349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mindfulness_UCLA_practice_sheet_files; sourceTree = "<group>"; };
 		FA4B9D542349B989004D1B7C /* sittingmeditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sittingmeditation.mp3; sourceTree = "<group>"; };
 		FA4B9D552349B989004D1B7C /* lovingkindness.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lovingkindness.mp3; sourceTree = "<group>"; };
 		FA4B9D562349B989004D1B7C /* RAIN.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = RAIN.mp3; sourceTree = "<group>"; };
@@ -158,6 +172,22 @@
 		FACDBA892366A5D900B538EC /* MindfulYoga2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulYoga2.swift; sourceTree = "<group>"; };
 		FACDBA8B2366AEDD00B538EC /* Mindful_Yoga_2_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mindful_Yoga_2_thumbnail.png; sourceTree = "<group>"; };
 		FACDBA8C2366AEDD00B538EC /* Mindful_Yoga_1_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mindful_Yoga_1_thumbnail.png; sourceTree = "<group>"; };
+		FACDBA8F2367951D00B538EC /* week5-formal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week5-formal.pdf"; sourceTree = "<group>"; };
+		FACDBA902367951E00B538EC /* week7-formal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week7-formal.pdf"; sourceTree = "<group>"; };
+		FACDBA912367951E00B538EC /* week4-formal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week4-formal.pdf"; sourceTree = "<group>"; };
+		FACDBA922367951E00B538EC /* week1-formal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week1-formal.pdf"; sourceTree = "<group>"; };
+		FACDBA932367951E00B538EC /* week6-formal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week6-formal.pdf"; sourceTree = "<group>"; };
+		FACDBA942367951F00B538EC /* week7-informal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week7-informal.pdf"; sourceTree = "<group>"; };
+		FACDBA952367951F00B538EC /* week4-informal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week4-informal.pdf"; sourceTree = "<group>"; };
+		FACDBA962367951F00B538EC /* week3-informal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week3-informal.pdf"; sourceTree = "<group>"; };
+		FACDBA972367951F00B538EC /* week5-informal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week5-informal.pdf"; sourceTree = "<group>"; };
+		FACDBA982367951F00B538EC /* week1-informal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week1-informal.pdf"; sourceTree = "<group>"; };
+		FACDBA992367952000B538EC /* week2-formal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week2-formal.pdf"; sourceTree = "<group>"; };
+		FACDBA9A2367952000B538EC /* midway-assessment.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "midway-assessment.pdf"; sourceTree = "<group>"; };
+		FACDBA9B2367952000B538EC /* week2-informal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "week2-informal.pdf"; sourceTree = "<group>"; };
+		FACDBAA92368D97D00B538EC /* blue-delete-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-delete-100.png"; sourceTree = "<group>"; };
+		FACDBAAA2368D97D00B538EC /* white-share-rounded-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-share-rounded-90.png"; sourceTree = "<group>"; };
+		FACDBAAB2368D97E00B538EC /* white-delete-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-delete-100.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +225,9 @@
 				FAC8916F2341EF350018338C /* Course_Content_Mountain.jpg */,
 				FAC8916D2341EF340018338C /* Getting_Started_Lotus.jpg */,
 				FACDBA7223652E7000B538EC /* mindfulness-pause-90.png */,
+				FACDBAA92368D97D00B538EC /* blue-delete-100.png */,
+				FACDBAAB2368D97E00B538EC /* white-delete-100.png */,
+				FACDBAAA2368D97D00B538EC /* white-share-rounded-90.png */,
 				FACDBA7323652E7000B538EC /* mindfulness-play-90.png */,
 				FACDBA8C2366AEDD00B538EC /* Mindful_Yoga_1_thumbnail.png */,
 				FACDBA8B2366AEDD00B538EC /* Mindful_Yoga_2_thumbnail.png */,
@@ -273,7 +306,19 @@
 				FAC8914F2341EB070018338C /* AppDelegate.swift */,
 				FAC891592341EB090018338C /* Assets.xcassets */,
 				FA4B9D532349B989004D1B7C /* mindfulness_UCLA_app_guided_meditations_audio_files */,
-				FA4B9D512349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files */,
+				FACDBA9A2367952000B538EC /* midway-assessment.pdf */,
+				FACDBA922367951E00B538EC /* week1-formal.pdf */,
+				FACDBA982367951F00B538EC /* week1-informal.pdf */,
+				FACDBA992367952000B538EC /* week2-formal.pdf */,
+				FACDBA9B2367952000B538EC /* week2-informal.pdf */,
+				FACDBA962367951F00B538EC /* week3-informal.pdf */,
+				FACDBA912367951E00B538EC /* week4-formal.pdf */,
+				FACDBA952367951F00B538EC /* week4-informal.pdf */,
+				FACDBA8F2367951D00B538EC /* week5-formal.pdf */,
+				FACDBA972367951F00B538EC /* week5-informal.pdf */,
+				FACDBA932367951E00B538EC /* week6-formal.pdf */,
+				FACDBA902367951E00B538EC /* week7-formal.pdf */,
+				FACDBA942367951F00B538EC /* week7-informal.pdf */,
 				FA4B9D5E2349B9B9004D1B7C /* mindfulness_UCLA_graphics_assets */,
 				FAC8915E2341EB090018338C /* Info.plist */,
 			);
@@ -414,6 +459,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACDBA9C2367954100B538EC /* midway-assessment.pdf in Resources */,
+				FACDBA9D2367954100B538EC /* week1-formal.pdf in Resources */,
+				FACDBA9E2367954100B538EC /* week1-informal.pdf in Resources */,
+				FACDBA9F2367954100B538EC /* week2-formal.pdf in Resources */,
+				FACDBAA02367954100B538EC /* week2-informal.pdf in Resources */,
+				FACDBAA12367954100B538EC /* week3-informal.pdf in Resources */,
+				FACDBAA22367954100B538EC /* week4-formal.pdf in Resources */,
+				FACDBAA32367954100B538EC /* week4-informal.pdf in Resources */,
+				FACDBAAC2368D97E00B538EC /* blue-delete-100.png in Resources */,
+				FACDBAA42367954100B538EC /* week5-formal.pdf in Resources */,
+				FACDBAA52367954100B538EC /* week5-informal.pdf in Resources */,
+				FACDBAA62367954100B538EC /* week6-formal.pdf in Resources */,
+				FACDBAA72367954100B538EC /* week7-formal.pdf in Resources */,
+				FACDBAA82367954100B538EC /* week7-informal.pdf in Resources */,
 				FACDBA7623654D9C00B538EC /* sittingmeditation.mp3 in Resources */,
 				FACDBA7723654D9C00B538EC /* lovingkindness.mp3 in Resources */,
 				FACDBA7823654D9C00B538EC /* RAIN.mp3 in Resources */,
@@ -424,7 +483,6 @@
 				FACDBA7D23654D9C00B538EC /* soften-soothe-allow.mp3 in Resources */,
 				FACDBA7E23654D9C00B538EC /* turning-toward-emotional (1).mp3 in Resources */,
 				FACDBA7F23654D9C00B538EC /* bodyscan.mp3 in Resources */,
-				FA4B9D522349B95A004D1B7C /* mindfulness_UCLA_practice_sheet_files in Resources */,
 				FAC8916A2341EB5E0018338C /* LaunchScreen.storyboard in Resources */,
 				FAC891852341EF370018338C /* Video_Courses_Yoga.jpeg in Resources */,
 				FAC891812341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_Background_Blue.png in Resources */,
@@ -433,6 +491,7 @@
 				FACDBA8D2366AEDD00B538EC /* Mindful_Yoga_2_thumbnail.png in Resources */,
 				FAC891792341EF370018338C /* TImer_Blue.png in Resources */,
 				FAC8917A2341EF370018338C /* Getting_Started_Lotus.jpg in Resources */,
+				FACDBAAE2368D97E00B538EC /* white-delete-100.png in Resources */,
 				FAC8917E2341EF370018338C /* UCLA_Meditation_Course_Lotus_Flower_Original_Image_UCLA_Blue.png in Resources */,
 				FACDBA7423652E7000B538EC /* mindfulness-pause-90.png in Resources */,
 				FAC89195234580250018338C /* Timer_Large_Detail_Background_Color.png in Resources */,
@@ -445,6 +504,7 @@
 				FAC891832341EF370018338C /* Timer_Large_Detail_Blue.png in Resources */,
 				FAC8917D2341EF370018338C /* Audio_Tracks_Meditation.jpg in Resources */,
 				FAC8917C2341EF370018338C /* Course_Content_Mountain.jpg in Resources */,
+				FACDBAAD2368D97E00B538EC /* white-share-rounded-90.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

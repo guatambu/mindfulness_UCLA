@@ -53,9 +53,9 @@ struct Week4Data {
             
         ],
         practiceSheetsURLList: [
-            ("\(WeekHeadings.formalPracticeSheet.rawValue) - Mindful Yoga (Yoga 2), Sitting Meditation", "TBD"),
-            ("\(WeekHeadings.informalPracticeSheet.rawValue) - STOP: The One Minute Breathing Space", "TBD"),
-            ("\(WeekHeadings.midwaySelfAssessment.rawValue) - Complete during last day of practice", "TBD")
+            ("\(WeekHeadings.formalPracticeSheet.rawValue) - Mindful Yoga (Yoga 2), Sitting Meditation", "week4-formal"),
+            ("\(WeekHeadings.informalPracticeSheet.rawValue) - STOP: The One Minute Breathing Space", "week4-informal"),
+            ("\(WeekHeadings.midwaySelfAssessment.rawValue) - Complete during last day of practice", "midway-assessment")
         ]
     )
 }

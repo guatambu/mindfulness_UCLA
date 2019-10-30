@@ -67,8 +67,8 @@ struct Week5Data {
             
         ],
         practiceSheetsURLList: [
-            ("\(WeekHeadings.formalPracticeSheet.rawValue) - #\"Turning Toward\" Meditation#", "TBD"),
-            ("\(WeekHeadings.informalPracticeSheet.rawValue) - #\"Turning Toward\" informal practices#", "TBD")
+            ("\(WeekHeadings.formalPracticeSheet.rawValue) - #\"Turning Toward\" Meditation#", "week5-formal"),
+            ("\(WeekHeadings.informalPracticeSheet.rawValue) - #\"Turning Toward\" informal practices#", "week5-informal")
         ]
     )
 }
