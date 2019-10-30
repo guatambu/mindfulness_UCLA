@@ -55,7 +55,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         }
         
 
-        print("isLinkActive: \(isLinkActive)")
+//        print("isLinkActive: \(isLinkActive)")
         
         // success, so on to cell formatting
         if tupleStrings.0 != "" {
@@ -184,16 +184,16 @@ extension CourseContentDetailTableViewCell {
         
         let boldMatches = boldRegex.matches(in: stringToFormat, options: [], range: range)
         
-        print("stringToFormat: \(stringToFormat)")
-        print("stringToFormat.count: \(stringToFormat.count)")
-        print("boldMatches: \(boldMatches)")
+//        print("stringToFormat: \(stringToFormat)")
+//        print("stringToFormat.count: \(stringToFormat.count)")
+//        print("boldMatches: \(boldMatches)")
         
         var boldCounter = 0
         
         for match in boldMatches {
             
-            print("i: \(boldCounter)")
-            print("charactersRemovedFromString: \(charactersRemovedFromString)")
+//            print("i: \(boldCounter)")
+//            print("charactersRemovedFromString: \(charactersRemovedFromString)")
             
             if boldCounter == 0 {
                 
@@ -234,8 +234,8 @@ extension CourseContentDetailTableViewCell {
                 charactersRemovedFromString = 0
             }
             
-            print("n: \(italicCounter)")
-            print("charactersRemovedFromString: \(charactersRemovedFromString)")
+//            print("n: \(italicCounter)")
+//            print("charactersRemovedFromString: \(charactersRemovedFromString)")
             
             let newRange = NSMakeRange(match.range.location - charactersRemovedFromString, match.range.length)
             
@@ -270,8 +270,8 @@ extension CourseContentDetailTableViewCell {
                 charactersRemovedFromString = 0
             }
             
-            print("n: \(smallItalicCounter)")
-            print("charactersRemovedFromString: \(charactersRemovedFromString)")
+//            print("n: \(smallItalicCounter)")
+//            print("charactersRemovedFromString: \(charactersRemovedFromString)")
             
             let newRange = NSMakeRange(match.range.location - charactersRemovedFromString, match.range.length)
             
@@ -306,8 +306,8 @@ extension CourseContentDetailTableViewCell {
                 charactersRemovedFromString = 0
             }
             
-            print("n: \(boldItalicCounter)")
-            print("charactersRemovedFromString: \(charactersRemovedFromString)")
+//            print("n: \(boldItalicCounter)")
+//            print("charactersRemovedFromString: \(charactersRemovedFromString)")
             
             let newRange = NSMakeRange(match.range.location - charactersRemovedFromString, match.range.length)
             
@@ -325,7 +325,7 @@ extension CourseContentDetailTableViewCell {
             attributedString.replaceCharacters(in: rangeOfLastCharacter, with: "")
         }
         
-        print("attributedString: \(attributedString)")
+//        print("attributedString: \(attributedString)")
         
         return attributedString
     }
