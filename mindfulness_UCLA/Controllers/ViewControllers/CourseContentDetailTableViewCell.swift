@@ -63,9 +63,13 @@ class CourseContentDetailTableViewCell: UITableViewCell {
             // format the headingLabel
             headingLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.0)
             headingLabel.isHidden = false
+            // hide the button
+            openWebViewButton.isHidden = true
+            openWebViewButton.isEnabled = false
+            
         
         } else {
-            // hide the headingLAbel
+            // hide the headingLabel
             headingLabel.isHidden = true
         }
         
