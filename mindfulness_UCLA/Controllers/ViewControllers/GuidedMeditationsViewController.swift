@@ -134,7 +134,61 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         
         playLocalAudioMeditation(path: audioMeditationToPlay.path)
         
+        switch audioMeditationToPlay.title {
+            
+        case AudioGuidedMeditationMetaDataStrings.bodyScanMeditationTitle.rawValue:
         
+            GuidedMeditationsModelController.bodyScanMeditationCount += 1
+            
+        // 2
+        case AudioGuidedMeditationMetaDataStrings.sittingMeditationTitle.rawValue:
+        
+            GuidedMeditationsModelController.sittingMeditationCount += 1
+            
+        // 3
+        case AudioGuidedMeditationMetaDataStrings.difficultEmotionsMeditationTitle.rawValue:
+            
+            GuidedMeditationsModelController.difficultEmotionsMeditationCount += 1
+            
+        // 4
+        case AudioGuidedMeditationMetaDataStrings.physicalPainMeditaitonTitle.rawValue:
+            
+            GuidedMeditationsModelController.physicalPainMeditationCount += 1
+            
+        // 5
+        case AudioGuidedMeditationMetaDataStrings.mountainMeditationTitle.rawValue:
+        
+            GuidedMeditationsModelController.mountainMeditationCount += 1
+            
+        // 6
+        case AudioGuidedMeditationMetaDataStrings.lakeMeditationTitle.rawValue:
+            
+            GuidedMeditationsModelController.lakeMeditationCount += 1
+            
+        // 7
+        case AudioGuidedMeditationMetaDataStrings.lovingkindnessMeditaitonTitle.rawValue:
+            
+            GuidedMeditationsModelController.lovingKindnessMeditationCount += 1
+        
+        // 8
+        case AudioGuidedMeditationMetaDataStrings.softenSootheAllowMeditationTitle.rawValue:
+            
+            GuidedMeditationsModelController.softenSootheAllowMeditationCount += 1
+            
+        // 9
+        case AudioGuidedMeditationMetaDataStrings.RAINMeditationTitle.rawValue:
+            
+            GuidedMeditationsModelController.rainMeditationCount += 1
+            
+        // 10
+        case AudioGuidedMeditationMetaDataStrings.silent30minGuidedMeditationTitle.rawValue:
+            
+            GuidedMeditationsModelController.silentMeditationCount += 1
+            
+            
+        default:
+            print("ERROR: unlikely event of an Guided MEditaiton with an unknown title has been passed into the switch statement in GuidedMeditationsViewController.swift -> tableView(tableView: didSelectRowAt:) - line 170.")
+        }
         
         playPauseButton.setImage(UIImage(named: "mindfulness-pause-90"), for: UIControl.State.normal)
         // activate the player's appearance in the UI

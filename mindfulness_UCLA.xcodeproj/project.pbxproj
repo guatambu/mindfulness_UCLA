@@ -95,6 +95,9 @@
 		FACDBAAC2368D97E00B538EC /* blue-delete-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBAA92368D97D00B538EC /* blue-delete-100.png */; };
 		FACDBAAD2368D97E00B538EC /* white-share-rounded-90.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBAAA2368D97D00B538EC /* white-share-rounded-90.png */; };
 		FACDBAAE2368D97E00B538EC /* white-delete-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBAAB2368D97E00B538EC /* white-delete-100.png */; };
+		FACDBAB0236BEA5700B538EC /* tibetan-bells-end-meditation-timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FACDBAAF236BEA5700B538EC /* tibetan-bells-end-meditation-timer.mp3 */; };
+		FACDBAB3236D0A0600B538EC /* TimerModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBAB2236D0A0600B538EC /* TimerModelController.swift */; };
+		FACDBAB5236D0A4300B538EC /* GuidedMeditationsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBAB4236D0A4300B538EC /* GuidedMeditationsModelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,6 +191,9 @@
 		FACDBAA92368D97D00B538EC /* blue-delete-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-delete-100.png"; sourceTree = "<group>"; };
 		FACDBAAA2368D97D00B538EC /* white-share-rounded-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-share-rounded-90.png"; sourceTree = "<group>"; };
 		FACDBAAB2368D97E00B538EC /* white-delete-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-delete-100.png"; sourceTree = "<group>"; };
+		FACDBAAF236BEA5700B538EC /* tibetan-bells-end-meditation-timer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "tibetan-bells-end-meditation-timer.mp3"; sourceTree = "<group>"; };
+		FACDBAB2236D0A0600B538EC /* TimerModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModelController.swift; sourceTree = "<group>"; };
+		FACDBAB4236D0A4300B538EC /* GuidedMeditationsModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationsModelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +210,7 @@
 		FA4B9D532349B989004D1B7C /* mindfulness_UCLA_app_guided_meditations_audio_files */ = {
 			isa = PBXGroup;
 			children = (
+				FACDBAAF236BEA5700B538EC /* tibetan-bells-end-meditation-timer.mp3 */,
 				FA4B9D542349B989004D1B7C /* sittingmeditation.mp3 */,
 				FA4B9D552349B989004D1B7C /* lovingkindness.mp3 */,
 				FA4B9D562349B989004D1B7C /* RAIN.mp3 */,
@@ -267,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */,
+				FACDBAB2236D0A0600B538EC /* TimerModelController.swift */,
+				FACDBAB4236D0A4300B538EC /* GuidedMeditationsModelController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -433,6 +442,11 @@
 				TargetAttributes = {
 					FAC8914B2341EB070018338C = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -473,6 +487,7 @@
 				FACDBAA62367954100B538EC /* week6-formal.pdf in Resources */,
 				FACDBAA72367954100B538EC /* week7-formal.pdf in Resources */,
 				FACDBAA82367954100B538EC /* week7-informal.pdf in Resources */,
+				FACDBAB0236BEA5700B538EC /* tibetan-bells-end-meditation-timer.mp3 in Resources */,
 				FACDBA7623654D9C00B538EC /* sittingmeditation.mp3 in Resources */,
 				FACDBA7723654D9C00B538EC /* lovingkindness.mp3 in Resources */,
 				FACDBA7823654D9C00B538EC /* RAIN.mp3 in Resources */,
@@ -531,6 +546,8 @@
 				FACDBA59236396E800B538EC /* GuidedMeditation.swift in Sources */,
 				FA4B9D682349C5BF004D1B7C /* Week5Data.swift in Sources */,
 				FACDBA5D2363980F00B538EC /* BodyScan.swift in Sources */,
+				FACDBAB3236D0A0600B538EC /* TimerModelController.swift in Sources */,
+				FACDBAB5236D0A4300B538EC /* GuidedMeditationsModelController.swift in Sources */,
 				FACDBA8323663E8E00B538EC /* VideoCoursesTableViewCell.swift in Sources */,
 				FA4B9D602349BAE3004D1B7C /* Week1Data.swift in Sources */,
 				FA4B9D642349C5A8004D1B7C /* Week3Data.swift in Sources */,

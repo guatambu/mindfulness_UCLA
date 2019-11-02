@@ -55,6 +55,8 @@ class VideoCoursesTableViewController: UITableViewController,
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        // TODO: perhaps need to implement the switch to track the plays on these two videos by a user by adding these to the GuidedMeditationsModelController and creating the corresponding data models in the Guided MEditaitons folder in the Models Group
+        
     }
     
     
