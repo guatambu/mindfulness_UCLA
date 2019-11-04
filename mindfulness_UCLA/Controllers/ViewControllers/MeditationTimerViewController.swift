@@ -46,8 +46,6 @@ class MeditationTimerViewController: UIViewController {
     // MARK: ViewControllers Lifecycle
     
     override func viewWillAppear(_ animated: Bool) {
-
-        print("viewWillAppear")
         
         if UserMeditationMasterTimeModelController.shared.isTimerActive != nil {
             
@@ -55,17 +53,12 @@ class MeditationTimerViewController: UIViewController {
                 
                 restartRunningTimer()
                 
-//                if UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt <= 0 {
-//
-//                    // numericCountdownLabel.text = convertSecondsToMinutes(time: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
-//
-//                    numericCountdownLabel.text = "0:00"
-//
-//                }
-                
-//                UserMeditationMasterTimeModelController.shared.isTimeRunning = true
-                
-                startButtonOutlet.isEnabled = true
+                if numericCountdownLabel.text != "0:00" {
+                    
+                    UserMeditationMasterTimeModelController.shared.isTimeRunning = true
+                    
+                    startButtonOutlet.isEnabled = false
+                }
                 
             } else if UserMeditationMasterTimeModelController.shared.isTimerActive && !UserMeditationMasterTimeModelController.shared.isTimeRunning {
                 
@@ -78,12 +71,9 @@ class MeditationTimerViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         
-        print("viewDidDisappear")
-        
         UserMeditationMasterTimeModelController.shared.currentViewWillDisappearTime = Date()
         
         destroyScheduledTimer()
-        
     }
 
     override func viewDidLoad() {
@@ -265,7 +255,6 @@ extension MeditationTimerViewController {
         minutesChoiceSlider.maximumValue = 60.00
         minutesChoiceSlider.setValue(0.00, animated: true)
         minutesChoiceSlider.minimumTrackTintColor = startBlue
-        
     }
     
     // function to set the start timer value with round 10 second values
@@ -311,7 +300,6 @@ extension MeditationTimerViewController {
         }
         
         return duration
-        
     }
 }
 
@@ -324,7 +312,7 @@ extension MeditationTimerViewController {
         
         UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt -= 1
         
-        print("MasterTimeMC.shared.secondsInts from background: \(UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)")
+//        print("MasterTimeMC.shared.secondsInts from background: \(UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)")
         
         numericCountdownLabel.text = convertSecondsToMinutes(time: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
         
@@ -393,6 +381,8 @@ extension MeditationTimerViewController {
                     sliderTimer = timer
                     // the timer is now and running and will be set isTimerRunning = true
                     UserMeditationMasterTimeModelController.shared.isTimeRunning = true
+                    
+                    numericCountdownLabel.text = convertSecondsToMinutes(time: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
                 }
                 
                 startButtonOutlet.setTitle("pause", for: UIControl.State.normal)
@@ -407,7 +397,7 @@ extension MeditationTimerViewController {
             
         } else {
             
-            print("ERROR: either the timeIsRunning property is false, or the sliderTimer does not equal nil, or both in MeditationTimerViewController ->  viewWillAppear(_ animated:) - line 400")
+            print("ERROR: either the timeIsRunning property is false, or the sliderTimer does not equal nil, or both in MeditationTimerViewController ->  viewWillAppear(_ animated:) - line 400.")
         }
     }
     
