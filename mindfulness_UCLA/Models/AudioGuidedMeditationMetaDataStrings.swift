@@ -65,7 +65,7 @@ enum AudioGuidedMeditationMetaDataStrings: String {
     // using for notification.id property
     case meditationDone = "meditation done" // we may need more than one, maybe not
     // message / subTitle
-    case hopeYouEnjoyedIt = "hope you enjoyed it"
+    case hopeYouEnjoyedIt = "hope you enjoyed it :)"
     // for the notification sound path
     case tibetanBells = "tibetan-bells-end-meditation-timer"
     case part1 = "-part 1"

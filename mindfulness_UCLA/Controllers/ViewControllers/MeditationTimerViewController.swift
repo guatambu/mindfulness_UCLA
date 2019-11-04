@@ -55,9 +55,15 @@ class MeditationTimerViewController: UIViewController {
                 
                 restartRunningTimer()
                 
-                numericCountdownLabel.text = convertSecondsToMinutes(time: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
+//                if UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt <= 0 {
+//
+//                    // numericCountdownLabel.text = convertSecondsToMinutes(time: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
+//
+//                    numericCountdownLabel.text = "0:00"
+//
+//                }
                 
-                UserMeditationMasterTimeModelController.shared.isTimeRunning = true
+//                UserMeditationMasterTimeModelController.shared.isTimeRunning = true
                 
                 startButtonOutlet.isEnabled = true
                 
@@ -322,7 +328,7 @@ extension MeditationTimerViewController {
         
         numericCountdownLabel.text = convertSecondsToMinutes(time: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
         
-        if UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt == 0 {
+        if UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt <= 0 {
             
             sliderTimer?.invalidate()
             
@@ -340,7 +346,6 @@ extension MeditationTimerViewController {
         }
     }
     
-    
     func scheduleNewTimer() {
         
         // schedule timer
@@ -351,7 +356,6 @@ extension MeditationTimerViewController {
             timer.tolerance = 0.1
             
             sliderTimer = timer
-            
         }
         
         // set relevant start time properties in UserMeditationMasterTimeModelController.shared
@@ -365,29 +369,41 @@ extension MeditationTimerViewController {
         // check to see if a meditation countdown timer is active
         if UserMeditationMasterTimeModelController.shared.isTimerActive && UserMeditationMasterTimeModelController.shared.isTimeRunning {
             
-            
             UserMeditationMasterTimeModelController.shared.currentElapsedTime = Date().timeIntervalSince(UserMeditationMasterTimeModelController.shared.currentViewWillDisappearTime)
             
             UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt = UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt - Int(UserMeditationMasterTimeModelController.shared.currentElapsedTime)
             
-            // scehdule timer based on time remaining on current "running" timer time left
-            if sliderTimer == nil {
+            // check to ensure valid positive run time for durationInSecondsAsInt
+            if UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt <= 0 {
                 
-                let timer = Timer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
-                RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
-                timer.tolerance = 0.1
+                UserMeditationMasterTimeModelController.shared.isTimerActive = nil
+                UserMeditationMasterTimeModelController.shared.isTimeRunning = nil
+                // do not schedule a timer, the durationInSecondsAsInt has expired
+                numericCountdownLabel.text = "0:00"
                 
-                sliderTimer = timer
+            } else {
+                
+                // scehdule timer based on time remaining on current "running" timer time left
+                if sliderTimer == nil {
+                    
+                    let timer = Timer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+                    RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
+                    timer.tolerance = 0.1
+                    
+                    sliderTimer = timer
+                    // the timer is now and running and will be set isTimerRunning = true
+                    UserMeditationMasterTimeModelController.shared.isTimeRunning = true
+                }
+                
+                startButtonOutlet.setTitle("pause", for: UIControl.State.normal)
+                startButtonOutlet.backgroundColor = pauseOrange
+                
+                // TODO: build actual pausing functionality to allow for timer to resume
+                
+                cancelButtonOutlet.isEnabled = true
+                
+                minutesChoiceSlider.isEnabled = false
             }
-            
-            startButtonOutlet.setTitle("pause", for: UIControl.State.normal)
-            startButtonOutlet.backgroundColor = pauseOrange
-            
-            // TODO: build actual pausing functionality to allow for timer to resume
-            
-            cancelButtonOutlet.isEnabled = true
-            
-            minutesChoiceSlider.isEnabled = false
             
         } else {
             

@@ -64,6 +64,7 @@ class LocalNotificationsManager {
         {
             let content = UNMutableNotificationContent()
             content.title = notification.title
+            content.body = notification.body
             content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: notification.soundFilePath))
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(inSeconds), repeats: false)
