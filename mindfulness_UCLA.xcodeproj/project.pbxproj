@@ -23,6 +23,7 @@
 		FA61C2AE234EBC40007F0AD3 /* CourseContentModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */; };
 		FA61C2B02352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */; };
 		FA61C2B223530070007F0AD3 /* CourseContentDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */; };
+		FA8EEA82236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EEA81236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift */; };
 		FAC891502341EB070018338C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8914F2341EB070018338C /* AppDelegate.swift */; };
 		FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */; };
 		FAC8915A2341EB090018338C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC891592341EB090018338C /* Assets.xcassets */; };
@@ -96,8 +97,9 @@
 		FACDBAAD2368D97E00B538EC /* white-share-rounded-90.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBAAA2368D97D00B538EC /* white-share-rounded-90.png */; };
 		FACDBAAE2368D97E00B538EC /* white-delete-100.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBAAB2368D97E00B538EC /* white-delete-100.png */; };
 		FACDBAB0236BEA5700B538EC /* tibetan-bells-end-meditation-timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FACDBAAF236BEA5700B538EC /* tibetan-bells-end-meditation-timer.mp3 */; };
-		FACDBAB3236D0A0600B538EC /* TimerModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBAB2236D0A0600B538EC /* TimerModelController.swift */; };
 		FACDBAB5236D0A4300B538EC /* GuidedMeditationsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBAB4236D0A4300B538EC /* GuidedMeditationsModelController.swift */; };
+		FACDBAB7236E9AFF00B538EC /* UserMeditationMasterTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBAB6236E9AFF00B538EC /* UserMeditationMasterTimeController.swift */; };
+		FACDBAB9236EA85C00B538EC /* LocalNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBAB8236EA85C00B538EC /* LocalNotificationsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +129,7 @@
 		FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentModelController.swift; sourceTree = "<group>"; };
 		FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailsTableViewController.swift; sourceTree = "<group>"; };
 		FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailTableViewCell.swift; sourceTree = "<group>"; };
+		FA8EEA81236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNUserNotificationCenterDelegate.swift; sourceTree = "<group>"; };
 		FAC8914C2341EB070018338C /* mindfulness_UCLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindfulness_UCLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC8914F2341EB070018338C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC891572341EB070018338C /* mindfulness_UCLA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mindfulness_UCLA.xcdatamodel; sourceTree = "<group>"; };
@@ -192,8 +195,9 @@
 		FACDBAAA2368D97D00B538EC /* white-share-rounded-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-share-rounded-90.png"; sourceTree = "<group>"; };
 		FACDBAAB2368D97E00B538EC /* white-delete-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-delete-100.png"; sourceTree = "<group>"; };
 		FACDBAAF236BEA5700B538EC /* tibetan-bells-end-meditation-timer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "tibetan-bells-end-meditation-timer.mp3"; sourceTree = "<group>"; };
-		FACDBAB2236D0A0600B538EC /* TimerModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModelController.swift; sourceTree = "<group>"; };
 		FACDBAB4236D0A4300B538EC /* GuidedMeditationsModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationsModelController.swift; sourceTree = "<group>"; };
+		FACDBAB6236E9AFF00B538EC /* UserMeditationMasterTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMeditationMasterTimeController.swift; sourceTree = "<group>"; };
+		FACDBAB8236EA85C00B538EC /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,8 +278,9 @@
 			isa = PBXGroup;
 			children = (
 				FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */,
-				FACDBAB2236D0A0600B538EC /* TimerModelController.swift */,
 				FACDBAB4236D0A4300B538EC /* GuidedMeditationsModelController.swift */,
+				FACDBAB6236E9AFF00B538EC /* UserMeditationMasterTimeController.swift */,
+				FACDBAB8236EA85C00B538EC /* LocalNotificationsManager.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC8914F2341EB070018338C /* AppDelegate.swift */,
+				FA8EEA81236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift */,
 				FAC891592341EB090018338C /* Assets.xcassets */,
 				FA4B9D532349B989004D1B7C /* mindfulness_UCLA_app_guided_meditations_audio_files */,
 				FACDBA9A2367952000B538EC /* midway-assessment.pdf */,
@@ -531,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4B9D662349C5B4004D1B7C /* Week4Data.swift in Sources */,
+				FACDBAB9236EA85C00B538EC /* LocalNotificationsManager.swift in Sources */,
 				FA4B9D622349C59B004D1B7C /* Week2Data.swift in Sources */,
 				FAC8918F23457EE10018338C /* VideoCoursesTableViewController.swift in Sources */,
 				FACDBA862366A45400B538EC /* VideoCourse.swift in Sources */,
@@ -546,7 +553,6 @@
 				FACDBA59236396E800B538EC /* GuidedMeditation.swift in Sources */,
 				FA4B9D682349C5BF004D1B7C /* Week5Data.swift in Sources */,
 				FACDBA5D2363980F00B538EC /* BodyScan.swift in Sources */,
-				FACDBAB3236D0A0600B538EC /* TimerModelController.swift in Sources */,
 				FACDBAB5236D0A4300B538EC /* GuidedMeditationsModelController.swift in Sources */,
 				FACDBA8323663E8E00B538EC /* VideoCoursesTableViewCell.swift in Sources */,
 				FA4B9D602349BAE3004D1B7C /* Week1Data.swift in Sources */,
@@ -564,8 +570,10 @@
 				FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */,
 				FACDBA51235E555E00B538EC /* ReGexPatterns.swift in Sources */,
 				FACDBA6323639A0100B538EC /* DifficultEmotions.swift in Sources */,
+				FA8EEA82236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift in Sources */,
 				FACDBA6B23639A5A00B538EC /* SootheSoftenAllow.swift in Sources */,
 				FACDBA6F23639A7A00B538EC /* Silent.swift in Sources */,
+				FACDBAB7236E9AFF00B538EC /* UserMeditationMasterTimeController.swift in Sources */,
 				FA61C2B02352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift in Sources */,
 				FACDBA8A2366A5D900B538EC /* MindfulYoga2.swift in Sources */,
 				FAC8918923457E8C0018338C /* GettingStartedTableViewController.swift in Sources */,

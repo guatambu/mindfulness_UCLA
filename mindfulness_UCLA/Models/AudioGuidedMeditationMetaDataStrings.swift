@@ -60,5 +60,20 @@ enum AudioGuidedMeditationMetaDataStrings: String {
     case silent30minGuidedMeditationPath = "silent30min_guided_meditation_audio_file"
     case silent30minGuidedMeditationDuration = "30:19"
     
+    // local notification content strings
+    
+    // using for notification.id property
+    case meditationDone = "meditation done" // we may need more than one, maybe not
+    // message / subTitle
+    case hopeYouEnjoyedIt = "hope you enjoyed it"
+    // for the notification sound path
+    case tibetanBells = "tibetan-bells-end-meditation-timer"
+    case part1 = "-part 1"
+    case part2 = "-part 2"
+    case part3 = "-part 3"
+    case part4 = "-part 4"
+    case soundFileType = ".mp3"
+    
+    
 }
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AVFoundation
+import UserNotifications
 
 class MeditationTimerViewController: UIViewController {
     
@@ -21,7 +21,9 @@ class MeditationTimerViewController: UIViewController {
     @IBOutlet weak var timerImageView: UIImageView!
     @IBOutlet weak var countdownView: UIView!
     // UIButton(s) properties
+    // only cancel button can toggle isTimerActive property to false
     @IBOutlet weak var cancelButtonOutlet: UIButton!
+    // // only start button can toggle isTimerActive property to true
     @IBOutlet weak var startButtonOutlet: UIButton!
     @IBOutlet weak var twoMinutesButtonOutlet: UIButton!
     @IBOutlet weak var fiveMinutesButtonOutlet: UIButton!
@@ -35,28 +37,47 @@ class MeditationTimerViewController: UIViewController {
     // Timer properties
     var sliderTimer: Timer?
     var timeInterval: TimeInterval = 0.00
-    var secondsInts: Int = 0
-    var isTimerRunning: Bool = false
-    // AVAudioPlayer
-    var audioPlayer = AVAudioPlayer()
-    var isAudioPlayerPlaying = false
     
+    // NOTE: -
+    // // only CANCEL button can toggle isTimerActive property to FALSE
+    // // only START button can toggle isTimerActive property to TRUE
+   
     
     // MARK: ViewControllers Lifecycle
     
     override func viewWillAppear(_ animated: Bool) {
+
+        print("viewWillAppear")
         
-        if sliderTimer != nil {
+        if UserMeditationMasterTimeModelController.shared.isTimerActive != nil {
             
-            print("********************************")
-            print("found existing sliderTimer")
-            print("********************************")
-        } else {
-            
-            
-            
-            
+            if UserMeditationMasterTimeModelController.shared.isTimerActive && UserMeditationMasterTimeModelController.shared.isTimeRunning {
+                
+                restartRunningTimer()
+                
+                numericCountdownLabel.text = convertSecondsToMinutes(time: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
+                
+                UserMeditationMasterTimeModelController.shared.isTimeRunning = true
+                
+                startButtonOutlet.isEnabled = true
+                
+            } else if UserMeditationMasterTimeModelController.shared.isTimerActive && !UserMeditationMasterTimeModelController.shared.isTimeRunning {
+                
+                numericCountdownLabel.text = convertSecondsToMinutes(time: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
+                
+                startButtonOutlet.isEnabled = true
+            }
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        print("viewDidDisappear")
+        
+        UserMeditationMasterTimeModelController.shared.currentViewWillDisappearTime = Date()
+        
+        destroyScheduledTimer()
+        
     }
 
     override func viewDidLoad() {
@@ -66,38 +87,66 @@ class MeditationTimerViewController: UIViewController {
         
         setupSlider()
         setupStartAndPauseButtons()
-        
-        prepareLocalAudioMeditation(path: "tibetan-bells-end-meditation-timer")
     }
+    
     
     // MARK: Actions
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
         
-        secondsInts = ((Int(timeInterval) / 10) * 10)
-        
-        print("\(secondsInts) seconds")
-        
-        isTimerRunning = !isTimerRunning
-        
-        if sliderTimer == nil {
+        if UserMeditationMasterTimeModelController.shared.isTimerActive == nil && UserMeditationMasterTimeModelController.shared.isTimeRunning == nil {
             
-            let timer = Timer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
-            RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
-            timer.tolerance = 0.2
-            
-//            let timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
-            
-            self.sliderTimer = timer
-            
+            UserMeditationMasterTimeModelController.shared.isTimerActive = false
+            UserMeditationMasterTimeModelController.shared.isTimeRunning = false
         }
         
-        if isTimerRunning {
+        // checks for UI based on whether an active Timer is running
+        if !UserMeditationMasterTimeModelController.shared.isTimerActive && !UserMeditationMasterTimeModelController.shared.isTimeRunning && startButtonOutlet.titleLabel?.text == "start" {
+            
+            UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt = ((Int(timeInterval) / 10) * 10)
+            
+            scheduleNewTimer()
+            
+            scheduleNewLocalNotification()
+            
+            // ** only START button can toggle isTimerActive property to TRUE **
+            UserMeditationMasterTimeModelController.shared.isTimerActive = true
             
             startButtonOutlet.setTitle("pause", for: UIControl.State.normal)
             startButtonOutlet.backgroundColor = pauseOrange
             
-            // TODO: build actual pausing functionality to allow for timer to resume
+            cancelButtonOutlet.isEnabled = true
+            
+            minutesChoiceSlider.isEnabled = false
+            
+        } else if UserMeditationMasterTimeModelController.shared.isTimerActive && UserMeditationMasterTimeModelController.shared.isTimeRunning && startButtonOutlet.titleLabel?.text == "pause" {
+            
+            if sliderTimer != nil {
+                
+                destroyScheduledTimer()
+            }
+            
+            destroyScheduledLocalNotifications()
+            
+            UserMeditationMasterTimeModelController.shared.isTimeRunning = false
+            
+            startButtonOutlet.setTitle("start", for: UIControl.State.normal)
+            startButtonOutlet.backgroundColor = startBlue
+            
+            cancelButtonOutlet.isEnabled = true
+        
+        } else if UserMeditationMasterTimeModelController.shared.isTimerActive && !UserMeditationMasterTimeModelController.shared.isTimeRunning && startButtonOutlet.titleLabel?.text == "start" {
+            
+            scheduleNewTimer()
+            
+            scheduleNewLocalNotification()
+            
+            UserMeditationMasterTimeModelController.shared.isTimeRunning = true
+            
+            cancelButtonOutlet.isEnabled = true
+            
+            startButtonOutlet.setTitle("pause", for: UIControl.State.normal)
+            startButtonOutlet.backgroundColor = pauseOrange
             
             cancelButtonOutlet.isEnabled = true
             
@@ -108,16 +157,25 @@ class MeditationTimerViewController: UIViewController {
             startButtonOutlet.setTitle("start", for: UIControl.State.normal)
             startButtonOutlet.backgroundColor = startBlue
             
+            minutesChoiceSlider.isEnabled = true
+            
             cancelButtonOutlet.isEnabled = true
         }
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIButton) {
         
-        isTimerRunning = false
+        // ** only CANCEL button can toggle isTimerActive property to FALSE **
+        UserMeditationMasterTimeModelController.shared.isTimerActive = false
         
-        sliderTimer?.invalidate()
-        sliderTimer = nil
+        UserMeditationMasterTimeModelController.shared.isTimeRunning = false
+        UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt = 0
+        
+        // destroy local timer
+        destroyScheduledTimer()
+
+        // destroy local notification(s)
+        destroyScheduledLocalNotifications()
         
         numericCountdownLabel.text = "0:00"
         
@@ -129,12 +187,6 @@ class MeditationTimerViewController: UIViewController {
         minutesChoiceSlider.isEnabled = true
         
         cancelButtonOutlet.isEnabled = false
-        
-        if isAudioPlayerPlaying {
-            
-            audioPlayer.stop()
-            isAudioPlayerPlaying = false
-        }
     }
     
     @IBAction func sliderMoved(_ sender: UISlider) {
@@ -151,7 +203,7 @@ class MeditationTimerViewController: UIViewController {
     @IBAction func twoMinutesButtonTapped(_ sender: UIButton) {
         
         timeInterval = 2 * 60
-        secondsInts = Int(timeInterval)
+        UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt = Int(timeInterval)
         
         numericCountdownLabel.text = setInitialTimerValue(time: timeInterval)
         
@@ -162,7 +214,7 @@ class MeditationTimerViewController: UIViewController {
     @IBAction func fiveMinutesButtonTapped(_ sender: UIButton) {
         
         timeInterval = 5 * 60
-        secondsInts = Int(timeInterval)
+        UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt = Int(timeInterval)
         
         numericCountdownLabel.text = setInitialTimerValue(time: timeInterval)
         
@@ -173,7 +225,7 @@ class MeditationTimerViewController: UIViewController {
     @IBAction func tenMinutesButtonTapped(_ sender: UIButton) {
         
         timeInterval = 10 * 60
-        secondsInts = Int(timeInterval)
+        UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt = Int(timeInterval)
         
         numericCountdownLabel.text = setInitialTimerValue(time: timeInterval)
         
@@ -185,7 +237,7 @@ class MeditationTimerViewController: UIViewController {
 
 extension MeditationTimerViewController {
     
-    // MARK: Helper Functions
+    // MARK: UI Helper Functions
     
     func setupStartAndPauseButtons() {
         
@@ -255,83 +307,129 @@ extension MeditationTimerViewController {
         return duration
         
     }
-    
+}
+
+
+// MARK: - timer functions
+extension MeditationTimerViewController {
+        
     // functipn to allow timer value to update the minutesLabel.text value
     @objc func updateTimer() {
         
-        secondsInts -= 1
+        UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt -= 1
         
-        print("secondsInts from background: \(secondsInts)")
+        print("MasterTimeMC.shared.secondsInts from background: \(UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)")
         
-        numericCountdownLabel.text = convertSecondsToMinutes(time: secondsInts)
+        numericCountdownLabel.text = convertSecondsToMinutes(time: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
         
-        if secondsInts == 0 {
+        if UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt == 0 {
             
             sliderTimer?.invalidate()
             
-            audioPlayer.play()
-            isAudioPlayerPlaying = true
+            self.cancelButtonOutlet.isEnabled = false
+            self.startButtonOutlet.backgroundColor = self.startBlue
+            self.startButtonOutlet.setTitle("start", for: UIControl.State.normal)
+            self.startButtonOutlet.isEnabled = false
             
-            let alert = UIAlertController(title: "meditation complete", message: "hope you enjoyed it.", preferredStyle: UIAlertController.Style.alert)
-            let done = UIAlertAction(title: "done", style: UIAlertAction.Style.default) { (action) in
+            self.minutesChoiceSlider.isEnabled = true
+            self.minutesChoiceSlider.value = 0.00
+            
+            UserMeditationMasterTimeModelController.shared.isTimerActive = false
+            UserMeditationMasterTimeModelController.shared.isTimeRunning = false
+            sliderTimer = nil
+        }
+    }
+    
+    
+    func scheduleNewTimer() {
+        
+        // schedule timer
+        if sliderTimer == nil {
+            
+            let timer = Timer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+            RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
+            timer.tolerance = 0.1
+            
+            sliderTimer = timer
+            
+        }
+        
+        // set relevant start time properties in UserMeditationMasterTimeModelController.shared
+        UserMeditationMasterTimeModelController.shared.isTimeRunning = true
+        
+        UserMeditationMasterTimeModelController.shared.timerStartTime = Date()
+    }
+    
+    func restartRunningTimer() {
+        
+        // check to see if a meditation countdown timer is active
+        if UserMeditationMasterTimeModelController.shared.isTimerActive && UserMeditationMasterTimeModelController.shared.isTimeRunning {
+            
+            
+            UserMeditationMasterTimeModelController.shared.currentElapsedTime = Date().timeIntervalSince(UserMeditationMasterTimeModelController.shared.currentViewWillDisappearTime)
+            
+            UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt = UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt - Int(UserMeditationMasterTimeModelController.shared.currentElapsedTime)
+            
+            // scehdule timer based on time remaining on current "running" timer time left
+            if sliderTimer == nil {
                 
-                if self.audioPlayer.isPlaying {
-                    
-                    self.audioPlayer.stop()
-                }
+                let timer = Timer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+                RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
+                timer.tolerance = 0.1
                 
-                self.cancelButtonOutlet.isEnabled = false
-                self.startButtonOutlet.backgroundColor = self.startBlue
-                self.startButtonOutlet.setTitle("start", for: UIControl.State.normal)
-                self.startButtonOutlet.isEnabled = false
-                
-                self.minutesChoiceSlider.isEnabled = true
-                self.minutesChoiceSlider.value = 0.00
-                
-                self.isTimerRunning = false
-                self.sliderTimer = nil
+                sliderTimer = timer
             }
             
-            alert.addAction(done)
+            startButtonOutlet.setTitle("pause", for: UIControl.State.normal)
+            startButtonOutlet.backgroundColor = pauseOrange
             
-            present(alert, animated: true, completion: nil)
+            // TODO: build actual pausing functionality to allow for timer to resume
+            
+            cancelButtonOutlet.isEnabled = true
+            
+            minutesChoiceSlider.isEnabled = false
+            
+        } else {
+            
+            print("ERROR: either the timeIsRunning property is false, or the sliderTimer does not equal nil, or both in MeditationTimerViewController ->  viewWillAppear(_ animated:) - line 400")
         }
     }
     
-    // function that takes the GuidedMEditation.path string property and converts it to local file path string and passes to the audioPlayer object to play the track
-    func prepareLocalAudioMeditation(path: String) {
+    func destroyScheduledTimer() {
         
-        guard let localFilePath = Bundle.main.path(forResource: "\(path)", ofType: "mp3") else {
-            
-            print("ERROR: nil value found for localFilePath in MeditationTimerViewController.swift -> playLocalAudioMeditation(path:) - line 203.")
-            return
-        }
+        sliderTimer?.invalidate()
+        sliderTimer = nil
+    }
+}
+
+
+// MARK: - funcitons for local notifications
+extension MeditationTimerViewController {
+    
+    func scheduleNewLocalNotification() {
         
-        let url = URL(fileURLWithPath: localFilePath)
-            
-        prepareUsingAVAudioPlayer(url: url)
-         
+        // schedule local notification
+        let manager = LocalNotificationsManager()
+        
+        manager.notifications = [
+            MyNotification(id: AudioGuidedMeditationMetaDataStrings.meditationDone.rawValue,
+                           title: AudioGuidedMeditationMetaDataStrings.meditationDone.rawValue,
+                           body: AudioGuidedMeditationMetaDataStrings.hopeYouEnjoyedIt.rawValue, soundFilePath: AudioGuidedMeditationMetaDataStrings.tibetanBells.rawValue + AudioGuidedMeditationMetaDataStrings.soundFileType.rawValue)
+        ]
+        
+        manager.schedule(duration: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
     }
     
-    // function to initiate the playing of a track given a local file URL
-    func prepareUsingAVAudioPlayer(url: URL) {
+    func destroyScheduledLocalNotifications() {
         
-        do {
-            
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            
-            audioPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            
-            audioPlayer.numberOfLoops = 8
-            audioPlayer.prepareToPlay()
-            
-            
-            
-        } catch {
-            
-            print("ERROR: problem while trying to play local audio file... \(error.localizedDescription) in MeditationTimerViewController.swift -> playUsingAVAudioPlayer(url:) - line 226.")
-        }
+        // destroy local notification(s)
+        let center = UNUserNotificationCenter.current()
+        
+        print(center)
+        
+        center.removeDeliveredNotifications(withIdentifiers: [AudioGuidedMeditationMetaDataStrings.meditationDone.rawValue])
+        center.removePendingNotificationRequests(withIdentifiers: [AudioGuidedMeditationMetaDataStrings.meditationDone.rawValue])
+        
+        print(center)
     }
 }
