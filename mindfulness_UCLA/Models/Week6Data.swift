@@ -57,8 +57,8 @@ struct Week6Data {
             ("*AH, FOWL - The Anger Process* ~adapted from Barbara De Angelis' \"Love Letters\"~", "https://palousemindfulness.com/docs/AHFOWL.pdf")
         ],
         practiceSheetsURLList: [
-            ("\(WeekHeadings.formalPracticeSheet.rawValue) -  Body Scan, Sitting, Yoga #(+ Mountain or Lake Med.)#", "TBD"),
-            ("\(WeekHeadings.informalPracticeSheet.rawValue) - Communication Calendar", "TBD")
+            ("\(WeekHeadings.formalPracticeSheet.rawValue) -  Body Scan, Sitting, Yoga #(+ Mountain or Lake Med.)#", "week6-formal"),
+            ("\(WeekHeadings.informalPracticeSheet.rawValue) - Communication Calendar", "week6-informal")
         ]
     )
 }

@@ -8,15 +8,15 @@
 
 import UIKit
 import SafariServices
+import PDFKit
+import WebKit
 
-class CourseContentDetailsTableViewController: UITableViewController,
-                                               CourseContentDetailsTableViewCellDelegate,
-                                               SFSafariViewControllerDelegate {
+class CourseContentDetailsTableViewController: UITableViewController {
 
     // MARK: Properties
     
-    // property tracking whether any links are active
-//    var isLinkActive: Bool?
+    var webView: WKWebView!
+    var pdfPath: String = ""
     // title string
     var detailTitle: String?
     // array that holds the valid checked string tuples used to present the overview details
@@ -26,7 +26,9 @@ class CourseContentDetailsTableViewController: UITableViewController,
     var validVideosListStrings: [ (String, String) ]?
     var validReadingStrings: [ (String, String) ]?
     var validReadingsListStrings: [ (String, String) ]?
+    // strings to display the text only about the practice sheets
     var validPracticeStrings: [ (String, String) ]?
+    // strings to display the active practice sheets to use with PDFKit
     var validPracticeSheetsStrings: [ (String, String) ]?
     var validSupplementalMaterialsStrings: [ (String, String) ]?
     
@@ -48,56 +50,6 @@ class CourseContentDetailsTableViewController: UITableViewController,
             
             title = detailTitle
         }
-        
-    }
-    
-    
-    // MARK: CourseContentDetailsTableViewCellDelegate functions
-
-    func openWebViewButtonTapped(cell: CourseContentDetailTableViewCell) {
-        
-        guard let indexPath = tableView.indexPath(for: cell) else {
-            
-            print("ERROR: nil value found for indexPath in CourseContentDetailsTableViewController.swift -> openWebViewButtonTapped(cell:) - line 56.")
-            return
-        }
-        
-        var tupleStrings = ("","")
-        
-        if let vidListStrings = validVideosListStrings {
-            tupleStrings = vidListStrings[indexPath.row]
-        }
-        
-        if let readingsListStrings = validReadingsListStrings {
-            tupleStrings = readingsListStrings[indexPath.row]
-        }
-        
-        if let sheetsListStrings = validPracticeSheetsStrings {
-            tupleStrings = sheetsListStrings[indexPath.row]
-        }
-        
-        if let materialsListStrings = validSupplementalMaterialsStrings {
-            tupleStrings = materialsListStrings[indexPath.row]
-        }
-        
-        let urlString = tupleStrings.1
-        
-        if let url = URL(string: urlString) {
-            
-            let safariVC = SFSafariViewController(url: url)
-
-            safariVC.delegate = self
-
-            self.present(safariVC, animated: true)
-        }
-        
-    }
-    
-    
-    // MARK: - SafariServices protocol functions
-    
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        dismiss(animated: true)
     }
     
     
@@ -146,7 +98,7 @@ class CourseContentDetailsTableViewController: UITableViewController,
         // in case the error case where ther are no valid rows to display in the tableView
         if totalRows == 0 {
             // handle the empty array error case
-            print("ERROR: totalRows == 0 in CourseContentDetailsTableViewController.swift -> tableView(numberOfRowsInSection:) - line 84.")
+            print("ERROR: totalRows == 0 in CourseContentDetailsTableViewController.swift -> tableView(numberOfRowsInSection:) - line 101.")
         }
         return totalRows
     }
@@ -163,41 +115,192 @@ class CourseContentDetailsTableViewController: UITableViewController,
         
         // if valid overview content, then we loop through the array of arrays
         if let validOverviewOrderedContentStrings = validOverviewOrderedContentStrings {
-            
+            cell.isLinkActive = false
+            cell.isPDFFile = false
             cell.tupleStrings = validOverviewOrderedContentStrings[indexPath.row]
-            cell.isLinkActive = false        }
+        }
         // if valid videos content
-        else if let validVideosListStrings = validVideosListStrings {
-            // set totalRows to individual tuple arrays count
-            cell.tupleStrings = validVideosListStrings[indexPath.row]
+        if let validVideosListStrings = validVideosListStrings {
             cell.isLinkActive = true
+            cell.isPDFFile = false
+            cell.tupleStrings = validVideosListStrings[indexPath.row]
         }
         // if valid readings content
         if let validReadingsListStrings = validReadingsListStrings {
-            // set totalRows to individual tuple arrays count
-            cell.tupleStrings = validReadingsListStrings[indexPath.row]
             cell.isLinkActive = true
+            cell.isPDFFile = false
+            cell.tupleStrings = validReadingsListStrings[indexPath.row]
         }
         // if valid practice strings content
         if let validPracticeStrings = validPracticeStrings {
-            // set totalRows to individual tuple arrays count
+            cell.isLinkActive = false
+            cell.isPDFFile = false
             cell.tupleStrings = validPracticeStrings[indexPath.row]
-            cell.isLinkActive = true
         }
         // if valid practice sheets content
         if let validPracticeSheetsStrings = validPracticeSheetsStrings {
-            // set totalRows to individual tuple arrays count
+            cell.isLinkActive = false
+            cell.isPDFFile = true
             cell.tupleStrings = validPracticeSheetsStrings[indexPath.row]
-            cell.isLinkActive = true
         }
         // if valid supplemental materials content arrays
         if let validSupplementalMaterialsStrings = validSupplementalMaterialsStrings {
-            // set totalRows to individual tuple arrays count
-            cell.tupleStrings = validSupplementalMaterialsStrings[indexPath.row]
             cell.isLinkActive = true
+            cell.isPDFFile = false
+            cell.tupleStrings = validSupplementalMaterialsStrings[indexPath.row]
         }
         
         return cell
+    }
+}
+
+
+extension CourseContentDetailsTableViewController:
+                                        CourseContentDetailsTableViewCellDelegate, WKUIDelegate {
+    
+    // MARK: CourseContentDetailsTableViewCellDelegate functions
+    
+    // function to dismiss all subviews created in PDF viewing mode
+    @objc func removeSubviews(sender: UIButton) {
+        
+        if let viewWithTag100 = self.view.viewWithTag(100) {
+            viewWithTag100.removeFromSuperview()
+        }else{
+            print("couldn't remove webView with tag 100")
+        }
+        if let viewWithTag200 = self.view.viewWithTag(200) {
+            viewWithTag200.removeFromSuperview()
+        }else{
+            print("couldn't remove shareFooterView with tag 200")
+        }
+        if let viewWithTag300 = self.view.viewWithTag(300) {
+            viewWithTag300.removeFromSuperview()
+        }else{
+            print("couldn't remove dismissButton with tag 300")
+        }
+    }
+    
+    // function to create and display the pdf action sheet from screen bottom
+    @objc func bringUpPDFActionSheet() {
+        
+        if let pdfToOpen = Bundle.main.url(forResource: pdfPath, withExtension: "pdf", subdirectory: nil, localization: nil) {
+            
+            do {
+                
+                let pdfData = try Data(contentsOf: pdfToOpen)
+                
+                let activityViewController = UIActivityViewController(activityItems: [pdfData], applicationActivities: nil)
+                
+                activityViewController.excludedActivityTypes = [UIActivity.ActivityType.assignToContact, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToFlickr, UIActivity.ActivityType.postToTencentWeibo, UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.postToVimeo, UIActivity.ActivityType.postToWeibo, UIActivity.ActivityType.saveToCameraRoll]
+                
+                activityViewController.popoverPresentationController?.sourceView = self.view
+                present(activityViewController, animated: true, completion: nil)
+                
+            } catch {
+                
+                print("ERROR: no pdf documant found at provided pdfPath \(error.localizedDescription)")
+                
+            }
+        } else {
+            print("ERROR: no pdf documant found at provided pdfPath in Bundle.main.url in CourseContentDetailsTableViewController.swift -> bringUpPDFActionSheet() - line 203")
+        }
+    }
+    
+    func openWebViewButtonTapped(cell: CourseContentDetailTableViewCell) {
+        
+        guard let indexPath = tableView.indexPath(for: cell) else {
+            
+            print("ERROR: nil value found for indexPath in CourseContentDetailsTableViewController.swift -> openWebViewButtonTapped(cell:) - line 211.")
+            return
+        }
+        
+        var tupleStrings = ("","")
+        
+        if let vidListStrings = validVideosListStrings {
+            tupleStrings = vidListStrings[indexPath.row]
+        }
+        
+        if let readingsListStrings = validReadingsListStrings {
+            tupleStrings = readingsListStrings[indexPath.row]
+        }
+        
+        if let sheetsListStrings = validPracticeSheetsStrings {
+            tupleStrings = sheetsListStrings[indexPath.row]
+        }
+        
+        if let materialsListStrings = validSupplementalMaterialsStrings {
+            tupleStrings = materialsListStrings[indexPath.row]
+        }
+        // open the web page via safari services
+        if let isLinkActive = cell.isLinkActive {
+            
+            if isLinkActive {
+                
+                let urlString = tupleStrings.1
+                
+                if let url = URL(string: urlString) {
+                    
+                    let safariVC = SFSafariViewController(url: url)
+                    
+                    safariVC.delegate = self
+                    
+                    self.present(safariVC, animated: true)
+                }
+            }
+        }
+        // open the .pdf file with PDFKit's PDFView object
+        if let isPDFFile = cell.isPDFFile {
+            
+            if isPDFFile {
+                
+                let pdfFilePath = tupleStrings.1
+                
+                pdfPath = pdfFilePath
+                
+                if let pdfToOpen = Bundle.main.url(forResource: pdfFilePath, withExtension: "pdf", subdirectory: nil, localization: nil) {
+                    
+                    do {
+                        let data = try Data(contentsOf: pdfToOpen)
+                        // create and configure WKWebView
+                        let webConfiguration = WKWebViewConfiguration()
+                        webView = WKWebView(frame: CGRect(x: 20, y: 20, width: view.frame.size.width - 40, height: (view.frame.size.height - 150)), configuration: webConfiguration)
+                        webView.uiDelegate = self
+                        webView.load(data, mimeType: "application/pdf", characterEncodingName: "", baseURL: pdfToOpen.deletingLastPathComponent())
+                        webView.tag = 100
+                        view.addSubview(webView)
+                        // create and configure footer for PDF viewer
+                        let shareFooterView = UIView(frame: CGRect(x: 0, y: (view.frame.size.height + view.bounds.minY - 72), width: view.frame.size.width, height: 72))
+                        shareFooterView.backgroundColor = UIColor(displayP3Red: 66.0/255.0 , green: 135.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+                        shareFooterView.tag = 200
+                        view.addSubview(shareFooterView)
+                        // create and configure the webView and shareFooterView dismiss button
+                        let dismissButton = UIButton(frame: CGRect(x: view.frame.size.width-64, y: 32, width: 24, height: 24))
+                        dismissButton.setImage(UIImage(named: "blue-delete-100"), for: UIControl.State.normal)
+                        dismissButton.addTarget(self, action: #selector(removeSubviews), for: UIControl.Event.touchUpInside)
+                        dismissButton.tag = 300
+                        view.addSubview(dismissButton)
+                        // create and configure share button
+                        let shareButton = UIButton(frame: CGRect(x: ((shareFooterView.frame.size.width/2) - 16), y: ((shareFooterView.frame.size.height/2) - 24) , width: 32, height: 32))
+                        shareButton.setImage(UIImage(named: "white-share-rounded-90"), for: UIControl.State.normal)
+                        shareButton.addTarget(self, action: #selector(bringUpPDFActionSheet), for: UIControl.Event.touchUpInside)
+                        shareFooterView.addSubview(shareButton)
+                        
+                    } catch {
+                        print("ERROR: couldn't create Data from pdfToOpen \(error.localizedDescription) in CourseContentDetailsTableViewController.swift -> openWebViewButtonTapped(cell:) - line 287.")
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+extension CourseContentDetailsTableViewController: SFSafariViewControllerDelegate {
+    
+    // MARK: - SafariServices protocol functions
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }
 

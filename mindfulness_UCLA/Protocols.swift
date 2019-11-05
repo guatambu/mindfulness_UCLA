@@ -11,8 +11,15 @@ import Foundation
 protocol CourseContentDetailsTableViewCellDelegate {
     
     // MARK: - Properties
-//    var isLinkActive: Bool? { get set }
     
     // MARK: functions
     func openWebViewButtonTapped(cell: CourseContentDetailTableViewCell)
+}
+
+protocol VideoCourseTableViewCellDelegate {
+    
+    // MARK: - Properties
+    
+    // MARK: functions
+    func openWebViewButtonTapped(cell: VideoCoursesTableViewCell)
 }

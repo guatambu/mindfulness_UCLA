@@ -6,9 +6,6 @@
 //  Copyright © 2019 DunDak, LLC. All rights reserved.
 //
 
-// TODO: - here we are going to format each individual cell's content.  this will be where the majority of the formatting's and content display's heavy lifting will take place
-
-
 import UIKit
 
 class CourseContentDetailTableViewCell: UITableViewCell {
@@ -19,7 +16,8 @@ class CourseContentDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var bodyTextLabel: UILabel!
     @IBOutlet weak var openWebViewButton: UIButton!
     
-    var isLinkActive = true
+    var isLinkActive: Bool?
+    var isPDFFile: Bool?
     
     var delegate: CourseContentDetailsTableViewCellDelegate?
     
@@ -47,8 +45,17 @@ class CourseContentDetailTableViewCell: UITableViewCell {
             print("ERROR: nil vlaue found for tupleStrings or isLinkActive property in CourseContentDetailTableViewCell.swift -> updateViews - line 46.")
             return
         }
+        guard let isLinkActive = isLinkActive else {
+            print("ERROR: nil vlaue found for isLinkActive or isLinkActive property in CourseContentDetailTableViewCell.swift -> updateViews - line 49.")
+            return
+        }
+        guard let isPDFFile = isPDFFile else {
+            print("ERROR: nil vlaue found for isPDFFile or isLinkActive property in CourseContentDetailTableViewCell.swift -> updateViews - line 52.")
+            return
+        }
+        
 
-        print("isLinkActive: \(isLinkActive)")
+//        print("isLinkActive: \(isLinkActive)")
         
         // success, so on to cell formatting
         if tupleStrings.0 != "" {
@@ -56,9 +63,13 @@ class CourseContentDetailTableViewCell: UITableViewCell {
             // format the headingLabel
             headingLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.0)
             headingLabel.isHidden = false
+            // hide the button
+            openWebViewButton.isHidden = true
+            openWebViewButton.isEnabled = false
+            
         
         } else {
-            // hide the headingLAbel
+            // hide the headingLabel
             headingLabel.isHidden = true
         }
         
@@ -76,7 +87,6 @@ class CourseContentDetailTableViewCell: UITableViewCell {
                 openWebViewButton.isHidden = false
                 openWebViewButton.isEnabled = true
                 openWebViewButton.setTitle("", for: UIControl.State.normal)
-                // format the button for appearance
                 
             } else if tupleStrings.1.contains("http") && !isLinkActive {
                 
@@ -90,6 +100,19 @@ class CourseContentDetailTableViewCell: UITableViewCell {
                 openWebViewButton.isHidden = true
                 openWebViewButton.isEnabled = false
                 
+            } else if isPDFFile {
+                
+                // format the headingLabel
+                headingLabel.attributedText = applyStylesToRange(stringToFormat: tupleStrings.0)
+                // hide the headingLabel
+                headingLabel.isHidden = false
+                // hide the bodyTextLabel
+                bodyTextLabel.isHidden = true
+                // show the button
+                openWebViewButton.isHidden = false
+                openWebViewButton.isEnabled = true
+                openWebViewButton.setTitle("", for: UIControl.State.normal)
+                
             } else {
                 
                 // show the bodyTextLabel
@@ -99,7 +122,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
                 // hide the button
                 openWebViewButton.isHidden = true
                 openWebViewButton.isEnabled = false
-                
+    
             }
             
         } else {
@@ -119,13 +142,7 @@ class CourseContentDetailTableViewCell: UITableViewCell {
 }
 
 
-
-// TODO: now we use the provided links in the various tuples to open a webview in app and display the link's page content.  this in app webview will need to be presented modally, and will want to have a 'X' button to close it and a left and a right arrow to navigate forward and back for some simple/basic internet navigation.
-
-// TODO:  review GilSans as text type because it appears we get 
-
-
-
+// MARK: - NSRegularExpression and text typeface formatting functions
 extension CourseContentDetailTableViewCell {
     
     // MARK: Helper Functions
@@ -167,16 +184,16 @@ extension CourseContentDetailTableViewCell {
         
         let boldMatches = boldRegex.matches(in: stringToFormat, options: [], range: range)
         
-        print("stringToFormat: \(stringToFormat)")
-        print("stringToFormat.count: \(stringToFormat.count)")
-        print("boldMatches: \(boldMatches)")
+//        print("stringToFormat: \(stringToFormat)")
+//        print("stringToFormat.count: \(stringToFormat.count)")
+//        print("boldMatches: \(boldMatches)")
         
         var boldCounter = 0
         
         for match in boldMatches {
             
-            print("i: \(boldCounter)")
-            print("charactersRemovedFromString: \(charactersRemovedFromString)")
+//            print("i: \(boldCounter)")
+//            print("charactersRemovedFromString: \(charactersRemovedFromString)")
             
             if boldCounter == 0 {
                 
@@ -217,8 +234,8 @@ extension CourseContentDetailTableViewCell {
                 charactersRemovedFromString = 0
             }
             
-            print("n: \(italicCounter)")
-            print("charactersRemovedFromString: \(charactersRemovedFromString)")
+//            print("n: \(italicCounter)")
+//            print("charactersRemovedFromString: \(charactersRemovedFromString)")
             
             let newRange = NSMakeRange(match.range.location - charactersRemovedFromString, match.range.length)
             
@@ -253,8 +270,8 @@ extension CourseContentDetailTableViewCell {
                 charactersRemovedFromString = 0
             }
             
-            print("n: \(smallItalicCounter)")
-            print("charactersRemovedFromString: \(charactersRemovedFromString)")
+//            print("n: \(smallItalicCounter)")
+//            print("charactersRemovedFromString: \(charactersRemovedFromString)")
             
             let newRange = NSMakeRange(match.range.location - charactersRemovedFromString, match.range.length)
             
@@ -289,8 +306,8 @@ extension CourseContentDetailTableViewCell {
                 charactersRemovedFromString = 0
             }
             
-            print("n: \(boldItalicCounter)")
-            print("charactersRemovedFromString: \(charactersRemovedFromString)")
+//            print("n: \(boldItalicCounter)")
+//            print("charactersRemovedFromString: \(charactersRemovedFromString)")
             
             let newRange = NSMakeRange(match.range.location - charactersRemovedFromString, match.range.length)
             
@@ -308,8 +325,7 @@ extension CourseContentDetailTableViewCell {
             attributedString.replaceCharacters(in: rangeOfLastCharacter, with: "")
         }
         
-        
-        print("attributedString: \(attributedString)")
+//        print("attributedString: \(attributedString)")
         
         return attributedString
     }

@@ -59,8 +59,8 @@ struct Week7Data {
             
         ],
         practiceSheetsURLList: [
-            ("\(WeekHeadings.formalPracticeSheet.rawValue) - Body Scan, Sitting, Yoga #~(+ Lovingkindness)~#", "TBD"),
-            ("\(WeekHeadings.informalPracticeSheet.rawValue) - Any #~(Simple Awareness, Mindful Eating, STOP, Soften..., etc.)~#", "TBD")
+            ("\(WeekHeadings.formalPracticeSheet.rawValue) - Body Scan, Sitting, Yoga #~(+ Lovingkindness)~#", "week7-formal"),
+            ("\(WeekHeadings.informalPracticeSheet.rawValue) - Any #~(Simple Awareness, Mindful Eating, STOP, Soften..., etc.)~#", "week7-informal")
         ]
     )
 }

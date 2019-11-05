@@ -139,6 +139,8 @@ extension WeekCourseMaterialsTableViewController {
         // unwrap the week's data object
         guard let weekData = weekData else { return }
         // access the various week's non optional (String, String) properties
+        let lessonTitle = weekData.lessonTitle
+        let lessonSubtitle = weekData.lessonSubTitle ?? ""
         let intro1 = weekData.introTextParagraph1
         let videos1 = weekData.videosTextParagraph1
         let readings1 = weekData.readingsTextParagraph1
@@ -171,6 +173,9 @@ extension WeekCourseMaterialsTableViewController {
         
         // reset tthe valid overvoew array
         validOverviewOrderedContentStrings = []
+        
+        validOverviewOrderedContentStrings.append((lessonTitle, ""))
+        validOverviewOrderedContentStrings.append(("", lessonSubtitle))
         
         // check for valid (i.e. contains more than an empty string) intro strings
         for string in introStrings {

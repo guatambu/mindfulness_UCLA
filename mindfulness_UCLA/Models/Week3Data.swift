@@ -52,8 +52,8 @@ struct Week3Data {
             ("*Mindfulness, the Mind, and Addictive Behavior* ~video by Judson Brewer [20 min]~", "https://www.youtube.com/watch?v=7a9sWI0vJzc")
         ],
         practiceSheetsURLList: [
-            ("\(WeekHeadings.formalPracticeSheet.rawValue) - Mindful Yoga (Yoga 1), Body Scan, Sitting Meditation", "TBD"),
-            ("\(WeekHeadings.informalPracticeSheet.rawValue) - Unpleasant Events Calendar", "TBD")
+            ("\(WeekHeadings.formalPracticeSheet.rawValue) - Mindful Yoga (Yoga 1), Body Scan, Sitting Meditation", "week3-formal"),
+            ("\(WeekHeadings.informalPracticeSheet.rawValue) - Unpleasant Events Calendar", "week3-informal")
         ]
     )
 }

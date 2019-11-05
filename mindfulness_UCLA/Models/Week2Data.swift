@@ -51,8 +51,8 @@ struct Week2Data {
                 ("*Positive Emotions and Mindfulness* ~video by Rachel Green [10 min]~", "https://www.youtube.com/watch?feature=player_embedded&v=4Gcohaq8Uhs#!")
             ],
             practiceSheetsURLList: [
-                ("\(WeekHeadings.formalPracticeSheet.rawValue) - Body Scan, Sitting Meditation", "TBD"),
-                ("\(WeekHeadings.informalPracticeSheet.rawValue) - Pleasant Events Calendar", "TBD")
+                ("\(WeekHeadings.formalPracticeSheet.rawValue) - Body Scan, Sitting Meditation", "week2-formal"),
+                ("\(WeekHeadings.informalPracticeSheet.rawValue) - Pleasant Events Calendar", "week2-informal")
             ]
     )
 }
