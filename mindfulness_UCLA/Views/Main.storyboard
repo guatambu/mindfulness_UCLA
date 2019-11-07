@@ -251,10 +251,15 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="mindfulness" id="uH1-jx-K6V">
                         <barButtonItem key="backBarButtonItem" title=" " id="8Nr-xA-VQd"/>
-                        <barButtonItem key="rightBarButtonItem" title=" " image="Timer_White_40px" id="nji-Ur-gA5">
+                        <barButtonItem key="leftBarButtonItem" title=" " image="Timer_White_40px" id="nji-Ur-gA5">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="PWs-lb-sMq" kind="show" id="fpe-vG-Nft"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="about" id="cby-cg-u0F">
+                            <connections>
+                                <segue destination="WVk-wA-Di5" kind="show" id="YWH-m8-Ahn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -460,6 +465,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFF-li-40D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885" y="-1351"/>
+        </scene>
+        <!--about us-->
+        <scene sceneID="4v0-OH-nj2">
+            <objects>
+                <viewController title="about us" id="WVk-wA-Di5" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LAP-TJ-fHO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUH-VU-ICS">
+                                <rect key="frame" x="16" y="88" width="288" height="400"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PZF-XZ-THw">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="418.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwG-gX-8o3">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="136.5"/>
+                                                <string key="text">All materials used in this application are from the Palouse Mindfulness program created by Dave Potter, a certified Mindfulness-Based Stress Reduction instructor, and are available free of charge at: </string>
+                                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="20"/>
+                                                <color key="textColor" red="0.26274509800000001" green="0.42352941179999998" blue="0.61960784310000006" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c42-0W-7np">
+                                                <rect key="frame" x="0.0" y="144.5" width="288" height="35"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                                <state key="normal" title="www.palousemindfulness.com ">
+                                                    <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="openWebsiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="Me0-eq-NAQ"/>
+                                                    <action selector="websiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="iQE-of-MIY"/>
+                                                    <action selector="websiteButtonTapped:" destination="WVk-wA-Di5" eventType="touchUpInside" id="j1w-PP-LDy"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBa-UR-Dpy">
+                                                <rect key="frame" x="0.0" y="187.5" width="288" height="114"/>
+                                                <string key="text">If you have any questions or experience any issues using this application, please contact study administrators by sending an email to:</string>
+                                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="20"/>
+                                                <color key="textColor" red="0.26274509800000001" green="0.42352941179999998" blue="0.61960784310000006" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqo-yI-9Ol">
+                                                <rect key="frame" x="0.0" y="309.5" width="288" height="35"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                                <state key="normal" title="tmatthews@ucla.edu">
+                                                    <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="emailButtonTapped:" destination="WVk-wA-Di5" eventType="touchUpInside" id="pbH-Sr-6S5"/>
+                                                    <action selector="emailButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="zWU-Rb-syI"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="or a call or text to:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45h-7f-C3B">
+                                                <rect key="frame" x="0.0" y="352.5" width="288" height="23"/>
+                                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="20"/>
+                                                <color key="textColor" red="0.26274509800000001" green="0.42352941179999998" blue="0.61960784310000006" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOc-Wv-6dC">
+                                                <rect key="frame" x="0.0" y="383.5" width="288" height="35"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                                <state key="normal" title="424-535-8293">
+                                                    <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="KsO-8c-16U"/>
+                                                    <action selector="phoneNumberButtonTapped:" destination="WVk-wA-Di5" eventType="touchUpInside" id="tYl-pz-0B1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="PZF-XZ-THw" firstAttribute="leading" secondItem="YUH-VU-ICS" secondAttribute="leading" id="Tdm-k8-Txq"/>
+                                    <constraint firstAttribute="trailing" secondItem="PZF-XZ-THw" secondAttribute="trailing" id="ZPo-9m-zlm"/>
+                                    <constraint firstAttribute="height" constant="400" id="agP-Jj-PBP"/>
+                                    <constraint firstItem="PZF-XZ-THw" firstAttribute="top" secondItem="YUH-VU-ICS" secondAttribute="top" id="sFa-lf-9Wk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YUH-VU-ICS" firstAttribute="top" secondItem="nNw-Cm-GMI" secondAttribute="top" constant="24" id="8jJ-CN-MyO"/>
+                            <constraint firstItem="YUH-VU-ICS" firstAttribute="leading" secondItem="nNw-Cm-GMI" secondAttribute="leading" constant="16" id="Sq1-sQ-ezK"/>
+                            <constraint firstItem="nNw-Cm-GMI" firstAttribute="trailing" secondItem="YUH-VU-ICS" secondAttribute="trailing" constant="16" id="agd-LE-qHn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nNw-Cm-GMI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F2A-Tf-RaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BFf-r9-XqU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="894"/>
         </scene>
         <!--Gettng Started Table View Controller-->
         <scene sceneID="Xgk-xL-YdF">
