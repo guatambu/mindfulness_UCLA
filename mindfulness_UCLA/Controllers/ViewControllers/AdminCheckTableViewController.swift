@@ -12,17 +12,17 @@ class AdminCheckTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    let meditationCounts: [Int] = [ GuidedMeditationsModelController.raisinMeditationCount,
-                        GuidedMeditationsModelController.bodyScanMeditationCount,
-                        GuidedMeditationsModelController.sittingMeditationCount,
-                        GuidedMeditationsModelController.difficultEmotionsMeditationCount,
-                        GuidedMeditationsModelController.physicalPainMeditationCount,
-                        GuidedMeditationsModelController.mountainMeditationCount,
-                        GuidedMeditationsModelController.lakeMeditationCount,
-                        GuidedMeditationsModelController.lovingKindnessMeditationCount,
-                        GuidedMeditationsModelController.softenSootheAllowMeditationCount,
-                        GuidedMeditationsModelController.rainMeditationCount,
-                        GuidedMeditationsModelController.silentMeditationCount ]
+    let meditationCounts: [Int] = [ GuidedMeditationsModelController.shared.raisinMeditationCount,
+                        GuidedMeditationsModelController.shared.bodyScanMeditationCount,
+                        GuidedMeditationsModelController.shared.sittingMeditationCount,
+                        GuidedMeditationsModelController.shared.difficultEmotionsMeditationCount,
+                        GuidedMeditationsModelController.shared.physicalPainMeditationCount,
+                        GuidedMeditationsModelController.shared.mountainMeditationCount,
+                        GuidedMeditationsModelController.shared.lakeMeditationCount,
+                        GuidedMeditationsModelController.shared.lovingKindnessMeditationCount,
+                        GuidedMeditationsModelController.shared.softenSootheAllowMeditationCount,
+                        GuidedMeditationsModelController.shared.rainMeditationCount,
+                        GuidedMeditationsModelController.shared.silentMeditationCount ]
     
     let meditations = [ RaisinMeditationVideo.metaData,
                         BodyScan.metaData,
