@@ -203,6 +203,7 @@ extension CourseContentDetailTableViewCell {
             let newRange = NSMakeRange(match.range.location - charactersRemovedFromString, match.range.length)
             
             attributedString.addAttributes(boldAttributes, range:newRange)
+            // attributedString.addAttribute(NSAttributedString.Key.link, value: <#T##Any#>, range: <#T##NSRange#>)
             
             let rangeOfFirstCharacter = NSMakeRange(match.range.location - charactersRemovedFromString, 1)
             

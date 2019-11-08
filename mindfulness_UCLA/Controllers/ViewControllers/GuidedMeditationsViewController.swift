@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SafariServices
 
 class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -25,16 +26,17 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
     
     var audioPlayer = AVAudioPlayer()
     
-    let audioMeditations: [GuidedMeditation] = [BodyScan.metaData,
-                                                Sitting.metaData,
-                                                DifficultEmotions.metaData,
-                                                PhysicalPain.metaData,
-                                                Mountain.metaData,
-                                                Lake.metaData,
-                                                Lovingkindness.metaData,
-                                                SootheSoftenAllow.metaData,
-                                                RAIN.metaData,
-                                                Silent.metaData]
+    let audioMeditations: [GuidedMeditation] = [ RaisinMeditationVideo.metaData,
+                                                 BodyScan.metaData,
+                                                 Sitting.metaData,
+                                                 DifficultEmotions.metaData,
+                                                 PhysicalPain.metaData,
+                                                 Mountain.metaData,
+                                                 Lake.metaData,
+                                                 Lovingkindness.metaData,
+                                                 SootheSoftenAllow.metaData,
+                                                 RAIN.metaData,
+                                                 Silent.metaData ]
     
     
     // MARK: - ViewController Lifecycle Functions
@@ -135,6 +137,21 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         playLocalAudioMeditation(path: audioMeditationToPlay.path)
         
         switch audioMeditationToPlay.title {
+            
+        case AudioGuidedMeditationMetaDataStrings.raisinMeditationTitle.rawValue:
+            
+            let urlString = AudioGuidedMeditationMetaDataStrings.raisinMeditationPath.rawValue
+            
+            if let url = URL(string: urlString) {
+                
+                let safariVC = SFSafariViewController(url: url)
+                
+                safariVC.delegate = self
+                
+                self.present(safariVC, animated: true)
+            }
+            
+            GuidedMeditationsModelController.raisinMeditationCount += 1
             
         case AudioGuidedMeditationMetaDataStrings.bodyScanMeditationTitle.rawValue:
         
@@ -281,5 +298,16 @@ extension GuidedMeditationsViewController {
         
         return duration
         
+    }
+}
+
+
+// MARK: - SafariServices SFSafariViewConttroller Delegate
+extension GuidedMeditationsViewController: SFSafariViewControllerDelegate {
+    
+    // MARK: - SafariServices protocol functions
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }
