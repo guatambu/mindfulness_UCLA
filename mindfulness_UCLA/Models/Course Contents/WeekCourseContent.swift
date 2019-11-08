@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WeekCourseContent{
+class WeekCourseContent {
     
     // MARK: Properties
     

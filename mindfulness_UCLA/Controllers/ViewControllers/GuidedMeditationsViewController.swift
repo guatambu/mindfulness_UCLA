@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SafariServices
 
 class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -20,21 +21,24 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
     @IBOutlet weak var trackSlider: UISlider!
     @IBOutlet weak var meditationsTableView: UITableView!
     
+    var isAudioPlayerPlaying: Bool = false
+    
     var sliderTimer: Timer?
     var trackLabelTimer: Timer?
     
     var audioPlayer = AVAudioPlayer()
     
-    let audioMeditations: [GuidedMeditation] = [BodyScan.metaData,
-                                                Sitting.metaData,
-                                                DifficultEmotions.metaData,
-                                                PhysicalPain.metaData,
-                                                Mountain.metaData,
-                                                Lake.metaData,
-                                                Lovingkindness.metaData,
-                                                SootheSoftenAllow.metaData,
-                                                RAIN.metaData,
-                                                Silent.metaData]
+    let audioMeditations: [GuidedMeditation] = [ RaisinMeditationVideo.metaData,
+                                                 BodyScan.metaData,
+                                                 Sitting.metaData,
+                                                 DifficultEmotions.metaData,
+                                                 PhysicalPain.metaData,
+                                                 Mountain.metaData,
+                                                 Lake.metaData,
+                                                 Lovingkindness.metaData,
+                                                 SootheSoftenAllow.metaData,
+                                                 RAIN.metaData,
+                                                 Silent.metaData ]
     
     
     // MARK: - ViewController Lifecycle Functions
@@ -84,7 +88,7 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
     
     @IBAction func playPauseButtonTapped(_ sender: UIButton) {
         
-        // let currentTime = audioPlayer.currentTime
+        isAudioPlayerPlaying = !isAudioPlayerPlaying
         
         if audioPlayer.isPlaying {
             
@@ -129,82 +133,165 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let audioMeditationToPlay = audioMeditations[indexPath.row]
-        
-        trackTitleLabel.text = audioMeditationToPlay.title
-        
-        playLocalAudioMeditation(path: audioMeditationToPlay.path)
+//
+//        trackTitleLabel.text = audioMeditationToPlay.title
+//        
+//        playLocalAudioMeditation(path: audioMeditationToPlay.path)
         
         switch audioMeditationToPlay.title {
+         
+        // 1
+        case AudioGuidedMeditationMetaDataStrings.raisinMeditationTitle.rawValue:
             
+            GuidedMeditationsModelController.shared.raisinMeditationCount += 1
+            
+            isAudioPlayerPlaying = false
+            
+            let urlString = AudioGuidedMeditationMetaDataStrings.raisinMeditationPath.rawValue
+            
+            if let url = URL(string: urlString) {
+                
+                let safariVC = SFSafariViewController(url: url)
+                
+                safariVC.delegate = self
+                
+                self.present(safariVC, animated: true)
+            }
+            
+         
+        // 2
         case AudioGuidedMeditationMetaDataStrings.bodyScanMeditationTitle.rawValue:
         
-            GuidedMeditationsModelController.bodyScanMeditationCount += 1
+            GuidedMeditationsModelController.shared.bodyScanMeditationCount += 1
             
-        // 2
-        case AudioGuidedMeditationMetaDataStrings.sittingMeditationTitle.rawValue:
-        
-            GuidedMeditationsModelController.sittingMeditationCount += 1
+            isAudioPlayerPlaying = true
+            
+            trackTitleLabel.text = audioMeditationToPlay.title
+            
+            playLocalAudioMeditation(path: audioMeditationToPlay.path)
             
         // 3
-        case AudioGuidedMeditationMetaDataStrings.difficultEmotionsMeditationTitle.rawValue:
+        case AudioGuidedMeditationMetaDataStrings.sittingMeditationTitle.rawValue:
+        
+            GuidedMeditationsModelController.shared.sittingMeditationCount += 1
             
-            GuidedMeditationsModelController.difficultEmotionsMeditationCount += 1
+            isAudioPlayerPlaying = true
+            
+            trackTitleLabel.text = audioMeditationToPlay.title
+            
+            playLocalAudioMeditation(path: audioMeditationToPlay.path)
             
         // 4
-        case AudioGuidedMeditationMetaDataStrings.physicalPainMeditaitonTitle.rawValue:
+        case AudioGuidedMeditationMetaDataStrings.difficultEmotionsMeditationTitle.rawValue:
             
-            GuidedMeditationsModelController.physicalPainMeditationCount += 1
+            GuidedMeditationsModelController.shared.difficultEmotionsMeditationCount += 1
+            
+            isAudioPlayerPlaying = true
+            
+            trackTitleLabel.text = audioMeditationToPlay.title
+            
+            playLocalAudioMeditation(path: audioMeditationToPlay.path)
             
         // 5
-        case AudioGuidedMeditationMetaDataStrings.mountainMeditationTitle.rawValue:
-        
-            GuidedMeditationsModelController.mountainMeditationCount += 1
+        case AudioGuidedMeditationMetaDataStrings.physicalPainMeditaitonTitle.rawValue:
+            
+            GuidedMeditationsModelController.shared.physicalPainMeditationCount += 1
+            
+            isAudioPlayerPlaying = true
+            
+            trackTitleLabel.text = audioMeditationToPlay.title
+            
+            playLocalAudioMeditation(path: audioMeditationToPlay.path)
             
         // 6
-        case AudioGuidedMeditationMetaDataStrings.lakeMeditationTitle.rawValue:
+        case AudioGuidedMeditationMetaDataStrings.mountainMeditationTitle.rawValue:
+        
+            GuidedMeditationsModelController.shared.mountainMeditationCount += 1
             
-            GuidedMeditationsModelController.lakeMeditationCount += 1
+            isAudioPlayerPlaying = true
+            
+            trackTitleLabel.text = audioMeditationToPlay.title
+            
+            playLocalAudioMeditation(path: audioMeditationToPlay.path)
             
         // 7
+        case AudioGuidedMeditationMetaDataStrings.lakeMeditationTitle.rawValue:
+            
+            GuidedMeditationsModelController.shared.lakeMeditationCount += 1
+            
+            isAudioPlayerPlaying = true
+            
+            trackTitleLabel.text = audioMeditationToPlay.title
+            
+            playLocalAudioMeditation(path: audioMeditationToPlay.path)
+            
+        // 8
         case AudioGuidedMeditationMetaDataStrings.lovingkindnessMeditaitonTitle.rawValue:
             
-            GuidedMeditationsModelController.lovingKindnessMeditationCount += 1
+            GuidedMeditationsModelController.shared.lovingKindnessMeditationCount += 1
+            
+            isAudioPlayerPlaying = true
+            
+            trackTitleLabel.text = audioMeditationToPlay.title
+            
+            playLocalAudioMeditation(path: audioMeditationToPlay.path)
         
-        // 8
+        // 9
         case AudioGuidedMeditationMetaDataStrings.softenSootheAllowMeditationTitle.rawValue:
             
-            GuidedMeditationsModelController.softenSootheAllowMeditationCount += 1
+            GuidedMeditationsModelController.shared.softenSootheAllowMeditationCount += 1
             
-        // 9
-        case AudioGuidedMeditationMetaDataStrings.RAINMeditationTitle.rawValue:
+            isAudioPlayerPlaying = true
             
-            GuidedMeditationsModelController.rainMeditationCount += 1
+            trackTitleLabel.text = audioMeditationToPlay.title
+            
+            playLocalAudioMeditation(path: audioMeditationToPlay.path)
             
         // 10
+        case AudioGuidedMeditationMetaDataStrings.RAINMeditationTitle.rawValue:
+            
+            GuidedMeditationsModelController.shared.rainMeditationCount += 1
+            
+            isAudioPlayerPlaying = true
+            
+            trackTitleLabel.text = audioMeditationToPlay.title
+            
+            playLocalAudioMeditation(path: audioMeditationToPlay.path)
+            
+        // 11
         case AudioGuidedMeditationMetaDataStrings.silent30minGuidedMeditationTitle.rawValue:
             
-            GuidedMeditationsModelController.silentMeditationCount += 1
+            GuidedMeditationsModelController.shared.silentMeditationCount += 1
+            
+            isAudioPlayerPlaying = true
+            
+            trackTitleLabel.text = audioMeditationToPlay.title
+            
+            playLocalAudioMeditation(path: audioMeditationToPlay.path)
             
             
         default:
-            print("ERROR: unlikely event of an Guided MEditaiton with an unknown title has been passed into the switch statement in GuidedMeditationsViewController.swift -> tableView(tableView: didSelectRowAt:) - line 170.")
+            print("ERROR: unlikely event of an Guided MEditaiton with an unknown title has been passed into the switch statement in GuidedMeditationsViewController.swift -> tableView(tableView: didSelectRowAt:) - line 249.")
         }
         
-        playPauseButton.setImage(UIImage(named: "mindfulness-pause-90"), for: UIControl.State.normal)
-        // activate the player's appearance in the UI
-        playPauseButton.isEnabled = true
-        
-        trackSlider.isEnabled = true
-        trackSlider.maximumValue = Float(audioPlayer.duration)
-        
-        sliderTimer?.invalidate()
-        sliderTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.sliderTracksProgress), userInfo: nil, repeats: true)
-        trackLabelTimer?.invalidate()
-        trackLabelTimer = Timer.scheduledTimer(timeInterval: 1.00, target: self, selector: #selector(self.displayTrackProgress), userInfo: nil, repeats: true)
-        
-        lefthandTrackProgressLabel.isEnabled = true
-        righthandTrackDurationLabel.isEnabled = true
-        
+        if isAudioPlayerPlaying {
+            
+            playPauseButton.setImage(UIImage(named: "mindfulness-pause-90"), for: UIControl.State.normal)
+            // activate the player's appearance in the UI
+            playPauseButton.isEnabled = true
+            
+            trackSlider.isEnabled = true
+            trackSlider.maximumValue = Float(audioPlayer.duration)
+            
+            sliderTimer?.invalidate()
+            sliderTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.sliderTracksProgress), userInfo: nil, repeats: true)
+            trackLabelTimer?.invalidate()
+            trackLabelTimer = Timer.scheduledTimer(timeInterval: 1.00, target: self, selector: #selector(self.displayTrackProgress), userInfo: nil, repeats: true)
+            
+            lefthandTrackProgressLabel.isEnabled = true
+            righthandTrackDurationLabel.isEnabled = true
+            
+        }
     }
 }
 
@@ -217,7 +304,7 @@ extension GuidedMeditationsViewController {
         
         guard let localFilePath = Bundle.main.path(forResource: "\(path)", ofType: "mp3") else {
             
-            print("ERROR: nil value found for localFilePath in GuidedMeditationsTableViewController.swift -> playLocalAudioMeditation(path:) - line 102.")
+            print("ERROR: nil value found for localFilePath in GuidedMeditationsTableViewController.swift -> playLocalAudioMeditation(path:) - line 279.")
             return
         }
         
@@ -240,7 +327,7 @@ extension GuidedMeditationsViewController {
             
         } catch {
             
-            print("ERROR: problem while trying to play local audio file... \(error.localizedDescription) in GuidedMeditationsTableViewController.swift -> playUsingAVAudioPlayer(url:) - line 121.")
+            print("ERROR: problem while trying to play local audio file... \(error.localizedDescription) in GuidedMeditationsTableViewController.swift -> playUsingAVAudioPlayer(url:) - line 302.")
         }
         
         lefthandTrackProgressLabel.text = "0:00"
@@ -281,5 +368,16 @@ extension GuidedMeditationsViewController {
         
         return duration
         
+    }
+}
+
+
+// MARK: - SafariServices SFSafariViewConttroller Delegate
+extension GuidedMeditationsViewController: SFSafariViewControllerDelegate {
+    
+    // MARK: - SafariServices protocol functions
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }
