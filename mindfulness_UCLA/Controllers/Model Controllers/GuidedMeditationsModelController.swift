@@ -14,15 +14,15 @@ class GuidedMeditationsModelController {
     
     static let shared = GuidedMeditationsModelController()
     
-    static var raisinMeditationCount = 0
-    static var bodyScanMeditationCount = 0
-    static var sittingMeditationCount = 0
-    static var difficultEmotionsMeditationCount = 0
-    static var physicalPainMeditationCount = 0
-    static var mountainMeditationCount = 0
-    static var lakeMeditationCount = 0
-    static var lovingKindnessMeditationCount = 0
-    static var softenSootheAllowMeditationCount = 0
-    static var rainMeditationCount = 0
-    static var silentMeditationCount = 0
+    var raisinMeditationCount = 0
+    var bodyScanMeditationCount = 0
+    var sittingMeditationCount = 0
+    var difficultEmotionsMeditationCount = 0
+    var physicalPainMeditationCount = 0
+    var mountainMeditationCount = 0
+    var lakeMeditationCount = 0
+    var lovingKindnessMeditationCount = 0
+    var softenSootheAllowMeditationCount = 0
+    var rainMeditationCount = 0
+    var silentMeditationCount = 0
 }
