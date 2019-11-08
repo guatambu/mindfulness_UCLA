@@ -36,7 +36,7 @@ class DashboardTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // setup navBar dimensions
-        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: 1242, height: 44)
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 44)
         
         // round corners on each static cell's view
         gettingStartedView.layer.cornerRadius = 10
