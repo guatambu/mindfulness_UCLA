@@ -22,8 +22,40 @@ class GettingStartedWorksheetViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func pdfVersionButtonTapped(_ sender: UIButton) {
+        
+        let urlString = GettingStartedHyperLinkStrings.gettingStartedWorksheetPDFURL.rawValue
+        
+        if let url = URL(string: urlString) {
+            
+            let safariVC = SFSafariViewController(url: url)
+            
+            safariVC.delegate = self
+            
+            self.present(safariVC, animated: true)
+        }
     }
     
     @IBAction func wordVersionButtonTapped(_ sender: UIButton) {
+        
+        let urlString = GettingStartedHyperLinkStrings.gettingStartedWorksheetWORDURL.rawValue
+        
+        if let url = URL(string: urlString) {
+            
+            let safariVC = SFSafariViewController(url: url)
+            
+            safariVC.delegate = self
+            
+            self.present(safariVC, animated: true)
+        }
+    }
+}
+
+
+extension GettingStartedWorksheetViewController: SFSafariViewControllerDelegate {
+    
+    // MARK: - SafariServices protocol functions
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }

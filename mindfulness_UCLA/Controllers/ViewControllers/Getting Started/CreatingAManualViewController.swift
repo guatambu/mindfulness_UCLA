@@ -21,5 +21,26 @@ class CreatingAManualViewController: UIViewController {
     // MARK: - Actioms
     
     @IBAction func mbsrManualButtonTapped(_ sender: UIButton) {
+        
+        let urlString = GettingStartedHyperLinkStrings.mbsrManualURL.rawValue
+        
+        if let url = URL(string: urlString) {
+            
+            let safariVC = SFSafariViewController(url: url)
+            
+            safariVC.delegate = self
+            
+            self.present(safariVC, animated: true)
+        }
+    }
+}
+
+
+extension CreatingAManualViewController: SFSafariViewControllerDelegate {
+    
+    // MARK: - SafariServices protocol functions
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }

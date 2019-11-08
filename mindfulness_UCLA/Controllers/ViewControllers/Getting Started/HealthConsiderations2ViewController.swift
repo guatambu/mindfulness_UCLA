@@ -21,5 +21,26 @@ class HealthConsiderations2ViewController: UIViewController {
     // MARK: - Actioms
 
     @IBAction func seeIfReactStronglyButtonTapped(_ sender: UIButton) {
+        
+        let urlString = GettingStartedHyperLinkStrings.ifYouReactStronglyURL.rawValue
+        
+        if let url = URL(string: urlString) {
+            
+            let safariVC = SFSafariViewController(url: url)
+            
+            safariVC.delegate = self
+            
+            self.present(safariVC, animated: true)
+        }
+    }
+}
+
+
+extension HealthConsiderations2ViewController: SFSafariViewControllerDelegate {
+    
+    // MARK: - SafariServices protocol functions
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }

@@ -21,6 +21,27 @@ class OnlineStudentCommunityViewController: UIViewController {
     // MARK: - Actions
  
     @IBAction func onlineCommunityButtonTapped(_ sender: UIButton) {
+        
+        let urlString = GettingStartedHyperLinkStrings.palouseMindfulnessOnlineStudentCommunityURL.rawValue
+        
+        if let url = URL(string: urlString) {
+            
+            let safariVC = SFSafariViewController(url: url)
+            
+            safariVC.delegate = self
+            
+            self.present(safariVC, animated: true)
+        }
     }
     
+}
+
+
+extension OnlineStudentCommunityViewController: SFSafariViewControllerDelegate {
+    
+    // MARK: - SafariServices protocol functions
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
+    }
 }
