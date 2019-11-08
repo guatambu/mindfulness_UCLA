@@ -8,34 +8,30 @@
 
 import Foundation
 
-struct GettingStartedData {
-    
-    static let content = GettingStartedContent(title: <#T##String#>,
-                                               subTitle: <#T##String?#>,
-                                               textParagraph1: <#T##(String, String)#>,
-                                               textParagraph2: <#T##(String, String)?#>,
-                                               textParagraph3: <#T##(String, String)?#>,
-                                               textParagraph4: <#T##(String, String)?#>,
-                                               textParagraph5: <#T##(String, String)?#>,
-                                               textParagraph6: <#T##(String, String)?#>,
-                                               textParagraph7: <#T##(String, String)?#>,
-                                               textParagraph8: <#T##(String, String)?#>,
-                                               textParagraph9: <#T##(String, String)?#>,
-                                               hyperlink1: <#T##(String, String)#>,
-                                               hyperlink2: <#T##(String, String)?#>,
-                                               hyperlink3: <#T##(String, String)?#>,
-                                               hyperlink4: <#T##(String, String)?#>,
-                                               hyperlink5: <#T##(String, String)?#>,
-                                               hyperlink6: <#T##(String, String)?#>,
-                                               hyperlink7: <#T##(String, String)?#>,
-                                               hyperlink8: <#T##(String, String)?#>,
-                                               hyperlink9: <#T##(String, String)?#>)
-    
-    
-}
-    
-    
-    
+//struct GettingStartedData {
+//
+//    static let content = GettingStartedContent(title: <#T##String#>,
+//                                               subTitle: <#T##String?#>,
+//                                               textParagraph1: <#T##(String, String)#>,
+//                                               textParagraph2: <#T##(String, String)?#>,
+//                                               textParagraph3: <#T##(String, String)?#>,
+//                                               textParagraph4: <#T##(String, String)?#>,
+//                                               textParagraph5: <#T##(String, String)?#>,
+//                                               textParagraph6: <#T##(String, String)?#>,
+//                                               textParagraph7: <#T##(String, String)?#>,
+//                                               textParagraph8: <#T##(String, String)?#>,
+//                                               textParagraph9: <#T##(String, String)?#>,
+//                                               hyperlink1: <#T##(String, String)#>,
+//                                               hyperlink2: <#T##(String, String)?#>,
+//                                               hyperlink3: <#T##(String, String)?#>,
+//                                               hyperlink4: <#T##(String, String)?#>,
+//                                               hyperlink5: <#T##(String, String)?#>,
+//                                               hyperlink6: <#T##(String, String)?#>,
+//                                               hyperlink7: <#T##(String, String)?#>,
+//                                               hyperlink8: <#T##(String, String)?#>,
+//                                               hyperlink9: <#T##(String, String)?#>)
+//
+//    
     
 //    (title: "getting started",
 //                                            subTitle: nil,

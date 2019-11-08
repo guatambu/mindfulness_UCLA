@@ -41,6 +41,22 @@ class AbutUsViewController: UIViewController, SFSafariViewControllerDelegate, MF
         
         placePhoneCallOrText()
     }
+    
+    @IBAction func adminCheckButtonTapped(_ sender: UIButton) {
+        
+        // programmatically performing the segue
+        
+        // instantiate the relevant storyboard
+        let mainView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        // instantiate the desired TableViewController as ViewController on relevant storyboard
+        let destViewController = mainView.instantiateViewController(withIdentifier: "toAdminCheck") as! AdminCheckTableViewController
+        // create the segue programmatically - PUSH
+        self.navigationController?.pushViewController(destViewController, animated: true)
+        // set the desired properties of the destinationVC's navgation Item
+        let backButtonItem = UIBarButtonItem()
+        backButtonItem.title = " "
+        navigationItem.backBarButtonItem = backButtonItem
+    }
 }
 
 

@@ -30,6 +30,10 @@
 		FA69CE98237380BF00522A39 /* AboutUsLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CE97237380BF00522A39 /* AboutUsLinks.swift */; };
 		FA69CE9A2373BF3300522A39 /* GettingStartedHyperLinkStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CE992373BF3300522A39 /* GettingStartedHyperLinkStrings.swift */; };
 		FA69CE9C2373C33100522A39 /* GettingStartedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CE9B2373C33100522A39 /* GettingStartedContent.swift */; };
+		FA69CE9E23753CD700522A39 /* IBDesignables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CE9D23753CD600522A39 /* IBDesignables.swift */; };
+		FA69CEA123753FFB00522A39 /* AdminCheckTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CEA023753FFB00522A39 /* AdminCheckTableViewController.swift */; };
+		FA69CEA3237541B700522A39 /* AdminCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CEA2237541B700522A39 /* AdminCheckTableViewCell.swift */; };
+		FA69CEA52375448200522A39 /* RaisinMeditationVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CEA42375448200522A39 /* RaisinMeditationVideo.swift */; };
 		FA8EEA82236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EEA81236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift */; };
 		FAC891502341EB070018338C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8914F2341EB070018338C /* AppDelegate.swift */; };
 		FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */; };
@@ -137,12 +141,16 @@
 		FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailsTableViewController.swift; sourceTree = "<group>"; };
 		FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FA69CE8F2373711800522A39 /* AboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
-		FA69CE912373728400522A39 /* GettingStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStarted.swift; sourceTree = "<group>"; };
+		FA69CE912373728400522A39 /* GettingStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GettingStarted.swift; path = "../Course Contents/GettingStarted.swift"; sourceTree = "<group>"; };
 		FA69CE9323737B6800522A39 /* about_us.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = about_us.jpg; sourceTree = "<group>"; };
 		FA69CE9523737F9D00522A39 /* AbutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbutUsViewController.swift; sourceTree = "<group>"; };
 		FA69CE97237380BF00522A39 /* AboutUsLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsLinks.swift; sourceTree = "<group>"; };
-		FA69CE992373BF3300522A39 /* GettingStartedHyperLinkStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedHyperLinkStrings.swift; sourceTree = "<group>"; };
-		FA69CE9B2373C33100522A39 /* GettingStartedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedContent.swift; sourceTree = "<group>"; };
+		FA69CE992373BF3300522A39 /* GettingStartedHyperLinkStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GettingStartedHyperLinkStrings.swift; path = ../GettingStartedHyperLinkStrings.swift; sourceTree = "<group>"; };
+		FA69CE9B2373C33100522A39 /* GettingStartedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GettingStartedContent.swift; path = ../GettingStartedContent.swift; sourceTree = "<group>"; };
+		FA69CE9D23753CD600522A39 /* IBDesignables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignables.swift; sourceTree = "<group>"; };
+		FA69CEA023753FFB00522A39 /* AdminCheckTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCheckTableViewController.swift; sourceTree = "<group>"; };
+		FA69CEA2237541B700522A39 /* AdminCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCheckTableViewCell.swift; sourceTree = "<group>"; };
+		FA69CEA42375448200522A39 /* RaisinMeditationVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisinMeditationVideo.swift; sourceTree = "<group>"; };
 		FA8EEA81236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNUserNotificationCenterDelegate.swift; sourceTree = "<group>"; };
 		FAC8914C2341EB070018338C /* mindfulness_UCLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindfulness_UCLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC8914F2341EB070018338C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -275,6 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				FA69CE9523737F9D00522A39 /* AbutUsViewController.swift */,
+				FA69CEA023753FFB00522A39 /* AdminCheckTableViewController.swift */,
+				FA69CEA2237541B700522A39 /* AdminCheckTableViewCell.swift */,
 				FAC8918623457E640018338C /* DashboardTableViewController.swift */,
 				FAC8918823457E8C0018338C /* GettingStartedTableViewController.swift */,
 				FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */,
@@ -301,6 +311,16 @@
 			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
+		FA69CE9F23753EC700522A39 /* Getting Started */ = {
+			isa = PBXGroup;
+			children = (
+				FA69CE992373BF3300522A39 /* GettingStartedHyperLinkStrings.swift */,
+				FA69CE9B2373C33100522A39 /* GettingStartedContent.swift */,
+				FA69CE912373728400522A39 /* GettingStarted.swift */,
+			);
+			path = "Getting Started";
+			sourceTree = "<group>";
+		};
 		FAC891432341EB070018338C = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				FACDBA5223622D2B00B538EC /* Protocols.swift */,
+				FA69CE9D23753CD600522A39 /* IBDesignables.swift */,
 				FAC891652341EB390018338C /* Models */,
 				FAC891672341EB490018338C /* Views */,
 				FAC891662341EB420018338C /* Controllers */,
@@ -360,8 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				FA69CE97237380BF00522A39 /* AboutUsLinks.swift */,
-				FA69CE992373BF3300522A39 /* GettingStartedHyperLinkStrings.swift */,
-				FA69CE9B2373C33100522A39 /* GettingStartedContent.swift */,
+				FA69CE9F23753EC700522A39 /* Getting Started */,
 				FACDBA5623638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift */,
 				FA4B9D4D23470DD3004D1B7C /* WeekHeadings.swift */,
 				FACDBA50235E555E00B538EC /* ReGexPatterns.swift */,
@@ -395,7 +415,6 @@
 			children = (
 				FA4B9D4F2349ADDC004D1B7C /* WeekCourseContent.swift */,
 				FA69CE8F2373711800522A39 /* AboutUs.swift */,
-				FA69CE912373728400522A39 /* GettingStarted.swift */,
 				FA4B9D5F2349BAE3004D1B7C /* Week1Data.swift */,
 				FA4B9D612349C59B004D1B7C /* Week2Data.swift */,
 				FA4B9D632349C5A8004D1B7C /* Week3Data.swift */,
@@ -413,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				FACDBA58236396E800B538EC /* GuidedMeditation.swift */,
+				FA69CEA42375448200522A39 /* RaisinMeditationVideo.swift */,
 				FACDBA5C2363980F00B538EC /* BodyScan.swift */,
 				FACDBA5E2363997400B538EC /* Sitting.swift */,
 				FACDBA60236399EB00B538EC /* PhysicalPain.swift */,
@@ -571,6 +591,7 @@
 				FA69CE922373728400522A39 /* GettingStarted.swift in Sources */,
 				FACDBA8123655AC200B538EC /* GuidedMeditationsViewController.swift in Sources */,
 				FACDBA6D23639A6A00B538EC /* RAIN.swift in Sources */,
+				FA69CE9E23753CD700522A39 /* IBDesignables.swift in Sources */,
 				FACDBA5723638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift in Sources */,
 				FACDBA712363D1C300B538EC /* GuidedMeditationTableViewCell.swift in Sources */,
 				FA4B9D6C2349C5D8004D1B7C /* Week7Data.swift in Sources */,
@@ -590,11 +611,14 @@
 				FACDBA61236399EB00B538EC /* PhysicalPain.swift in Sources */,
 				FA4B9D502349ADDC004D1B7C /* WeekCourseContent.swift in Sources */,
 				FACDBA6523639A1200B538EC /* Mountain.swift in Sources */,
+				FA69CEA52375448200522A39 /* RaisinMeditationVideo.swift in Sources */,
 				FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */,
 				FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */,
 				FACDBA6923639A3100B538EC /* Lovingkindness.swift in Sources */,
+				FA69CEA123753FFB00522A39 /* AdminCheckTableViewController.swift in Sources */,
 				FA69CE98237380BF00522A39 /* AboutUsLinks.swift in Sources */,
 				FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */,
+				FA69CEA3237541B700522A39 /* AdminCheckTableViewCell.swift in Sources */,
 				FA69CE902373711800522A39 /* AboutUs.swift in Sources */,
 				FACDBA51235E555E00B538EC /* ReGexPatterns.swift in Sources */,
 				FACDBA6323639A0100B538EC /* DifficultEmotions.swift in Sources */,
