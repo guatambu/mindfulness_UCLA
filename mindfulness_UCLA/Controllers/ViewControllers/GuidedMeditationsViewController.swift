@@ -10,6 +10,12 @@ import UIKit
 import AVFoundation
 import SafariServices
 
+
+// *********
+// TODO: add coredata properties of the various meditation play counts for persistance
+// *********
+
+
 class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - Properties
