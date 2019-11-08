@@ -51,7 +51,6 @@
 		FAC891832341EF370018338C /* Timer_Large_Detail_Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */; };
 		FAC891852341EF370018338C /* Video_Courses_Yoga.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FAC891782341EF370018338C /* Video_Courses_Yoga.jpeg */; };
 		FAC8918723457E640018338C /* DashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918623457E640018338C /* DashboardTableViewController.swift */; };
-		FAC8918923457E8C0018338C /* GettingStartedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918823457E8C0018338C /* GettingStartedTableViewController.swift */; };
 		FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */; };
 		FAC8918F23457EE10018338C /* VideoCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */; };
 		FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */; };
@@ -111,6 +110,18 @@
 		FACDBAB5236D0A4300B538EC /* GuidedMeditationsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBAB4236D0A4300B538EC /* GuidedMeditationsModelController.swift */; };
 		FACDBAB7236E9AFF00B538EC /* UserMeditationMasterTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBAB6236E9AFF00B538EC /* UserMeditationMasterTimeController.swift */; };
 		FACDBAB9236EA85C00B538EC /* LocalNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBAB8236EA85C00B538EC /* LocalNotificationsManager.swift */; };
+		FAD5936023760D12009A213C /* BeforeYouBeginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5935F23760D12009A213C /* BeforeYouBeginViewController.swift */; };
+		FAD5936223760D48009A213C /* GettingStartedWorksheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5936123760D48009A213C /* GettingStartedWorksheetViewController.swift */; };
+		FAD5936423760D6D009A213C /* OnlineStudentCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5936323760D6D009A213C /* OnlineStudentCommunityViewController.swift */; };
+		FAD5936623760D91009A213C /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5936523760D91009A213C /* FAQViewController.swift */; };
+		FAD5936823760DAA009A213C /* CreatingAManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5936723760DAA009A213C /* CreatingAManualViewController.swift */; };
+		FAD5936A23760DC8009A213C /* VideosAndReadingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5936923760DC8009A213C /* VideosAndReadingsViewController.swift */; };
+		FAD5936C23760DE0009A213C /* DailyPractice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5936B23760DE0009A213C /* DailyPractice1ViewController.swift */; };
+		FAD5936E23760DF3009A213C /* DailyPractice2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5936D23760DF3009A213C /* DailyPractice2ViewController.swift */; };
+		FAD5937023760E45009A213C /* HealthConsiderations1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5936F23760E45009A213C /* HealthConsiderations1ViewController.swift */; };
+		FAD5937223760E5D009A213C /* HealthConsiderations2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5937123760E5D009A213C /* HealthConsiderations2ViewController.swift */; };
+		FAD5937423760E6F009A213C /* ReadyToStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5937323760E6F009A213C /* ReadyToStartViewController.swift */; };
+		FAD59376237610B8009A213C /* GettingStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD59375237610B8009A213C /* GettingStartedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,18 +149,18 @@
 		FA4B9D6D2349C5E5004D1B7C /* Week8Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week8Data.swift; path = ../Week8Data.swift; sourceTree = "<group>"; };
 		FA4B9D6F2349C5F1004D1B7C /* Week9Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Week9Data.swift; path = ../Week9Data.swift; sourceTree = "<group>"; };
 		FA61C2AD234EBC40007F0AD3 /* CourseContentModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentModelController.swift; sourceTree = "<group>"; };
-		FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailsTableViewController.swift; sourceTree = "<group>"; };
-		FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentDetailTableViewCell.swift; sourceTree = "<group>"; };
+		FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CourseContentDetailsTableViewController.swift; path = ../CourseContentDetailsTableViewController.swift; sourceTree = "<group>"; };
+		FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CourseContentDetailTableViewCell.swift; path = ../CourseContentDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FA69CE8F2373711800522A39 /* AboutUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs.swift; sourceTree = "<group>"; };
 		FA69CE912373728400522A39 /* GettingStarted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GettingStarted.swift; path = "../Course Contents/GettingStarted.swift"; sourceTree = "<group>"; };
 		FA69CE9323737B6800522A39 /* about_us.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = about_us.jpg; sourceTree = "<group>"; };
-		FA69CE9523737F9D00522A39 /* AbutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbutUsViewController.swift; sourceTree = "<group>"; };
+		FA69CE9523737F9D00522A39 /* AbutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AbutUsViewController.swift; path = ../AbutUsViewController.swift; sourceTree = "<group>"; };
 		FA69CE97237380BF00522A39 /* AboutUsLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsLinks.swift; sourceTree = "<group>"; };
 		FA69CE992373BF3300522A39 /* GettingStartedHyperLinkStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GettingStartedHyperLinkStrings.swift; path = ../GettingStartedHyperLinkStrings.swift; sourceTree = "<group>"; };
 		FA69CE9B2373C33100522A39 /* GettingStartedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GettingStartedContent.swift; path = ../GettingStartedContent.swift; sourceTree = "<group>"; };
 		FA69CE9D23753CD600522A39 /* IBDesignables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignables.swift; sourceTree = "<group>"; };
-		FA69CEA023753FFB00522A39 /* AdminCheckTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCheckTableViewController.swift; sourceTree = "<group>"; };
-		FA69CEA2237541B700522A39 /* AdminCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCheckTableViewCell.swift; sourceTree = "<group>"; };
+		FA69CEA023753FFB00522A39 /* AdminCheckTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminCheckTableViewController.swift; path = ../AdminCheckTableViewController.swift; sourceTree = "<group>"; };
+		FA69CEA2237541B700522A39 /* AdminCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminCheckTableViewCell.swift; path = ../AdminCheckTableViewCell.swift; sourceTree = "<group>"; };
 		FA69CEA42375448200522A39 /* RaisinMeditationVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisinMeditationVideo.swift; sourceTree = "<group>"; };
 		FA8EEA81236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNUserNotificationCenterDelegate.swift; sourceTree = "<group>"; };
 		FAC8914C2341EB070018338C /* mindfulness_UCLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindfulness_UCLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,10 +181,9 @@
 		FAC891762341EF360018338C /* Timer_Large_Detail_Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail_Blue.png; sourceTree = "<group>"; };
 		FAC891782341EF370018338C /* Video_Courses_Yoga.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Video_Courses_Yoga.jpeg; sourceTree = "<group>"; };
 		FAC8918623457E640018338C /* DashboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewController.swift; sourceTree = "<group>"; };
-		FAC8918823457E8C0018338C /* GettingStartedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedTableViewController.swift; sourceTree = "<group>"; };
-		FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseContentTableViewController.swift; sourceTree = "<group>"; };
-		FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCoursesTableViewController.swift; sourceTree = "<group>"; };
-		FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCourseMaterialsTableViewController.swift; sourceTree = "<group>"; };
+		FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CourseContentTableViewController.swift; path = ../CourseContentTableViewController.swift; sourceTree = "<group>"; };
+		FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoCoursesTableViewController.swift; path = ../VideoCoursesTableViewController.swift; sourceTree = "<group>"; };
+		FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeekCourseMaterialsTableViewController.swift; path = ../WeekCourseMaterialsTableViewController.swift; sourceTree = "<group>"; };
 		FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerViewController.swift; sourceTree = "<group>"; };
 		FAC89194234580250018338C /* Timer_Large_Detail_Background_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timer_Large_Detail_Background_Color.png; sourceTree = "<group>"; };
 		FACDBA50235E555E00B538EC /* ReGexPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReGexPatterns.swift; sourceTree = "<group>"; };
@@ -190,11 +200,11 @@
 		FACDBA6A23639A5A00B538EC /* SootheSoftenAllow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SootheSoftenAllow.swift; sourceTree = "<group>"; };
 		FACDBA6C23639A6A00B538EC /* RAIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAIN.swift; sourceTree = "<group>"; };
 		FACDBA6E23639A7A00B538EC /* Silent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silent.swift; sourceTree = "<group>"; };
-		FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationTableViewCell.swift; sourceTree = "<group>"; };
+		FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GuidedMeditationTableViewCell.swift; path = ../GuidedMeditationTableViewCell.swift; sourceTree = "<group>"; };
 		FACDBA7223652E7000B538EC /* mindfulness-pause-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mindfulness-pause-90.png"; sourceTree = "<group>"; };
 		FACDBA7323652E7000B538EC /* mindfulness-play-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mindfulness-play-90.png"; sourceTree = "<group>"; };
-		FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationsViewController.swift; sourceTree = "<group>"; };
-		FACDBA8223663E8E00B538EC /* VideoCoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCoursesTableViewCell.swift; sourceTree = "<group>"; };
+		FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GuidedMeditationsViewController.swift; path = ../GuidedMeditationsViewController.swift; sourceTree = "<group>"; };
+		FACDBA8223663E8E00B538EC /* VideoCoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoCoursesTableViewCell.swift; path = ../VideoCoursesTableViewCell.swift; sourceTree = "<group>"; };
 		FACDBA852366A45400B538EC /* VideoCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCourse.swift; sourceTree = "<group>"; };
 		FACDBA872366A52E00B538EC /* MindfulYoga1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulYoga1.swift; sourceTree = "<group>"; };
 		FACDBA892366A5D900B538EC /* MindfulYoga2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulYoga2.swift; sourceTree = "<group>"; };
@@ -220,6 +230,18 @@
 		FACDBAB4236D0A4300B538EC /* GuidedMeditationsModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedMeditationsModelController.swift; sourceTree = "<group>"; };
 		FACDBAB6236E9AFF00B538EC /* UserMeditationMasterTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMeditationMasterTimeController.swift; sourceTree = "<group>"; };
 		FACDBAB8236EA85C00B538EC /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
+		FAD5935F23760D12009A213C /* BeforeYouBeginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeYouBeginViewController.swift; sourceTree = "<group>"; };
+		FAD5936123760D48009A213C /* GettingStartedWorksheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedWorksheetViewController.swift; sourceTree = "<group>"; };
+		FAD5936323760D6D009A213C /* OnlineStudentCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineStudentCommunityViewController.swift; sourceTree = "<group>"; };
+		FAD5936523760D91009A213C /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		FAD5936723760DAA009A213C /* CreatingAManualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingAManualViewController.swift; sourceTree = "<group>"; };
+		FAD5936923760DC8009A213C /* VideosAndReadingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosAndReadingsViewController.swift; sourceTree = "<group>"; };
+		FAD5936B23760DE0009A213C /* DailyPractice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPractice1ViewController.swift; sourceTree = "<group>"; };
+		FAD5936D23760DF3009A213C /* DailyPractice2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPractice2ViewController.swift; sourceTree = "<group>"; };
+		FAD5936F23760E45009A213C /* HealthConsiderations1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthConsiderations1ViewController.swift; sourceTree = "<group>"; };
+		FAD5937123760E5D009A213C /* HealthConsiderations2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthConsiderations2ViewController.swift; sourceTree = "<group>"; };
+		FAD5937323760E6F009A213C /* ReadyToStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyToStartViewController.swift; sourceTree = "<group>"; };
+		FAD59375237610B8009A213C /* GettingStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +255,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA31D0E623760B3C00D4109E /* About */ = {
+			isa = PBXGroup;
+			children = (
+				FA69CE9523737F9D00522A39 /* AbutUsViewController.swift */,
+				FA69CEA023753FFB00522A39 /* AdminCheckTableViewController.swift */,
+				FA69CEA2237541B700522A39 /* AdminCheckTableViewCell.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		FA31D0E723760B9200D4109E /* Getting Started */ = {
+			isa = PBXGroup;
+			children = (
+				FAD59375237610B8009A213C /* GettingStartedViewController.swift */,
+				FAD5935F23760D12009A213C /* BeforeYouBeginViewController.swift */,
+				FAD5936123760D48009A213C /* GettingStartedWorksheetViewController.swift */,
+				FAD5936323760D6D009A213C /* OnlineStudentCommunityViewController.swift */,
+				FAD5936523760D91009A213C /* FAQViewController.swift */,
+				FAD5936723760DAA009A213C /* CreatingAManualViewController.swift */,
+				FAD5936923760DC8009A213C /* VideosAndReadingsViewController.swift */,
+				FAD5936B23760DE0009A213C /* DailyPractice1ViewController.swift */,
+				FAD5936D23760DF3009A213C /* DailyPractice2ViewController.swift */,
+				FAD5936F23760E45009A213C /* HealthConsiderations1ViewController.swift */,
+				FAD5937123760E5D009A213C /* HealthConsiderations2ViewController.swift */,
+				FAD5937323760E6F009A213C /* ReadyToStartViewController.swift */,
+			);
+			path = "Getting Started";
+			sourceTree = "<group>";
+		};
+		FA31D0E823760B9B00D4109E /* Course Content */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */,
+				FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */,
+				FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */,
+				FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */,
+			);
+			path = "Course Content";
+			sourceTree = "<group>";
+		};
+		FA31D0E923760BA500D4109E /* Guided Meditations */ = {
+			isa = PBXGroup;
+			children = (
+				FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */,
+				FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */,
+			);
+			path = "Guided Meditations";
+			sourceTree = "<group>";
+		};
+		FA31D0EA23760BAB00D4109E /* Video Courses */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */,
+				FACDBA8223663E8E00B538EC /* VideoCoursesTableViewCell.swift */,
+			);
+			path = "Video Courses";
+			sourceTree = "<group>";
+		};
 		FA4B9D532349B989004D1B7C /* mindfulness_UCLA_app_guided_meditations_audio_files */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,19 +362,12 @@
 		FA61C2AB234EBBE4007F0AD3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA69CE9523737F9D00522A39 /* AbutUsViewController.swift */,
-				FA69CEA023753FFB00522A39 /* AdminCheckTableViewController.swift */,
-				FA69CEA2237541B700522A39 /* AdminCheckTableViewCell.swift */,
+				FA31D0E623760B3C00D4109E /* About */,
 				FAC8918623457E640018338C /* DashboardTableViewController.swift */,
-				FAC8918823457E8C0018338C /* GettingStartedTableViewController.swift */,
-				FAC8918A23457EA90018338C /* CourseContentTableViewController.swift */,
-				FAC8919023457F030018338C /* WeekCourseMaterialsTableViewController.swift */,
-				FA61C2AF2352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift */,
-				FA61C2B123530070007F0AD3 /* CourseContentDetailTableViewCell.swift */,
-				FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */,
-				FACDBA702363D1C300B538EC /* GuidedMeditationTableViewCell.swift */,
-				FAC8918E23457EE10018338C /* VideoCoursesTableViewController.swift */,
-				FACDBA8223663E8E00B538EC /* VideoCoursesTableViewCell.swift */,
+				FA31D0E723760B9200D4109E /* Getting Started */,
+				FA31D0E823760B9B00D4109E /* Course Content */,
+				FA31D0E923760BA500D4109E /* Guided Meditations */,
+				FA31D0EA23760BAB00D4109E /* Video Courses */,
 				FAC8919223457F3B0018338C /* MeditationTimerViewController.swift */,
 			);
 			path = ViewControllers;
@@ -581,19 +654,25 @@
 				FA4B9D662349C5B4004D1B7C /* Week4Data.swift in Sources */,
 				FACDBAB9236EA85C00B538EC /* LocalNotificationsManager.swift in Sources */,
 				FA69CE9A2373BF3300522A39 /* GettingStartedHyperLinkStrings.swift in Sources */,
+				FAD5936423760D6D009A213C /* OnlineStudentCommunityViewController.swift in Sources */,
 				FA4B9D622349C59B004D1B7C /* Week2Data.swift in Sources */,
 				FAC8918F23457EE10018338C /* VideoCoursesTableViewController.swift in Sources */,
 				FACDBA862366A45400B538EC /* VideoCourse.swift in Sources */,
 				FA69CE9623737F9D00522A39 /* AbutUsViewController.swift in Sources */,
 				FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */,
 				FA61C2AE234EBC40007F0AD3 /* CourseContentModelController.swift in Sources */,
+				FAD5936823760DAA009A213C /* CreatingAManualViewController.swift in Sources */,
 				FACDBA5323622D2B00B538EC /* Protocols.swift in Sources */,
+				FAD5936223760D48009A213C /* GettingStartedWorksheetViewController.swift in Sources */,
 				FA69CE922373728400522A39 /* GettingStarted.swift in Sources */,
 				FACDBA8123655AC200B538EC /* GuidedMeditationsViewController.swift in Sources */,
 				FACDBA6D23639A6A00B538EC /* RAIN.swift in Sources */,
+				FAD5936023760D12009A213C /* BeforeYouBeginViewController.swift in Sources */,
+				FAD5936A23760DC8009A213C /* VideosAndReadingsViewController.swift in Sources */,
 				FA69CE9E23753CD700522A39 /* IBDesignables.swift in Sources */,
 				FACDBA5723638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift in Sources */,
 				FACDBA712363D1C300B538EC /* GuidedMeditationTableViewCell.swift in Sources */,
+				FAD5937023760E45009A213C /* HealthConsiderations1ViewController.swift in Sources */,
 				FA4B9D6C2349C5D8004D1B7C /* Week7Data.swift in Sources */,
 				FA61C2B223530070007F0AD3 /* CourseContentDetailTableViewCell.swift in Sources */,
 				FACDBA59236396E800B538EC /* GuidedMeditation.swift in Sources */,
@@ -608,10 +687,15 @@
 				FA69CE9C2373C33100522A39 /* GettingStartedContent.swift in Sources */,
 				FA4B9D4E23470DD3004D1B7C /* WeekHeadings.swift in Sources */,
 				FA4B9D6E2349C5E5004D1B7C /* Week8Data.swift in Sources */,
+				FAD5936623760D91009A213C /* FAQViewController.swift in Sources */,
 				FACDBA61236399EB00B538EC /* PhysicalPain.swift in Sources */,
 				FA4B9D502349ADDC004D1B7C /* WeekCourseContent.swift in Sources */,
+				FAD5936C23760DE0009A213C /* DailyPractice1ViewController.swift in Sources */,
+				FAD59376237610B8009A213C /* GettingStartedViewController.swift in Sources */,
 				FACDBA6523639A1200B538EC /* Mountain.swift in Sources */,
+				FAD5937423760E6F009A213C /* ReadyToStartViewController.swift in Sources */,
 				FA69CEA52375448200522A39 /* RaisinMeditationVideo.swift in Sources */,
+				FAD5937223760E5D009A213C /* HealthConsiderations2ViewController.swift in Sources */,
 				FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */,
 				FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */,
 				FACDBA6923639A3100B538EC /* Lovingkindness.swift in Sources */,
@@ -628,9 +712,9 @@
 				FACDBAB7236E9AFF00B538EC /* UserMeditationMasterTimeController.swift in Sources */,
 				FA61C2B02352EF35007F0AD3 /* CourseContentDetailsTableViewController.swift in Sources */,
 				FACDBA8A2366A5D900B538EC /* MindfulYoga2.swift in Sources */,
-				FAC8918923457E8C0018338C /* GettingStartedTableViewController.swift in Sources */,
 				FAC891502341EB070018338C /* AppDelegate.swift in Sources */,
 				FACDBA6723639A1C00B538EC /* Lake.swift in Sources */,
+				FAD5936E23760DF3009A213C /* DailyPractice2ViewController.swift in Sources */,
 				FACDBA5F2363997400B538EC /* Sitting.swift in Sources */,
 				FA4B9D6A2349C5CB004D1B7C /* Week6Data.swift in Sources */,
 				FAC8919323457F3B0018338C /* MeditationTimerViewController.swift in Sources */,
