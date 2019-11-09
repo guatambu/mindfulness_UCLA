@@ -13,8 +13,10 @@ class GettingStartedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // set the desired properties of the destinationVC's navgation Item
+        let backItem = UIBarButtonItem()
+        backItem.title = " "
+        navigationItem.backBarButtonItem = backItem
+        
     }
-
-
 }

@@ -122,6 +122,7 @@
 		FAD5937223760E5D009A213C /* HealthConsiderations2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5937123760E5D009A213C /* HealthConsiderations2ViewController.swift */; };
 		FAD5937423760E6F009A213C /* ReadyToStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5937323760E6F009A213C /* ReadyToStartViewController.swift */; };
 		FAD59376237610B8009A213C /* GettingStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD59375237610B8009A213C /* GettingStartedViewController.swift */; };
+		FAD593782376523B009A213C /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD593772376523B009A213C /* ViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -242,6 +243,7 @@
 		FAD5937123760E5D009A213C /* HealthConsiderations2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthConsiderations2ViewController.swift; sourceTree = "<group>"; };
 		FAD5937323760E6F009A213C /* ReadyToStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyToStartViewController.swift; sourceTree = "<group>"; };
 		FAD59375237610B8009A213C /* GettingStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedViewController.swift; sourceTree = "<group>"; };
+		FAD593772376523B009A213C /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +417,7 @@
 			children = (
 				FACDBA5223622D2B00B538EC /* Protocols.swift */,
 				FA69CE9D23753CD600522A39 /* IBDesignables.swift */,
+				FAD593772376523B009A213C /* ViewControllerExtension.swift */,
 				FAC891652341EB390018338C /* Models */,
 				FAC891672341EB490018338C /* Views */,
 				FAC891662341EB420018338C /* Controllers */,
@@ -699,6 +702,7 @@
 				FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */,
 				FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */,
 				FACDBA6923639A3100B538EC /* Lovingkindness.swift in Sources */,
+				FAD593782376523B009A213C /* ViewControllerExtension.swift in Sources */,
 				FA69CEA123753FFB00522A39 /* AdminCheckTableViewController.swift in Sources */,
 				FA69CE98237380BF00522A39 /* AboutUsLinks.swift in Sources */,
 				FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */,

@@ -13,8 +13,13 @@ class BeforeYouBeginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // set the desired properties of the destinationVC's navgation Item
+        let backItem = UIBarButtonItem()
+        backItem.title = " "
+        navigationItem.backBarButtonItem = backItem
+        
+        let closeItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.stop, target: self, action: #selector(self.returnToDashboard))
+        navigationItem.rightBarButtonItem = closeItem
+        
     }
-    
-
 }

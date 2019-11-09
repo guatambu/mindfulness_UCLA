@@ -388,8 +388,6 @@ extension MeditationTimerViewController {
                 startButtonOutlet.setTitle("pause", for: UIControl.State.normal)
                 startButtonOutlet.backgroundColor = pauseOrange
                 
-                // TODO: build actual pausing functionality to allow for timer to resume
-                
                 cancelButtonOutlet.isEnabled = true
                 
                 minutesChoiceSlider.isEnabled = false
