@@ -26,7 +26,7 @@ enum GettingStartedHyperLinkStrings: String {
     case frequentlyAskedQuestionsURL = "https://palousemindfulness.com/FAQ.html"
     
     case mbsrManual = "MNSR Manual"
-    case mbsrManualURL = "https://palousemindfulness.com/MBSR/manual.html`"
+    case mbsrManualURL = "https://palousemindfulness.com/MBSR/manual.html"
     
     case ifYouReactStrongly = "If you react strongly"
     case ifYouReactStronglyURL = "https://palousemindfulness.com/FAQ-if-you-react-strongly.html"

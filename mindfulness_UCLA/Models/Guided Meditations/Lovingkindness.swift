@@ -10,5 +10,5 @@ import Foundation
 
 struct Lovingkindness {
     
-    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.lovingkindnessMeditaitonTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.lovingkindnessMeditaitonDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.lovingkindnessMeditaitonPath.rawValue)
+    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.lovingkindnessMeditaitonTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.lovingkindnessMeditaitonDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.lovingkindnessMeditaitonPath.rawValue, thumbnailPath: "")
 }

@@ -10,5 +10,5 @@ import Foundation
 
 struct RAIN {
     
-    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.RAINMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.RAINMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.RAINMeditationPath.rawValue)
+    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.RAINMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.RAINMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.RAINMeditationPath.rawValue, thumbnailPath: "")
 }

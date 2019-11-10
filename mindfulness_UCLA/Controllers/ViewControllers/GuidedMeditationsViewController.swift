@@ -10,6 +10,12 @@ import UIKit
 import AVFoundation
 import SafariServices
 
+
+// *********
+// TODO: add coredata properties of the various meditation play counts for persistance
+// *********
+
+
 class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - Properties
@@ -39,6 +45,8 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
                                                  SootheSoftenAllow.metaData,
                                                  RAIN.metaData,
                                                  Silent.metaData ]
+    
+    let masterCount = GuidedMeditationsModelController.shared.counts[0]
     
     
     // MARK: - ViewController Lifecycle Functions
@@ -143,7 +151,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 1
         case AudioGuidedMeditationMetaDataStrings.raisinMeditationTitle.rawValue:
             
-            GuidedMeditationsModelController.shared.raisinMeditationCount += 1
+//            GuidedMeditationsModelController.shared.raisinMeditationCount += 1
+            
+            masterCount.raisin += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: masterCount.raisin, bodyScan: nil, difficultEmotions: nil, lake: nil, lovingKindness: nil, mountain: nil, physicalPain: nil, r_a_i_n: nil, silent: nil, sitting: nil, sootheSoftenAllow: nil, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = false
             
@@ -162,7 +174,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 2
         case AudioGuidedMeditationMetaDataStrings.bodyScanMeditationTitle.rawValue:
         
-            GuidedMeditationsModelController.shared.bodyScanMeditationCount += 1
+//            GuidedMeditationsModelController.shared.bodyScanMeditationCount += 1
+            
+            masterCount.bodyScan += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: masterCount.bodyScan, difficultEmotions: nil, lake: nil, lovingKindness: nil, mountain: nil, physicalPain: nil, r_a_i_n: nil, silent: nil, sitting: nil, sootheSoftenAllow: nil, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = true
             
@@ -173,7 +189,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 3
         case AudioGuidedMeditationMetaDataStrings.sittingMeditationTitle.rawValue:
         
-            GuidedMeditationsModelController.shared.sittingMeditationCount += 1
+//            GuidedMeditationsModelController.shared.sittingMeditationCount += 1
+            
+            masterCount.sitting += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: nil, lake: nil, lovingKindness: nil, mountain: nil, physicalPain: nil, r_a_i_n: nil, silent: nil, sitting: masterCount.sitting, sootheSoftenAllow: nil, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = true
             
@@ -184,7 +204,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 4
         case AudioGuidedMeditationMetaDataStrings.difficultEmotionsMeditationTitle.rawValue:
             
-            GuidedMeditationsModelController.shared.difficultEmotionsMeditationCount += 1
+//            GuidedMeditationsModelController.shared.difficultEmotionsMeditationCount += 1
+            
+            masterCount.difficultEmotions += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: masterCount.difficultEmotions, lake: nil, lovingKindness: nil, mountain: nil, physicalPain: nil, r_a_i_n: nil, silent: nil, sitting: nil, sootheSoftenAllow: nil, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = true
             
@@ -195,7 +219,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 5
         case AudioGuidedMeditationMetaDataStrings.physicalPainMeditaitonTitle.rawValue:
             
-            GuidedMeditationsModelController.shared.physicalPainMeditationCount += 1
+//            GuidedMeditationsModelController.shared.physicalPainMeditationCount += 1
+            
+            masterCount.physicalPain += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: nil, lake: nil, lovingKindness: nil, mountain: nil, physicalPain: masterCount.physicalPain, r_a_i_n: nil, silent: nil, sitting: nil, sootheSoftenAllow: nil, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = true
             
@@ -206,7 +234,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 6
         case AudioGuidedMeditationMetaDataStrings.mountainMeditationTitle.rawValue:
         
-            GuidedMeditationsModelController.shared.mountainMeditationCount += 1
+//            GuidedMeditationsModelController.shared.mountainMeditationCount += 1
+            
+            masterCount.mountain += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: nil, lake: nil, lovingKindness: nil, mountain: masterCount.mountain, physicalPain: nil, r_a_i_n: nil, silent: nil, sitting: nil, sootheSoftenAllow: nil, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = true
             
@@ -217,7 +249,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 7
         case AudioGuidedMeditationMetaDataStrings.lakeMeditationTitle.rawValue:
             
-            GuidedMeditationsModelController.shared.lakeMeditationCount += 1
+//            GuidedMeditationsModelController.shared.lakeMeditationCount += 1
+            
+            masterCount.lake += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: nil, lake: masterCount.lake, lovingKindness: nil, mountain: nil, physicalPain: nil, r_a_i_n: nil, silent: nil, sitting: nil, sootheSoftenAllow: nil, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = true
             
@@ -228,7 +264,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 8
         case AudioGuidedMeditationMetaDataStrings.lovingkindnessMeditaitonTitle.rawValue:
             
-            GuidedMeditationsModelController.shared.lovingKindnessMeditationCount += 1
+//            GuidedMeditationsModelController.shared.lovingKindnessMeditationCount += 1
+            
+            masterCount.lovingKindness += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: nil, lake: nil, lovingKindness: masterCount.lovingKindness, mountain: nil, physicalPain: nil, r_a_i_n: nil, silent: nil, sitting: nil, sootheSoftenAllow: nil, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = true
             
@@ -239,7 +279,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 9
         case AudioGuidedMeditationMetaDataStrings.softenSootheAllowMeditationTitle.rawValue:
             
-            GuidedMeditationsModelController.shared.softenSootheAllowMeditationCount += 1
+//             GuidedMeditationsModelController.shared.softenSootheAllowMeditationCount += 1
+            
+            masterCount.sootheSoftenAllow += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: nil, lake: nil, lovingKindness: nil, mountain: nil, physicalPain: nil, r_a_i_n: nil, silent: nil, sitting: nil, sootheSoftenAllow: masterCount.sootheSoftenAllow, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = true
             
@@ -250,7 +294,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 10
         case AudioGuidedMeditationMetaDataStrings.RAINMeditationTitle.rawValue:
             
-            GuidedMeditationsModelController.shared.rainMeditationCount += 1
+//            GuidedMeditationsModelController.shared.rainMeditationCount += 1
+            
+            masterCount.r_a_i_n += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: nil, lake: nil, lovingKindness: nil, mountain: nil, physicalPain: nil, r_a_i_n: masterCount.r_a_i_n, silent: nil, sitting: nil, sootheSoftenAllow: nil, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = true
             
@@ -261,7 +309,11 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         // 11
         case AudioGuidedMeditationMetaDataStrings.silent30minGuidedMeditationTitle.rawValue:
             
-            GuidedMeditationsModelController.shared.silentMeditationCount += 1
+//            GuidedMeditationsModelController.shared.silentMeditationCount += 1
+            
+            masterCount.silent += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: nil, lake: nil, lovingKindness: nil, mountain: nil, physicalPain: nil, r_a_i_n: nil, silent: masterCount.silent, sitting: nil, sootheSoftenAllow: nil, yoga1: nil, yoga2: nil)
             
             isAudioPlayerPlaying = true
             

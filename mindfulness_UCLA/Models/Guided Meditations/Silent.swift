@@ -10,5 +10,5 @@ import Foundation
 
 struct Silent {
     
-    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.silent30minGuidedMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.silent30minGuidedMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.silent30minGuidedMeditationPath.rawValue)
+    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.silent30minGuidedMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.silent30minGuidedMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.silent30minGuidedMeditationPath.rawValue, thumbnailPath: "")
 }

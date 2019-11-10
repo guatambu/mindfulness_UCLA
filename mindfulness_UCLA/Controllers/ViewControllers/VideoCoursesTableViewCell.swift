@@ -18,7 +18,7 @@ class VideoCoursesTableViewCell: UITableViewCell {
     
     var delegate: VideoCourseTableViewCellDelegate?
     
-    var videoCourse: VideoCourse? {
+    var videoCourse: GuidedMeditation? {
         didSet {
             updateViews()
         }
@@ -39,7 +39,7 @@ class VideoCoursesTableViewCell: UITableViewCell {
             return
         }
         
-        videoCourseThumbnailIMageView.image = UIImage(named: "\(videoCourse.url)")
+        videoCourseThumbnailIMageView.image = UIImage(named: "\(videoCourse.path)")
         videoCourseTitleLabel.text = videoCourse.title
         videoCourseThumbnailIMageView.image = UIImage(named: videoCourse.thumbnailPath)
     }

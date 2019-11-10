@@ -10,5 +10,5 @@ import Foundation
 
 struct SootheSoftenAllow {
     
-    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.softenSootheAllowMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.softenSootheAllowMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.softenSootheAllowMeditationPath.rawValue)
+    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.softenSootheAllowMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.softenSootheAllowMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.softenSootheAllowMeditationPath.rawValue, thumbnailPath: "")
 }

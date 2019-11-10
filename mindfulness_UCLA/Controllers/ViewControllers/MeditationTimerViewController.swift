@@ -83,6 +83,17 @@ class MeditationTimerViewController: UIViewController {
         
         setupSlider()
         setupStartAndPauseButtons()
+        
+        
+        
+        
+        // register for app foreground and background notifications
+        let notificationCenter = NotificationCenter.default
+        // foreground
+        notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
+        // background
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
     
     
@@ -231,9 +242,8 @@ class MeditationTimerViewController: UIViewController {
 }
 
 
+// MARK: UI Helper Functions
 extension MeditationTimerViewController {
-    
-    // MARK: UI Helper Functions
     
     func setupStartAndPauseButtons() {
         
@@ -302,6 +312,45 @@ extension MeditationTimerViewController {
         return duration
     }
 }
+
+
+// MARK: - functions that handle timer UI when app moves to from foreground/background
+extension MeditationTimerViewController {
+    
+    @objc func appMovedToForeground() {
+        print("App moved to ForeGround!")
+        
+        if UserMeditationMasterTimeModelController.shared.isTimerActive != nil {
+            
+            if UserMeditationMasterTimeModelController.shared.isTimerActive && UserMeditationMasterTimeModelController.shared.isTimeRunning {
+                
+                restartRunningTimer()
+                
+                if numericCountdownLabel.text != "0:00" {
+                    
+                    UserMeditationMasterTimeModelController.shared.isTimeRunning = true
+                    
+                    startButtonOutlet.isEnabled = false
+                }
+                
+            } else if UserMeditationMasterTimeModelController.shared.isTimerActive && !UserMeditationMasterTimeModelController.shared.isTimeRunning {
+                
+                numericCountdownLabel.text = convertSecondsToMinutes(time: UserMeditationMasterTimeModelController.shared.durationInSecondsAsInt)
+                
+                startButtonOutlet.isEnabled = true
+            }
+        }
+    }
+
+    @objc func appMovedToBackground() {
+        print("App moved to Background!")
+        
+        UserMeditationMasterTimeModelController.shared.currentViewWillDisappearTime = Date()
+        
+        destroyScheduledTimer()
+    }
+}
+
 
 
 // MARK: - timer functions
@@ -387,8 +436,6 @@ extension MeditationTimerViewController {
                 
                 startButtonOutlet.setTitle("pause", for: UIControl.State.normal)
                 startButtonOutlet.backgroundColor = pauseOrange
-                
-                // TODO: build actual pausing functionality to allow for timer to resume
                 
                 cancelButtonOutlet.isEnabled = true
                 

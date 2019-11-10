@@ -10,5 +10,5 @@ import Foundation
 
 struct DifficultEmotions {
     
-    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.difficultEmotionsMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.difficultEmotionsMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.difficultEmotionsMeditationPath.rawValue)
+    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.difficultEmotionsMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.difficultEmotionsMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.difficultEmotionsMeditationPath.rawValue, thumbnailPath: "")
 }

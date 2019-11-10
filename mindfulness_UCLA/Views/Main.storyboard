@@ -585,9 +585,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FkS-lX-YTf">
-                                            <rect key="frame" x="16" y="21" width="35" height="23"/>
+                                            <rect key="frame" x="16" y="25" width="28" height="18.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="16"/>
                                             <color key="textColor" red="0.26274509800000001" green="0.42352941179999998" blue="0.61960784310000006" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1005,7 +1005,7 @@
         <!--getting started-->
         <scene sceneID="SZV-tD-rU9">
             <objects>
-                <viewController title="getting started" id="EWi-kh-4rx" sceneMemberID="viewController">
+                <viewController title="getting started" id="EWi-kh-4rx" customClass="GettingStartedViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fg9-cI-Qjf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1064,8 +1064,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="4jc-wJ-vBW"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="J2l-jf-q6j"/>
                                             <segue destination="Cpw-ao-tFy" kind="show" id="X7O-X1-czP"/>
                                         </connections>
                                     </button>
@@ -1245,14 +1243,13 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIw-aF-fOG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="wn4-jp-5aZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1957.5" y="-668.66197183098598"/>
         </scene>
         <!--before you begin...-->
         <scene sceneID="C4K-0B-d98">
             <objects>
-                <viewController title="before you begin..." id="Cpw-ao-tFy" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="before you begin..." id="Cpw-ao-tFy" customClass="BeforeYouBeginViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HXb-kc-Qlv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1297,8 +1294,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="NYr-FY-D1X"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="eQO-EM-7TI"/>
                                             <segue destination="agK-E5-L8i" kind="show" id="X02-kT-9Bv"/>
                                         </connections>
                                     </button>
@@ -1484,7 +1479,7 @@
         <!--online student community-->
         <scene sceneID="nF7-gy-deK">
             <objects>
-                <viewController title="online student community" id="59K-8q-xkK" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="online student community" id="59K-8q-xkK" customClass="OnlineStudentCommunityViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZGx-1P-diJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1551,6 +1546,7 @@
                                                                     <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
+                                                                    <action selector="onlineCommunityButtonTapped:" destination="59K-8q-xkK" eventType="touchUpInside" id="D8a-g5-hGg"/>
                                                                     <action selector="openWebsiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="095-Zk-Qd7"/>
                                                                     <action selector="openWebsiteButtonTapped:" destination="PCv-ul-7Qx" eventType="touchUpInside" id="E5w-lJ-wCm"/>
                                                                     <action selector="websiteButtonTapped:" destination="PCv-ul-7Qx" eventType="touchUpInside" id="cAx-Z2-lKG"/>
@@ -1594,8 +1590,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="1Dr-a8-vkt"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="kMa-WW-KwL"/>
                                             <segue destination="cfT-7e-acZ" kind="show" id="ATg-Gt-ehr"/>
                                         </connections>
                                     </button>
@@ -1782,7 +1776,7 @@
         <!--the getting started worksheet-->
         <scene sceneID="PVk-Ua-sJe">
             <objects>
-                <viewController title="the getting started worksheet" id="agK-E5-L8i" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="the getting started worksheet" id="agK-E5-L8i" customClass="GettingStartedWorksheetViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5fh-9v-bHW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1825,6 +1819,7 @@
                                                         <connections>
                                                             <action selector="openWebsiteButtonTapped:" destination="i2f-ps-uWD" eventType="touchUpInside" id="crf-ME-iPv"/>
                                                             <action selector="openWebsiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="sQU-d2-O3B"/>
+                                                            <action selector="pdfVersionButtonTapped:" destination="agK-E5-L8i" eventType="touchUpInside" id="tFT-2n-dPf"/>
                                                             <action selector="websiteButtonTapped:" destination="i2f-ps-uWD" eventType="touchUpInside" id="VAT-1s-p4R"/>
                                                             <action selector="websiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="Y6v-Mw-wH9"/>
                                                         </connections>
@@ -1840,6 +1835,7 @@
                                                             <action selector="openWebsiteButtonTapped:" destination="i2f-ps-uWD" eventType="touchUpInside" id="vcX-X4-GGo"/>
                                                             <action selector="websiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="Hk5-n8-Chh"/>
                                                             <action selector="websiteButtonTapped:" destination="i2f-ps-uWD" eventType="touchUpInside" id="sm7-Hr-yhz"/>
+                                                            <action selector="wordVersionButtonTapped:" destination="agK-E5-L8i" eventType="touchUpInside" id="Gl1-Qs-wXh"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1883,8 +1879,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="MDX-AA-DjT"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="xL1-zs-qnt"/>
                                             <segue destination="59K-8q-xkK" kind="show" id="rJD-0W-Xvc"/>
                                         </connections>
                                     </button>
@@ -2071,7 +2065,7 @@
         <!--frequently asked questions-->
         <scene sceneID="Lgo-k2-zAb">
             <objects>
-                <viewController title="frequently asked questions" id="cfT-7e-acZ" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="frequently asked questions" id="cfT-7e-acZ" customClass="FAQViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dbM-TB-DrV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2099,6 +2093,7 @@
                                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="FAQButtonTapped:" destination="cfT-7e-acZ" eventType="touchUpInside" id="uKt-E4-bgi"/>
                                                             <action selector="openWebsiteButtonTapped:" destination="D2o-K4-bBS" eventType="touchUpInside" id="ZE0-VY-yEV"/>
                                                             <action selector="openWebsiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="xwo-oc-oey"/>
                                                             <action selector="websiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="8uS-Hj-d6g"/>
@@ -2128,8 +2123,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="YZX-EL-xfZ"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="kQI-El-jdl"/>
                                             <segue destination="ysB-kF-jnN" kind="show" id="ucb-gB-ewy"/>
                                         </connections>
                                     </button>
@@ -2316,7 +2309,7 @@
         <!--creating a manual-->
         <scene sceneID="g5H-RY-xIJ">
             <objects>
-                <viewController title="creating a manual" id="ysB-kF-jnN" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="creating a manual" id="ysB-kF-jnN" customClass="CreatingAManualViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XcA-x0-ZKp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2344,6 +2337,7 @@
                                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="mbsrManualButtonTapped:" destination="ysB-kF-jnN" eventType="touchUpInside" id="x4N-n9-4Fe"/>
                                                             <action selector="openWebsiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="aCg-lW-pPL"/>
                                                             <action selector="openWebsiteButtonTapped:" destination="fNX-yV-MRP" eventType="touchUpInside" id="d5T-Kq-ZOD"/>
                                                             <action selector="websiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="MDy-ON-dBK"/>
@@ -2373,8 +2367,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="2hu-dT-T8V"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="lL2-WK-23N"/>
                                             <segue destination="7Bn-Oq-xyJ" kind="show" id="zzD-dv-UpL"/>
                                         </connections>
                                     </button>
@@ -2561,7 +2553,7 @@
         <!--videos and reading-->
         <scene sceneID="meD-yS-t6P">
             <objects>
-                <viewController title="videos and reading" id="7Bn-Oq-xyJ" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="videos and reading" id="7Bn-Oq-xyJ" customClass="VideosAndReadingsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Brs-sc-aTL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2607,8 +2599,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="ezs-tG-TlF"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="xPr-Dm-sFd"/>
                                             <segue destination="v5c-J6-eds" kind="show" id="Tp4-Uz-ZZU"/>
                                         </connections>
                                     </button>
@@ -2791,10 +2781,10 @@
             </objects>
             <point key="canvasLocation" x="6549" y="-672"/>
         </scene>
-        <!--daily practice-->
+        <!--daily practice 1-->
         <scene sceneID="OBj-sF-5r4">
             <objects>
-                <viewController title="daily practice" id="v5c-J6-eds" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="daily practice" id="v5c-J6-eds" userLabel="daily practice 1" customClass="DailyPractice1ViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p8J-Od-Jou">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2841,8 +2831,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="MdH-5z-9at"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="RdE-3p-Tpf"/>
                                             <segue destination="WbR-WQ-WVV" kind="show" id="tmA-hq-9dS"/>
                                         </connections>
                                     </button>
@@ -3025,10 +3013,10 @@
             </objects>
             <point key="canvasLocation" x="7283" y="-669"/>
         </scene>
-        <!--daily practice-->
+        <!--daily practice 2-->
         <scene sceneID="PKT-Nx-Ujg">
             <objects>
-                <viewController title="daily practice" id="WbR-WQ-WVV" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="daily practice" id="WbR-WQ-WVV" userLabel="daily practice 2" customClass="DailyPractice2ViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t4p-cp-2zT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3074,8 +3062,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="btI-PS-Wch"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="fnq-Bj-fSE"/>
                                             <segue destination="GHp-wq-OSr" kind="show" id="osB-Fe-2md"/>
                                         </connections>
                                     </button>
@@ -3261,7 +3247,7 @@
         <!--health considerations-->
         <scene sceneID="N40-7W-qPc">
             <objects>
-                <viewController title="health considerations" id="GHp-wq-OSr" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="health considerations" id="GHp-wq-OSr" customClass="HealthConsiderations1ViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dRE-QA-bei">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3311,8 +3297,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="GFd-Ba-pIA"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="ueb-G1-ksy"/>
                                             <segue destination="d11-DW-jqJ" kind="show" id="nhK-rE-sUX"/>
                                         </connections>
                                     </button>
@@ -3498,7 +3482,7 @@
         <!--health considerations-->
         <scene sceneID="dSt-Ys-eMw">
             <objects>
-                <viewController title="health considerations" id="d11-DW-jqJ" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="health considerations" id="d11-DW-jqJ" customClass="HealthConsiderations2ViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vRl-al-mEt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3532,6 +3516,7 @@
                                                 <connections>
                                                     <action selector="openWebsiteButtonTapped:" destination="zau-Va-dYY" eventType="touchUpInside" id="cBn-q6-kzc"/>
                                                     <action selector="openWebsiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="wUy-Or-QHD"/>
+                                                    <action selector="seeIfReactStronglyButtonTapped:" destination="d11-DW-jqJ" eventType="touchUpInside" id="nul-fW-Vtg"/>
                                                     <action selector="websiteButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="C3L-pR-th5"/>
                                                     <action selector="websiteButtonTapped:" destination="zau-Va-dYY" eventType="touchUpInside" id="iX2-r4-JnT"/>
                                                 </connections>
@@ -3564,8 +3549,6 @@
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="6HA-Oc-Cre"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="9pc-vD-eOt"/>
                                             <segue destination="0Aw-EN-yhs" kind="show" id="IvP-6W-5eD"/>
                                         </connections>
                                     </button>
@@ -3751,7 +3734,7 @@
         <!--ready to start?-->
         <scene sceneID="gks-qE-5EY">
             <objects>
-                <viewController title="ready to start?" id="0Aw-EN-yhs" customClass="AbutUsViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ready to start?" id="0Aw-EN-yhs" customClass="ReadyToStartViewController" customModule="mindfulness_UCLA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hwQ-xN-zNY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3768,7 +3751,7 @@
                                                 <color key="textColor" red="0.26274509800000001" green="0.42352941179999998" blue="0.61960784310000006" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you're ready, just click on Week 1  below or the &quot;Course Content&quot; option in the app's main dashboard." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgj-eg-g48">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you're ready, just click on Get Started  below, and then the &quot;Course Content&quot; option in the app's main dashboard." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgj-eg-g48">
                                                 <rect key="frame" x="0.0" y="44.5" width="288" height="55"/>
                                                 <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="16"/>
                                                 <color key="textColor" red="0.26274509800000001" green="0.42352941179999998" blue="0.61960784310000006" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -3806,15 +3789,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4QT-Hb-DHE" userLabel="Page Progress Stack View">
                                 <rect key="frame" x="24" y="493" width="272" height="51"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkU-WC-FLB" userLabel="next">
-                                        <rect key="frame" x="104" y="0.0" width="64" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkU-WC-FLB" userLabel="get started">
+                                        <rect key="frame" x="88" y="0.0" width="96" height="35"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
-                                        <state key="normal" title="Week 1">
+                                        <state key="normal" title="Get Started">
                                             <color key="titleColor" red="0.25882352939999997" green="0.52941176469999995" blue="0.96078431369999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="phoneNumberButtonTapped:" destination="wn4-jp-5aZ" eventType="touchUpInside" id="EtM-eb-4rb"/>
-                                            <action selector="phoneNumberButtonTapped:" destination="BFf-r9-XqU" eventType="touchUpInside" id="nKl-DU-P55"/>
+                                            <action selector="getStartedButtonTapped:" destination="0Aw-EN-yhs" eventType="touchUpInside" id="H32-OE-zUB"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BHn-Ku-Ssl" userLabel="Pages Stack View">
