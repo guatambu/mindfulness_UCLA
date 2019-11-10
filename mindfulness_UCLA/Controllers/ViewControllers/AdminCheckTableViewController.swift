@@ -12,17 +12,30 @@ class AdminCheckTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    let meditationCounts: [Int] = [ GuidedMeditationsModelController.shared.raisinMeditationCount,
-                        GuidedMeditationsModelController.shared.bodyScanMeditationCount,
-                        GuidedMeditationsModelController.shared.sittingMeditationCount,
-                        GuidedMeditationsModelController.shared.difficultEmotionsMeditationCount,
-                        GuidedMeditationsModelController.shared.physicalPainMeditationCount,
-                        GuidedMeditationsModelController.shared.mountainMeditationCount,
-                        GuidedMeditationsModelController.shared.lakeMeditationCount,
-                        GuidedMeditationsModelController.shared.lovingKindnessMeditationCount,
-                        GuidedMeditationsModelController.shared.softenSootheAllowMeditationCount,
-                        GuidedMeditationsModelController.shared.rainMeditationCount,
-                        GuidedMeditationsModelController.shared.silentMeditationCount ]
+    var meditationCounts: [Double] {
+        
+        var masterCount: [Double] = []
+        
+        guard let sourceOfTruth = GuidedMeditationsModelController.shared.masterCount else {
+            
+            return []
+        }
+        
+        masterCount = [ sourceOfTruth.raisin,
+                        sourceOfTruth.sitting,
+                        sourceOfTruth.difficultEmotions,
+                        sourceOfTruth.physicalPain,
+                        sourceOfTruth.mountain,
+                        sourceOfTruth.lake,
+                        sourceOfTruth.lovingKindness,
+                        sourceOfTruth.sootheSoftenAllow,
+                        sourceOfTruth.r_a_i_n,
+                        sourceOfTruth.silent,
+                        sourceOfTruth.yoga1,
+                        sourceOfTruth.yoga2 ]
+        
+        return masterCount
+    }
     
     let meditations = [ RaisinMeditationVideo.metaData,
                         BodyScan.metaData,
@@ -58,7 +71,7 @@ class AdminCheckTableViewController: UITableViewController {
         
         cell.textLabel?.text = meditations[indexPath.row].title
         
-        cell.detailTextLabel?.text = "\(meditationCounts[indexPath.row])"
+        cell.detailTextLabel?.text = "\(Int(meditationCounts[indexPath.row]))"
 
         return cell
     }

@@ -28,15 +28,27 @@ class DashboardTableViewController: UITableViewController {
     @IBOutlet weak var courseContentView: UIView!
     @IBOutlet weak var guidedMeditationsView: UIView!
     @IBOutlet weak var videoClassesView: UIView!
+
+    
     
     
     // MRAK: - ViewController Lifecycle funcitons
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createMasterCount()
 
         // setup navBar dimensions
         self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 44)
+        
+        addFinishingTouchesToTableView()
+    }
+    
+    
+    // MARK: - Helper Functions
+    
+    func addFinishingTouchesToTableView() {
         
         // round corners on each static cell's view
         gettingStartedView.layer.cornerRadius = 10
@@ -70,5 +82,22 @@ class DashboardTableViewController: UITableViewController {
         tableBackgroundSubView.addSubview(backgroundImageView)
         // set tableView background to desired view
         self.tableView.backgroundView = tableBackgroundSubView
+        
+    }
+    
+    func createMasterCount() {
+        
+        if GuidedMeditationsModelController.shared.masterCount == nil {
+            
+            GuidedMeditationsModelController.shared.masterCount = GuidedMeditationCount(raisin: 0.00, bodyScan: 0.00, difficultEmotions: 0.00, lake: 0.00, lovingKindness: 0.00, mountain: 0.00, physicalPain: 0.00, r_a_i_n: 0.00, silent: 0.00, sitting: 0.00, sootheSoftenAllow: 0.00, yoga1: 0.00, yoga2: 0.00)
+            
+            GuidedMeditationsModelController.shared.saveToPersistentStorage()
+            
+            print(GuidedMeditationsModelController.shared.masterCount ?? [])
+            
+        } else {
+            
+            return
+        }
     }
 }

@@ -32,7 +32,6 @@
 		FA69CE9C2373C33100522A39 /* GettingStartedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CE9B2373C33100522A39 /* GettingStartedContent.swift */; };
 		FA69CE9E23753CD700522A39 /* IBDesignables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CE9D23753CD600522A39 /* IBDesignables.swift */; };
 		FA69CEA123753FFB00522A39 /* AdminCheckTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CEA023753FFB00522A39 /* AdminCheckTableViewController.swift */; };
-		FA69CEA3237541B700522A39 /* AdminCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CEA2237541B700522A39 /* AdminCheckTableViewCell.swift */; };
 		FA69CEA52375448200522A39 /* RaisinMeditationVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69CEA42375448200522A39 /* RaisinMeditationVideo.swift */; };
 		FA8EEA82236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EEA81236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift */; };
 		FAC891502341EB070018338C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8914F2341EB070018338C /* AppDelegate.swift */; };
@@ -123,6 +122,8 @@
 		FAD5937423760E6F009A213C /* ReadyToStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5937323760E6F009A213C /* ReadyToStartViewController.swift */; };
 		FAD59376237610B8009A213C /* GettingStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD59375237610B8009A213C /* GettingStartedViewController.swift */; };
 		FAD593782376523B009A213C /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD593772376523B009A213C /* ViewControllerExtension.swift */; };
+		FAD5937A23776471009A213C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5937923776471009A213C /* CoreDataStack.swift */; };
+		FAD5937C23776518009A213C /* GuidedMeditationCount+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5937B23776518009A213C /* GuidedMeditationCount+Convenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,7 +162,6 @@
 		FA69CE9B2373C33100522A39 /* GettingStartedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GettingStartedContent.swift; path = ../GettingStartedContent.swift; sourceTree = "<group>"; };
 		FA69CE9D23753CD600522A39 /* IBDesignables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignables.swift; sourceTree = "<group>"; };
 		FA69CEA023753FFB00522A39 /* AdminCheckTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminCheckTableViewController.swift; path = ../AdminCheckTableViewController.swift; sourceTree = "<group>"; };
-		FA69CEA2237541B700522A39 /* AdminCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminCheckTableViewCell.swift; path = ../AdminCheckTableViewCell.swift; sourceTree = "<group>"; };
 		FA69CEA42375448200522A39 /* RaisinMeditationVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisinMeditationVideo.swift; sourceTree = "<group>"; };
 		FA8EEA81236FFECD00BFC053 /* UNUserNotificationCenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNUserNotificationCenterDelegate.swift; sourceTree = "<group>"; };
 		FAC8914C2341EB070018338C /* mindfulness_UCLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindfulness_UCLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +244,8 @@
 		FAD5937323760E6F009A213C /* ReadyToStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyToStartViewController.swift; sourceTree = "<group>"; };
 		FAD59375237610B8009A213C /* GettingStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedViewController.swift; sourceTree = "<group>"; };
 		FAD593772376523B009A213C /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		FAD5937923776471009A213C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FAD5937B23776518009A213C /* GuidedMeditationCount+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GuidedMeditationCount+Convenience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,7 +264,6 @@
 			children = (
 				FA69CE9523737F9D00522A39 /* AbutUsViewController.swift */,
 				FA69CEA023753FFB00522A39 /* AdminCheckTableViewController.swift */,
-				FA69CEA2237541B700522A39 /* AdminCheckTableViewCell.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -422,7 +423,6 @@
 				FAC891672341EB490018338C /* Views */,
 				FAC891662341EB420018338C /* Controllers */,
 				FAC891642341EB2D0018338C /* App Resources */,
-				FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */,
 			);
 			path = mindfulness_UCLA;
 			sourceTree = "<group>";
@@ -464,6 +464,9 @@
 				FACDBA5A236397CF00B538EC /* Course Contents */,
 				FACDBA5B236397F300B538EC /* Guided Meditations */,
 				FACDBA842366A41F00B538EC /* Video Course Models */,
+				FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */,
+				FAD5937923776471009A213C /* CoreDataStack.swift */,
+				FAD5937B23776518009A213C /* GuidedMeditationCount+Convenience.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				FAD59376237610B8009A213C /* GettingStartedViewController.swift in Sources */,
 				FACDBA6523639A1200B538EC /* Mountain.swift in Sources */,
 				FAD5937423760E6F009A213C /* ReadyToStartViewController.swift in Sources */,
+				FAD5937C23776518009A213C /* GuidedMeditationCount+Convenience.swift in Sources */,
 				FA69CEA52375448200522A39 /* RaisinMeditationVideo.swift in Sources */,
 				FAD5937223760E5D009A213C /* HealthConsiderations2ViewController.swift in Sources */,
 				FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */,
@@ -706,7 +710,6 @@
 				FA69CEA123753FFB00522A39 /* AdminCheckTableViewController.swift in Sources */,
 				FA69CE98237380BF00522A39 /* AboutUsLinks.swift in Sources */,
 				FAC8919123457F030018338C /* WeekCourseMaterialsTableViewController.swift in Sources */,
-				FA69CEA3237541B700522A39 /* AdminCheckTableViewCell.swift in Sources */,
 				FA69CE902373711800522A39 /* AboutUs.swift in Sources */,
 				FACDBA51235E555E00B538EC /* ReGexPatterns.swift in Sources */,
 				FACDBA6323639A0100B538EC /* DifficultEmotions.swift in Sources */,
@@ -721,6 +724,7 @@
 				FAD5936E23760DF3009A213C /* DailyPractice2ViewController.swift in Sources */,
 				FACDBA5F2363997400B538EC /* Sitting.swift in Sources */,
 				FA4B9D6A2349C5CB004D1B7C /* Week6Data.swift in Sources */,
+				FAD5937A23776471009A213C /* CoreDataStack.swift in Sources */,
 				FAC8919323457F3B0018338C /* MeditationTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
