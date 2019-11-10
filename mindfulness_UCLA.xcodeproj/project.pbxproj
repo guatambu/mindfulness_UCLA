@@ -84,7 +84,6 @@
 		FACDBA7F23654D9C00B538EC /* bodyscan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4B9D5D2349B989004D1B7C /* bodyscan.mp3 */; };
 		FACDBA8123655AC200B538EC /* GuidedMeditationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */; };
 		FACDBA8323663E8E00B538EC /* VideoCoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA8223663E8E00B538EC /* VideoCoursesTableViewCell.swift */; };
-		FACDBA862366A45400B538EC /* VideoCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA852366A45400B538EC /* VideoCourse.swift */; };
 		FACDBA882366A52E00B538EC /* MindfulYoga1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA872366A52E00B538EC /* MindfulYoga1.swift */; };
 		FACDBA8A2366A5D900B538EC /* MindfulYoga2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDBA892366A5D900B538EC /* MindfulYoga2.swift */; };
 		FACDBA8D2366AEDD00B538EC /* Mindful_Yoga_2_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = FACDBA8B2366AEDD00B538EC /* Mindful_Yoga_2_thumbnail.png */; };
@@ -124,6 +123,7 @@
 		FAD593782376523B009A213C /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD593772376523B009A213C /* ViewControllerExtension.swift */; };
 		FAD5937A23776471009A213C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5937923776471009A213C /* CoreDataStack.swift */; };
 		FAD5937C23776518009A213C /* GuidedMeditationCount+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5937B23776518009A213C /* GuidedMeditationCount+Convenience.swift */; };
+		FAD5937E2377C8C6009A213C /* VideoGuidedMeditationStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5937D2377C8C6009A213C /* VideoGuidedMeditationStrings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,7 +206,6 @@
 		FACDBA7323652E7000B538EC /* mindfulness-play-90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mindfulness-play-90.png"; sourceTree = "<group>"; };
 		FACDBA8023655AC100B538EC /* GuidedMeditationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GuidedMeditationsViewController.swift; path = ../GuidedMeditationsViewController.swift; sourceTree = "<group>"; };
 		FACDBA8223663E8E00B538EC /* VideoCoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoCoursesTableViewCell.swift; path = ../VideoCoursesTableViewCell.swift; sourceTree = "<group>"; };
-		FACDBA852366A45400B538EC /* VideoCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCourse.swift; sourceTree = "<group>"; };
 		FACDBA872366A52E00B538EC /* MindfulYoga1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulYoga1.swift; sourceTree = "<group>"; };
 		FACDBA892366A5D900B538EC /* MindfulYoga2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulYoga2.swift; sourceTree = "<group>"; };
 		FACDBA8B2366AEDD00B538EC /* Mindful_Yoga_2_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mindful_Yoga_2_thumbnail.png; sourceTree = "<group>"; };
@@ -246,6 +245,7 @@
 		FAD593772376523B009A213C /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		FAD5937923776471009A213C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FAD5937B23776518009A213C /* GuidedMeditationCount+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GuidedMeditationCount+Convenience.swift"; sourceTree = "<group>"; };
+		FAD5937D2377C8C6009A213C /* VideoGuidedMeditationStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGuidedMeditationStrings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +367,7 @@
 			children = (
 				FA31D0E623760B3C00D4109E /* About */,
 				FAC8918623457E640018338C /* DashboardTableViewController.swift */,
+				FAD5937923776471009A213C /* CoreDataStack.swift */,
 				FA31D0E723760B9200D4109E /* Getting Started */,
 				FA31D0E823760B9B00D4109E /* Course Content */,
 				FA31D0E923760BA500D4109E /* Guided Meditations */,
@@ -459,13 +460,12 @@
 				FA69CE97237380BF00522A39 /* AboutUsLinks.swift */,
 				FA69CE9F23753EC700522A39 /* Getting Started */,
 				FACDBA5623638AD400B538EC /* AudioGuidedMeditationMetaDataStrings.swift */,
+				FAD5937D2377C8C6009A213C /* VideoGuidedMeditationStrings.swift */,
 				FA4B9D4D23470DD3004D1B7C /* WeekHeadings.swift */,
 				FACDBA50235E555E00B538EC /* ReGexPatterns.swift */,
 				FACDBA5A236397CF00B538EC /* Course Contents */,
 				FACDBA5B236397F300B538EC /* Guided Meditations */,
-				FACDBA842366A41F00B538EC /* Video Course Models */,
 				FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */,
-				FAD5937923776471009A213C /* CoreDataStack.swift */,
 				FAD5937B23776518009A213C /* GuidedMeditationCount+Convenience.swift */,
 			);
 			path = Models;
@@ -522,18 +522,10 @@
 				FACDBA6A23639A5A00B538EC /* SootheSoftenAllow.swift */,
 				FACDBA6C23639A6A00B538EC /* RAIN.swift */,
 				FACDBA6E23639A7A00B538EC /* Silent.swift */,
-			);
-			path = "Guided Meditations";
-			sourceTree = "<group>";
-		};
-		FACDBA842366A41F00B538EC /* Video Course Models */ = {
-			isa = PBXGroup;
-			children = (
-				FACDBA852366A45400B538EC /* VideoCourse.swift */,
 				FACDBA872366A52E00B538EC /* MindfulYoga1.swift */,
 				FACDBA892366A5D900B538EC /* MindfulYoga2.swift */,
 			);
-			path = "Video Course Models";
+			path = "Guided Meditations";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -663,7 +655,6 @@
 				FAD5936423760D6D009A213C /* OnlineStudentCommunityViewController.swift in Sources */,
 				FA4B9D622349C59B004D1B7C /* Week2Data.swift in Sources */,
 				FAC8918F23457EE10018338C /* VideoCoursesTableViewController.swift in Sources */,
-				FACDBA862366A45400B538EC /* VideoCourse.swift in Sources */,
 				FA69CE9623737F9D00522A39 /* AbutUsViewController.swift in Sources */,
 				FAC891582341EB070018338C /* mindfulness_UCLA.xcdatamodeld in Sources */,
 				FA61C2AE234EBC40007F0AD3 /* CourseContentModelController.swift in Sources */,
@@ -705,6 +696,7 @@
 				FAD5937223760E5D009A213C /* HealthConsiderations2ViewController.swift in Sources */,
 				FA4B9D702349C5F1004D1B7C /* Week9Data.swift in Sources */,
 				FAC8918B23457EA90018338C /* CourseContentTableViewController.swift in Sources */,
+				FAD5937E2377C8C6009A213C /* VideoGuidedMeditationStrings.swift in Sources */,
 				FACDBA6923639A3100B538EC /* Lovingkindness.swift in Sources */,
 				FAD593782376523B009A213C /* ViewControllerExtension.swift in Sources */,
 				FA69CEA123753FFB00522A39 /* AdminCheckTableViewController.swift in Sources */,

@@ -10,5 +10,5 @@ import Foundation
 
 struct Lake {
     
-    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.lakeMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.lakeMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.lakeMeditationPath.rawValue)
+    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.lakeMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.lakeMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.lakeMeditationPath.rawValue, thumbnailPath: "")
 }

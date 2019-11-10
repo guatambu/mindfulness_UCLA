@@ -15,7 +15,9 @@ class VideoCoursesTableViewController: UITableViewController,
     
     // MARK: - Properties
     
-    let videoCourses: [VideoCourse] = [ MindfulYoga1.metaData, MindfulYoga2.metaData ]
+    let videoCourses: [GuidedMeditation] = [ MindfulYoga1.metaData, MindfulYoga2.metaData ]
+    
+    let masterCount = GuidedMeditationsModelController.shared.counts[0]
     
     
     // MARK: - ViewController Lifecycle Functions
@@ -70,7 +72,9 @@ class VideoCoursesTableViewController: UITableViewController,
             return
         }
         
-        let urlString = videoCourses[indexPath.row].url
+        let videoCourseToPlay = videoCourses[indexPath.row]
+        
+        let urlString = videoCourseToPlay.path
         
         if let url = URL(string: urlString) {
             
@@ -81,6 +85,25 @@ class VideoCoursesTableViewController: UITableViewController,
             self.present(safariVC, animated: true)
         }
         
+        // add to masterCount
+        switch videoCourseToPlay.title {
+            
+        case VideoGuidedMeditationMetaDataStrings.yoga1Title.rawValue:
+            
+            masterCount.yoga1 += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: nil, lake: nil, lovingKindness: nil, mountain: nil, physicalPain: nil, r_a_i_n: nil, silent: nil, sitting: nil, sootheSoftenAllow: nil, yoga1: masterCount.yoga1, yoga2: nil)
+            
+        case VideoGuidedMeditationMetaDataStrings.yoga2Title.rawValue:
+            
+            masterCount.yoga2 += 1.00
+            
+            GuidedMeditationsModelController.shared.update(count: masterCount, raisin: nil, bodyScan: nil, difficultEmotions: nil, lake: nil, lovingKindness: nil, mountain: nil, physicalPain: nil, r_a_i_n: nil, silent: nil, sitting: nil, sootheSoftenAllow: nil, yoga1: nil, yoga2: masterCount.yoga2)
+            
+        default:
+            print("ERROR: unlikely event of an Guided Meditaiton Yoga Vdeo Course with an unknown title has been passed into the switch statement in VideoCoursesTableViewController.swift -> openWebViewButtonTapped(cell:) - line 104.")
+            
+        }
     }
     
     

@@ -87,16 +87,18 @@ class DashboardTableViewController: UITableViewController {
     
     func createMasterCount() {
         
-        if GuidedMeditationsModelController.shared.masterCount == nil {
+        if GuidedMeditationsModelController.shared.counts.count == 0 {
             
-            GuidedMeditationsModelController.shared.masterCount = GuidedMeditationCount(raisin: 0.00, bodyScan: 0.00, difficultEmotions: 0.00, lake: 0.00, lovingKindness: 0.00, mountain: 0.00, physicalPain: 0.00, r_a_i_n: 0.00, silent: 0.00, sitting: 0.00, sootheSoftenAllow: 0.00, yoga1: 0.00, yoga2: 0.00)
+            GuidedMeditationsModelController.shared.masterCount = GuidedMeditationCount(raisin: 0.0, bodyScan: 0.0, difficultEmotions: 0.0, lake: 0.0, lovingKindness: 0.0, mountain: 0.0, physicalPain: 0.0, r_a_i_n: 0.0, silent: 0.0, sitting: 0.0, sootheSoftenAllow: 0.0, yoga1: 0.0, yoga2: 0.0)
             
-            GuidedMeditationsModelController.shared.saveToPersistentStorage()
+            GuidedMeditationsModelController.shared.add(count: GuidedMeditationsModelController.shared.masterCount!)
             
-            print(GuidedMeditationsModelController.shared.masterCount ?? [])
+            print("counts.count == \(GuidedMeditationsModelController.shared.counts.count)")
+            print(GuidedMeditationsModelController.shared.counts[0])
             
         } else {
             
+            print("we got a master count! \n \(GuidedMeditationsModelController.shared.counts[0].raisin)\n \(GuidedMeditationsModelController.shared.counts[0].bodyScan)\n \(GuidedMeditationsModelController.shared.counts[0].sitting)\n \(GuidedMeditationsModelController.shared.counts[0].physicalPain)\n \(GuidedMeditationsModelController.shared.counts[0].difficultEmotions)\n \(GuidedMeditationsModelController.shared.counts[0].mountain)\n \(GuidedMeditationsModelController.shared.counts[0].lake)\n \(GuidedMeditationsModelController.shared.counts[0].lovingKindness)\n \(GuidedMeditationsModelController.shared.counts[0].sootheSoftenAllow)\n \(GuidedMeditationsModelController.shared.counts[0].r_a_i_n)\n \(GuidedMeditationsModelController.shared.counts[0].silent)\n \(GuidedMeditationsModelController.shared.counts[0].yoga1)\n \(GuidedMeditationsModelController.shared.counts[0].yoga2)")
             return
         }
     }

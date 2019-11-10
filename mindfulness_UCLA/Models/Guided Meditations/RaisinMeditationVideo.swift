@@ -10,5 +10,5 @@ import Foundation
 
 struct RaisinMeditationVideo {
     
-    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.raisinMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.raisinMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.raisinMeditationPath.rawValue)
+    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.raisinMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.raisinMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.raisinMeditationPath.rawValue, thumbnailPath: "")
 }

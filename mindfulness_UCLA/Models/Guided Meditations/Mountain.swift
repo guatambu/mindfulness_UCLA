@@ -10,5 +10,5 @@ import Foundation
 
 struct Mountain {
     
-    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.mountainMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.mountainMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.mountainMeditationPath.rawValue)
+    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.mountainMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.mountainMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.mountainMeditationPath.rawValue, thumbnailPath: "")
 }

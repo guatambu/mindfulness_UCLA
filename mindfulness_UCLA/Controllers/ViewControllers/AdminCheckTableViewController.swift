@@ -16,12 +16,10 @@ class AdminCheckTableViewController: UITableViewController {
         
         var masterCount: [Double] = []
         
-        guard let sourceOfTruth = GuidedMeditationsModelController.shared.masterCount else {
-            
-            return []
-        }
+        let sourceOfTruth = GuidedMeditationsModelController.shared.counts[0] 
         
         masterCount = [ sourceOfTruth.raisin,
+                        sourceOfTruth.bodyScan,
                         sourceOfTruth.sitting,
                         sourceOfTruth.difficultEmotions,
                         sourceOfTruth.physicalPain,
@@ -47,7 +45,9 @@ class AdminCheckTableViewController: UITableViewController {
                         Lovingkindness.metaData,
                         SootheSoftenAllow.metaData,
                         RAIN.metaData,
-                        Silent.metaData ]
+                        Silent.metaData,
+                        MindfulYoga1.metaData,
+                        MindfulYoga2.metaData ]
     
     
     // MARK: - ViewController Lifecycle Functions
@@ -67,7 +67,9 @@ class AdminCheckTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "adminCheckCell", for: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "adminCheckCell", for: indexPath)
+        
+        
         
         cell.textLabel?.text = meditations[indexPath.row].title
         

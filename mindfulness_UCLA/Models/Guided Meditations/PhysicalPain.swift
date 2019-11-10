@@ -10,5 +10,5 @@ import Foundation
 
 struct PhysicalPain {
     
-    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.physicalPainMeditaitonTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.physicalPainMeditaitonDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.physicalPainMeditaitonPath.rawValue)
+    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.physicalPainMeditaitonTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.physicalPainMeditaitonDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.physicalPainMeditaitonPath.rawValue, thumbnailPath: "")
 }

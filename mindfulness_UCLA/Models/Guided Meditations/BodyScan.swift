@@ -10,5 +10,5 @@ import Foundation
 
 struct BodyScan {
     
-    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.bodyScanMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.bodyScanMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.bodyScanMeditationPath.rawValue)
+    static let metaData = GuidedMeditation(title: AudioGuidedMeditationMetaDataStrings.bodyScanMeditationTitle.rawValue, duration: AudioGuidedMeditationMetaDataStrings.bodyScanMeditationDuration.rawValue, path: AudioGuidedMeditationMetaDataStrings.bodyScanMeditationPath.rawValue, thumbnailPath: "")
 }

@@ -16,16 +16,19 @@ class GuidedMeditation {
     var duration: String
     // local bundle.main.path
     var path: String
+    var thumbnailPath: String
     
     
     // MARK: Initialization
     init(title: String,
          duration: String,
-         path: String
+         path: String,
+         thumbnailPath: String
         ) {
         self.title = title
         self.duration = duration
         self.path = path
+        self.thumbnailPath = thumbnailPath
     }
 }
 
@@ -35,6 +38,7 @@ extension GuidedMeditation: Equatable {
         if lhs.title != rhs.title { return false }
         if lhs.duration != rhs.duration { return false }
         if lhs.path != rhs.path { return false }
+        if lhs.thumbnailPath != rhs.thumbnailPath { return false }
         
         return true
     }
