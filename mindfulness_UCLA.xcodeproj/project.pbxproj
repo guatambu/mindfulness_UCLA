@@ -367,7 +367,6 @@
 			children = (
 				FA31D0E623760B3C00D4109E /* About */,
 				FAC8918623457E640018338C /* DashboardTableViewController.swift */,
-				FAD5937923776471009A213C /* CoreDataStack.swift */,
 				FA31D0E723760B9200D4109E /* Getting Started */,
 				FA31D0E823760B9B00D4109E /* Course Content */,
 				FA31D0E923760BA500D4109E /* Guided Meditations */,
@@ -466,6 +465,7 @@
 				FACDBA5A236397CF00B538EC /* Course Contents */,
 				FACDBA5B236397F300B538EC /* Guided Meditations */,
 				FAC891562341EB070018338C /* mindfulness_UCLA.xcdatamodeld */,
+				FAD5937923776471009A213C /* CoreDataStack.swift */,
 				FAD5937B23776518009A213C /* GuidedMeditationCount+Convenience.swift */,
 			);
 			path = Models;
