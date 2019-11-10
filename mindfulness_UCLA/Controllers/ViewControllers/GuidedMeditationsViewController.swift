@@ -65,7 +65,16 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         trackSlider.isEnabled = false
         lefthandTrackProgressLabel.isEnabled = false
         righthandTrackDurationLabel.isEnabled = false
-
+        
+        do {
+            
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+        } catch {
+            
+            print("ERROR: problem while trying to set up AVAudioSession... \(error.localizedDescription) in GuidedMeditationsTableViewController.swift -> viewDidLoad() - line 76.")
+        }
     }
     
     
@@ -354,7 +363,7 @@ extension GuidedMeditationsViewController {
     // function that takes the GuidedMEditation.path string property and converts it to local file path string and passes to the audioPlayer object to play the track
     func playLocalAudioMeditation(path: String) {
         
-        guard let localFilePath = Bundle.main.path(forResource: "\(path)", ofType: "mp3") else {
+        guard let localFilePath = Bundle.main.path(forResource: "\(path).mp3", ofType: nil) else {
             
             print("ERROR: nil value found for localFilePath in GuidedMeditationsTableViewController.swift -> playLocalAudioMeditation(path:) - line 279.")
             return
