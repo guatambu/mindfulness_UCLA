@@ -7,34 +7,15 @@
 //
 
 import Foundation
-
-//class GuidedMeditationsModelController {
-//
-//    // MARK: - Properties
-//
-//    static let shared = GuidedMeditationsModelController()
-//
-//    var raisinMeditationCount = 0
-//    var bodyScanMeditationCount = 0
-//    var sittingMeditationCount = 0
-//    var difficultEmotionsMeditationCount = 0
-//    var physicalPainMeditationCount = 0
-//    var mountainMeditationCount = 0
-//    var lakeMeditationCount = 0
-//    var lovingKindnessMeditationCount = 0
-//    var softenSootheAllowMeditationCount = 0
-//    var rainMeditationCount = 0
-//    var silentMeditationCount = 0
-//}
-
-
 import CoreData
+import AVFoundation
 
 class GuidedMeditationsModelController {
     
     // MARK: - Properties
     
     static let shared = GuidedMeditationsModelController()
+    static var audioPlayer = AVAudioPlayer()
     
     var counts: [GuidedMeditationCount] {
         let fetchRequest: NSFetchRequest<GuidedMeditationCount> = GuidedMeditationCount.fetchRequest()
@@ -48,6 +29,7 @@ class GuidedMeditationsModelController {
     }
     
     var masterCount: GuidedMeditationCount?
+    var isGuidedMeditationPlaying: Bool?
     
     
     // MARK: - CRUD Functions
