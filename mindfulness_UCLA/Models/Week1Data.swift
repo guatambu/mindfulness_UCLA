@@ -32,6 +32,7 @@ struct Week1Data {
             ("*The Power of Mindfulness* ~- Shauna Shapiro [13 min]~", "https://www.youtube.com/watch?v=IeblJdB2-Vo&list=PLbiVpU59JkVbNfFyAG4SrC8NGnC0-D4jg&index=1"),
             ("*Don't Try to be Mindful* ~- Daron Larson [12 min]~", "https://www.youtube.com/watch?v=Y_27l2hMYvE&index=2&list=PLbiVpU59JkVbNfFyAG4SrC8NGnC0-D4jg"),
             ("*Befriending Our Bodies* ~- Jon Kabat-Zinn [4 min]~", "https://www.youtube.com/watch?v=iS53roI_pWE&index=3&list=PLbiVpU59JkVbNfFyAG4SrC8NGnC0-D4jg"),
+            ("*All Bodies are Beautiful* ~- Amy Pence-Brown [4 min]~", "https://www.youtube.com/watch?v=wEGMn-XvtIE&list=PLbiVpU59JkVbNfFyAG4SrC8NGnC0-D4jg&index=5"),
             ("*Raisin Meditation* ~- Dave Potter [12 min]~", "https://www.youtube.com/watch?v=_CZEEYMXr8Q&index=4&list=PLbiVpU59JkVbNfFyAG4SrC8NGnC0-D4jg")
         ],
         weekReadingURLList: [

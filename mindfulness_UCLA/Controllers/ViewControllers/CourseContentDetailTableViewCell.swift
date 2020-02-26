@@ -128,6 +128,9 @@ class CourseContentDetailTableViewCell: UITableViewCell {
         } else {
             // hide the bodyTextLabel
             bodyTextLabel.isHidden = true
+            // hide the button
+            openWebViewButton.isHidden = true
+            openWebViewButton.isEnabled = false
         }
     }
     

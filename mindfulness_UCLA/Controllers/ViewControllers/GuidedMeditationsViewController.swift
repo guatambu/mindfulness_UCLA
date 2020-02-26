@@ -11,12 +11,6 @@ import AVFoundation
 import MediaPlayer
 import SafariServices
 
-
-// *********
-// TODO: add coredata properties of the various meditation play counts for persistance
-// *********
-
-
 class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Properties
@@ -33,8 +27,6 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
     
     var sliderTimer: Timer?
     var trackLabelTimer: Timer?
-    
-//    var GuidedMeditationsModelController.audioPlayer = AVAudioPlayer()
     
     let audioMeditations: [GuidedMeditation] = [ RaisinMeditationVideo.metaData,
                                                  BodyScan.metaData,
@@ -120,7 +112,7 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
             
         } catch {
             
-            print("ERROR: problem while trying to set up AVAudioSession... \(error.localizedDescription) in GuidedMeditationsTableViewController.swift -> viewDidLoad() - line 76.")
+            print("ERROR: problem while trying to set up AVAudioSession... \(error.localizedDescription) in GuidedMeditationsTableViewController.swift -> viewDidLoad() - line 115.")
         }
     }
     
@@ -186,7 +178,7 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "guidedMeditationsCell", for: indexPath) as? GuidedMeditationTableViewCell else {
             
-            print("ERROR: nil value found for cell in GuidedMeditationTableViewController.swift - tableView(_ tableView: cellForRowAt:) - line 39.")
+            print("ERROR: nil value found for cell in GuidedMeditationTableViewController.swift - tableView(_ tableView: cellForRowAt:) - line 181.")
             return UITableViewCell()
             
         }
@@ -202,10 +194,6 @@ class GuidedMeditationsViewController: UIViewController, UITableViewDelegate, UI
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let audioMeditationToPlay = audioMeditations[indexPath.row]
-//
-//        trackTitleLabel.text = audioMeditationToPlay.title
-//        
-//        playLocalAudioMeditation(path: audioMeditationToPlay.path)
         
         switch audioMeditationToPlay.title {
          
@@ -469,7 +457,7 @@ extension GuidedMeditationsViewController: AVAudioPlayerDelegate {
         
         guard let localFilePath = Bundle.main.path(forResource: "\(path).mp3", ofType: nil) else {
             
-            print("ERROR: nil value found for localFilePath in GuidedMeditationsTableViewController.swift -> playLocalAudioMeditation(path:) - line 279.")
+            print("ERROR: nil value found for localFilePath in GuidedMeditationsTableViewController.swift -> playLocalAudioMeditation(path:) - line 460.")
             return
         }
         
@@ -495,7 +483,7 @@ extension GuidedMeditationsViewController: AVAudioPlayerDelegate {
             
         } catch {
             
-            print("ERROR: problem while trying to set up audioPlayer and play local audio file... \(error.localizedDescription) in GuidedMeditationsTableViewController.swift -> playUsingAVAudioPlayer(url:) - line 477.")
+            print("ERROR: problem while trying to set up audioPlayer and play local audio file... \(error.localizedDescription) in GuidedMeditationsTableViewController.swift -> playUsingAVAudioPlayer(url:) - line 486.")
         }
         
         lefthandTrackProgressLabel.text = "0:00"
