@@ -35,9 +35,9 @@ struct Week9Data {
             ("*Understanding Job Burnout* ~- Dr. Christina Maslach~", "https://www.youtube.com/watch?v=gRPBkCW0R5E&t=10s")
         ],
         weekReadingURLList: [
-            ("*Job Stress 101* ~- placeholder~", "https://www.uml.edu/Research/CPH-NEW/Worker/stress-at-work/job-stress-101.aspx"),
-            ("*Job Stress Health Effects* ~- placeholder~", "https://www.uml.edu/Research/CPH-NEW/Worker/stress-at-work/health-effects.aspx"),
-            ("*Coping with Stress at Work* ~- placeholder~", "https://www.apa.org/helpcenter/work-stress")
+            ("*Job Stress 101* ~- UML~", "https://www.uml.edu/Research/CPH-NEW/Worker/stress-at-work/job-stress-101.aspx"),
+            ("*Job Stress Health Effects* ~- UML~", "https://www.uml.edu/Research/CPH-NEW/Worker/stress-at-work/health-effects.aspx"),
+            ("*Coping with Stress at Work* ~- APA~", "https://www.apa.org/helpcenter/work-stress")
         ],
         supplementalMaterialsURLList: [],
         practiceSheetsURLList: []
